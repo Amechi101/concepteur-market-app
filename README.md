@@ -13,4 +13,8 @@ ans = raw_input('>')
 if ans == 60000:
    print "Hello World"
    
-elif ans != 60000
+elif ans != 60000:
+    print "You lose"
+    
+else:
+    print "Or I win"
