@@ -1,0 +1,13 @@
+create table address
+(
+id serial,
+address varchar(50),
+city varchar(50),
+zipcode int,
+isbilling boolean,
+country varchar(20),
+uid bigint(20) unsigned not null,
+
+primary key (id),
+foreign key (uid) references user(id)
+)

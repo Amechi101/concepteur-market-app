@@ -1,0 +1,14 @@
+create table reward
+(
+id serial,
+name varchar(30),
+description varchar(140),
+cost int,
+isactive boolean,
+daysvalid int,
+
+type int,
+discount int,
+
+primary key (id)
+)
