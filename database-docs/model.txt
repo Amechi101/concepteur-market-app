@@ -1,4 +1,13 @@
 create table model
 (
+id bigint(20) unsigned not null,
 
+haircolor int unsigned,
+hairstyle int unsigned,
+skincolor int unsigned,
+eyecolor int unsigned,
+lipsize int unsigned,
+
+primary key (id)
+foreign key (id) references user(id)
 )

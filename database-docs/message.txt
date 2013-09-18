@@ -3,8 +3,9 @@ create table message
 id serial,
 sender_id bigint(20) unsigned not null,
 recipient_id bigint(20) unsigned not null,
-sent datetime,
-text varchar(),
+
+timestamp datetime,
+text text,
 
 primary key (id),
 foreign key (sender_id) references user(id),

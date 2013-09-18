@@ -1,7 +1,8 @@
 create table rewardpool
 (
-uid bigint(20) unsigned not null,
-rid bigint(20) unsigned not null,
+u_id bigint(20) unsigned not null,
+r_id bigint(20) unsigned not null,
+
 isvalid boolean,
 expire date,
 
