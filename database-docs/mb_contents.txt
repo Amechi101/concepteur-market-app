@@ -1,0 +1,13 @@
+create table mb_contents
+(
+mb_id bigint(20) unsigned not null,
+d_id bigint(20) unsigned not null,
+
+xpos int,
+ypos int,
+scale double,
+
+primary key (mb_id, d_id),
+foreign key (mb_id) references moodboard(id),
+foreign key (d_id) references design(id)
+)

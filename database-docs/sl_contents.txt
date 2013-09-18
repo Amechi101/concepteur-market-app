@@ -1,0 +1,9 @@
+create table sl_contents
+(
+sl_id bigint(20) unsigned not null,
+d_id bigint(20) unsigned not null,
+
+primary key (sl_id, d_id),
+foreign key (sl_id) references saved_look(id),
+foreign key (d_id) references design(id)
+)

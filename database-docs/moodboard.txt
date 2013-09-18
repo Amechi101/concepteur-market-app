@@ -1,0 +1,10 @@
+create table moodboard
+(
+id serial,
+
+name varchar(30),
+timestamp datetime,
+isprivate boolean,
+
+primary key (id)
+)
