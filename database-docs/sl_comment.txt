@@ -9,5 +9,5 @@ text text,
 
 primary key (id),
 foreign key (id) references user(id),
-foreign key (id) references loo(id)
+foreign key (id) references look(id)
 )
