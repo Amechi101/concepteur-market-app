@@ -4,7 +4,7 @@ id serial,
 u_id bigint(20) unsigned not null,
 mb_id bigint(20) unsigned not null,
 
-bool liked,
+liked bool,
 
 primary key (id),
 foreign key (id) references user(id),
