@@ -3,8 +3,8 @@ create table mb_contents
 mb_id bigint(20) unsigned not null,
 d_id bigint(20) unsigned not null,
 
-xpos int,
-ypos int,
+xpos int(11),
+ypos int(11),
 scale double,
 
 primary key (mb_id, d_id),
