@@ -8,6 +8,6 @@ timestamp datetime,
 text text,
 
 primary key (id),
-foreign key (id) references user(id),
-foreign key (id) references moodboard(id)
+foreign key (u_id) references user(id),
+foreign key (mb_id) references moodboard(id)
 )
