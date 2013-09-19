@@ -6,7 +6,7 @@ u_id bigint(20) unsigned not null,
 address varchar(50),
 city varchar(50),
 state varchar(2)
-zipcode int,
+zipcode int(5),
 is_billing boolean,
 country varchar(20),
 
