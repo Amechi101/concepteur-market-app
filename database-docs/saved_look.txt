@@ -3,7 +3,7 @@ create table saved_look
 id serial,
 u_id bigint(20) unsigned not null,
 
-name varchar,
+name varchar(50),
 timestamp datetime,
 is_private boolean,
 
