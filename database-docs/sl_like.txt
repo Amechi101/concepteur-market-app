@@ -5,6 +5,6 @@ u_id bigint(20) unsigned not null,
 sl_id bigint(20) unsigned not null,
 
 primary key (id),
-foreign key (id) references user(id),
-foreign key (id) references saved_look(id)
+foreign key (u_id) references user(id),
+foreign key (sl_id) references saved_look(id)
 )
