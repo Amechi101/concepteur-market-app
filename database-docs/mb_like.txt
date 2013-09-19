@@ -5,6 +5,6 @@ u_id bigint(20) unsigned not null,
 mb_id bigint(20) unsigned not null,
 
 primary key (id),
-foreign key (id) references user(id),
-foreign key (id) references moodboard(id)
+foreign key (u_id) references user(id),
+foreign key (mb_id) references moodboard(id)
 )
