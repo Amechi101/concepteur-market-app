@@ -5,9 +5,9 @@ id serial,
 name varchar(30),
 description varchar(140),
 cost int,
-is_active boolean,
-days_valid int,
-type int,
+isactive tiny(1),
+daysvalid int(11),
+type int(11),
 discount int,
 
 primary key (id)
