@@ -9,4 +9,3 @@ is_private boolean,
 
 primary key (id),
 foreign key (u_id) references user(id)
-)
