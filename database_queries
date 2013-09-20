@@ -1,0 +1,155 @@
+insert into card (cnumber,ccv,name,address_id,uid) values (12345,235,"sadsada",1,1);
+ 
+Add ‘card’
+ 
+ 
+ 
+ -------------------
+ 
+ 
+insert into address (address,city,zipcode,isbilling,country,uid,state) values ("1st street","Los Angeles",90007,1,"United States",1,"CA");
+ 
+add ‘address’
+ 
+ 
+ --------------
+ 
+ 
+ 
+insert into model (id,haircolor,hairstyle,skincolor,eyecolor,lipsize) values (1,1,1,1,1,1);
+ 
+ add ‘model’
+ 
+ 
+ -------------------------
+ 
+ 
+ 
+ 
+ 
+insert into friends (id1,id2) values (1,2);
+ 
+first make sure that the friend pair doesn't exist in the friends table and then add this new pair
+ 
+add ‘friends’
+ 
+ 
+-------------------- 
+ 
+insert into message (sender_id,recipient_id,timestamp,text) values (1,2,current_timestamp,"Hello");
+ 
+message entry
+ 
+ 
+ 
+-------------------
+ 
+ 
+select password from user where email="sagar123@usc.edu" and password="password";
+ 
+sign in for user
+ 
+ 
+-------------------
+ 
+ 
+------------------
+ 
+insert into user (email,password,fname,lname,gender) values ("sjanu@usc.edu","password","ssaa","patwardsaa",1);
+ 
+sign up for user
+
+--------------------
+
+
+insert into rewardpool (u_id, r_id, isvalid, expire) values (34, 45, 5, current_date);
+
+add 'rewardpool'
+
+
+
+---------------------------
+
+
+insert into reward (id, name, description, cost, daysvalid, type, discount, isactive) values (4, "Amechi", "Get $20 off next purchase", "500", "30", "1", "20", 0);
+
+add 'reward'
+
+
+
+
+-------------------------
+
+
+insert into saved_look (id, u_id, name, timestamp, is_private) values (2, 3, "Amechi", current_timestamp,40);
+
+add ‘saved_look’
+------------------
+
+
+insert into sl_like (id, u_id, sl_id) values (2, 3, 4);
+
+add ‘sl_lkes’
+---------------
+
+insert into sl_contents (sl_id, d_id) values (3, 4);
+add ‘sl_contents’
+----------------
+
+
+insert into sl_comment (id, u_id, l_id, timestamp, text) values (3, 4, 5, current_timestamp, "This is Yolo :\)")
+add ‘sl_comment’
+
+----------------
+
+insert into moodboard (id, name, timestamp, isprivate) values (2, 3, current_date, 8)
+
+add ‘moodboard’
+----------------
+
+insert into mb_like (id, u_id, mb_id) values (4, 900000000, 83*33)
+
+add ‘mb_like’
+
+---------------
+
+insert into mb_contents (mb_id, d_id, xpos, ypos, scale) values (3, 5, 67.84, 89.40, 890.9088)
+add ‘mb_contents’
+---------------
+insert into mb_comment (id, u_id, mb_id, timestamp, text) values (2, 3, 4, current_timestamp, "Is it time to use python yet?")
+add mb_comment
+--------------
+
+insert into design (id, designer_id, name, type, description, point_value, likes) values (44, 89, "The Rock", "78", "I love Mysql", 50000, 50000)
+
+add ‘design’
+
+
+--------------
+insert into design_spec (id, c_id, color_name, size_name, measurements, quantity, price) values (34, 58, "The color is blue", "XL", "This dress is really kinky :\D", 4, 45.55)
+
+add 'design_spec'
+
+------------------
+
+insert into designer (id, name, description) values (45, "Kate Spade", "Designer Based In New York, edgy, bright and fun clothing is what she does")
+add 'designer'
+
+-------------
+
+insert into d_login (id, email, password) values (45, "batman@usc.edu", "bigpimpin101")
+add 'd_login'
+
+
+--------------
+
+insert into d_viewed (id, u_id, mb_id, liked) values (34, 56, 567, 0)
+
+add 'd_viewed'
+
+---------
+
+insert into d_comment (id, u_id, mb_id, timestamp, text) values (45, 56, 56, current_timestamp, "I am so tired of mysql!")
+
+add 'd_comment'
+
