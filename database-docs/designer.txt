@@ -1,9 +1,0 @@
-create table designer
-(
-id serial,
-
-name varchar(30),
-desc varchar(255),
-
-primary key (id)
-)
