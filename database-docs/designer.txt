@@ -1,0 +1,9 @@
+create table designer
+(
+id serial,
+
+name varchar(30),
+description varchar(255),
+
+primary key (id)
+)

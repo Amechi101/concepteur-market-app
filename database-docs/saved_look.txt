@@ -1,0 +1,12 @@
+create table saved_look
+(
+id serial,
+u_id bigint(20) unsigned not null,
+
+name varchar(50),
+timestamp datetime,
+is_private boolean,
+
+primary key (id),
+foreign key (u_id) references user(id)
+)

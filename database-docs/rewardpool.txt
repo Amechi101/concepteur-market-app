@@ -1,0 +1,12 @@
+create table rewardpool
+(
+u_id bigint(20) unsigned not null,
+r_id bigint(20) unsigned not null,
+
+isvalid boolean,
+expire date,
+
+primary key (u_id, r_id),
+foreign key (u_id) references user(id),
+foreign key (r_id) references reward(id)
+)

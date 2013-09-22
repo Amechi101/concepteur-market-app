@@ -1,0 +1,14 @@
+create table design_spec
+(
+id serial,
+c_id bigint(20) unsigned not null,
+
+color_name varchar(20),
+size_name varchar(5),
+measurements varchar(255),
+quantity int(11),
+price decimal(9,2),
+
+primary key (id),
+foreign key (c_id) references design(id)
+)
