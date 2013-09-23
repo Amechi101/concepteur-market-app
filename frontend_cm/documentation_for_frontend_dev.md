@@ -11,7 +11,7 @@ Legend for ‘Development Status’:
 ‘Completed’  (Read for testing, in which you switch “Ready For Testing on excel to “Yes”)
 ‘In-Process/Query’ (Meaning currently being work on towards completion but encountering a few problems in development. This must be taken care off first before continuing on to a new section
 
-Use the numbering in the "##Legned for Main Area's of the website:" and specifically for profile area (number and subsequent letter) to address what is currently being worked on.
+Use the numbering in the "##Legend for Main Area's of the website:" and specifically for profile area (number and subsequent letter) to address what is currently being worked on.
 
 
 #Other Important things:
@@ -28,7 +28,7 @@ When writing within the ##development notes you place any comment you need to cr
 
 3. Profile Area 
 
-(a - q for: details to be addressed in profile area, these details can be altered and are just used as gudielines for development)
+(a - q for: details to be addressed in profile area, these details can be altered and are just used as guidelines for development)
 
 a. settings page
 b. Personal information page
@@ -43,7 +43,7 @@ g. Rewards page
 h. Moodboard Functionality (Public and Private)
 i. Looks Feed (testing the saved looks private area to public area upload to feed, etc...)
 j. upload to the feed function
-k. fixing the toogle from feed to Moodboard section and Looks Feed
+k. fixing the toggle from feed to Moodboard section and Looks Feed
 
 ]
 
@@ -51,7 +51,7 @@ l. Change Photo Function
 m. Edit avatar function
 n. Upload to the feed function
 
-o. First Header: with the logo & functionailty of showing pictue icon, Name &drop down of quick links to other sections/ Second Header: with all of the links to other page areas)
+o. First Header: with the logo & functionality of showing picture icon, Name &drop down of quick links to other sections/ Second Header: with all of the links to other page areas)
 
 p. Adding footer
 q. Being able to rotate model on profile page
