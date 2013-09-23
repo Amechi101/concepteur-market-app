@@ -5,3 +5,11 @@ I've added a few files:
 - `.gitignore` is a file that tells git to ignore certain files (fancy that!) At the moment, all we're telling it to ignore is a certain OS X system file, but in the future we'll want to ignore any sort of compiled files we might create.
 
 ~ Erik
+
+===============
+
+9/23/13:
+
+For Yuan and Naomi, I have added the front-end documentation in frontend_cm, to help aid in the protocol and important info! I will add a best practice to the folder in the coming days.
+
+-Amechi
