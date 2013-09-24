@@ -3,11 +3,15 @@ import webapp2
 from google.appengine.api import rdbms
 from google.appengine.ext.webapp.util import run_wsgi_app
 
-_INSTANCE_NAME = 'concepteur-7823-m-002792:core'
-_DATABASE_NAME = 'test'
+_INSTANCE_NAME = 'concepteur-7823-m-002792:core' # the database instance id
+_DATABASE_NAME = 'test' # the database name
 
 class MainPage(webapp2.RequestHandler):
   def get(self):
+
+    # The document that's loaded when the user enters the page. Note that the
+    # form action is "/login", which causes a redirect to LoginPage when the
+    # submit button is clicked.
     self.response.out.write("""
       <!DOCTYPE html>
       <html>
@@ -26,6 +30,7 @@ class MainPage(webapp2.RequestHandler):
 
 class LoginPage(webapp2.RequestHandler):
   def post(self):
+    # Get the data the user entered in the form 
     email = self.request.get("email")
     password = self.request.get("password")
     conn = rdbms.connect(instance=_INSTANCE_NAME, database=_DATABASE_NAME)
