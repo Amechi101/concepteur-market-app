@@ -1,4 +1,4 @@
-# Django settings for ConcepteurMarket project.
+# Django settings for concepteurm project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,14 +11,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'google.appengine.ext.django.backends.rdbms', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
-        'INSTANCE': 'concepteur-7823-m-002792:core',
     }
 }
 
@@ -84,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '#n6#y3g!u%x8y9t56%rblzm-&oe9_2%98^l9&vjqeag_ftky@^'
+SECRET_KEY = ')2(^#y!oni6%c*ep@hm=xwd%i-ems%ya*yu=&s3i!#zn3!we6h'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -103,10 +102,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'ConcepteurMarket.urls'
+ROOT_URLCONF = 'concepteurm.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'ConcepteurMarket.wsgi.application'
+WSGI_APPLICATION = 'concepteurm.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
