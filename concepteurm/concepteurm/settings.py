@@ -20,9 +20,43 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
-        #'INSTANCE': 'concepteur-7823-m-002792:core',
+        'INSTANCE': 'concepteur-7823-m-002792:core',
     }
 }
+
+# import os
+# if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+#     # Running on production App Engine, so use a Google Cloud SQL database.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'HOST': 'concepteur-7823-m-002792:core',
+#             'NAME': 'test',
+#             'USER': '',
+#         }
+#     }
+# elif os.getenv('SETTINGS_MODE') == 'prod':
+#     # Running in development, but want to access the Google Cloud SQL instance
+#     # in production.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',  #google.appengine.ext.django.backends.rdbms'
+#             'INSTANCE': 'concepteur-7823-m-002792:core',
+#             'NAME': 'test',
+#             'USER': '',
+#         }
+#     }
+# else:
+#     # Running in development, so use a local MySQL database.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'test',
+#             'USER': '',
+#             'PASSWORD': '',
+#         }
+#     }
+
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -105,7 +139,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'urls' #concepteurm.
+ROOT_URLCONF = 'concepteurm.urls' #concepteurm.
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'concepteurm.wsgi.application'
@@ -117,12 +151,12 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # 'django.contrib.auth',
+    # 'django.contrib.contenttypes',
+    # 'django.contrib.sessions',
+    # 'django.contrib.sites',
+    # 'django.contrib.messages',
+    # 'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

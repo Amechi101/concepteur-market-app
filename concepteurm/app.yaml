@@ -1,0 +1,25 @@
+# application: concepteur-7823-m-002792
+# version: 1
+# runtime: python27
+# api_version: 1
+# threadsafe: true
+
+# # handlers:
+# # - url: /.*
+# #   script: login.app
+
+# # libraries:
+# # - name: webapp2
+# #   version: latest
+
+# libraries:
+# - name: django
+#   version: "1.5"
+
+# builtins:
+# - django_wsgi: on
+
+# handlers:
+# - url: /static/admin
+#   static_dir: static/admin
+#   expiration: '0'

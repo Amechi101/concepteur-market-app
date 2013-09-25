@@ -11,15 +11,3 @@ handlers:
 libraries:
 - name: webapp2
   version: latest
-
-# libraries:
-# - name: django
-#   version: "1.5"
-
-# builtins:
-# - django_wsgi: on
-
-# handlers:
-# - url: /static/admin
-#   static_dir: static/admin
-#   expiration: '0'
