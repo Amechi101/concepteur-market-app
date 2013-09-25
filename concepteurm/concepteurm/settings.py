@@ -1,4 +1,6 @@
 # Django settings for concepteurm project.
+# import os
+# BASE_DIR = os.path.abspath(os.path.dirname(__file__)) + os.sep
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,13 +13,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'test',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
+        #'INSTANCE': 'concepteur-7823-m-002792:core',
     }
 }
 
@@ -102,7 +105,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'concepteurm.urls'
+ROOT_URLCONF = 'urls' #concepteurm.
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'concepteurm.wsgi.application'
