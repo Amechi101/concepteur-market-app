@@ -4,9 +4,9 @@
 # api_version: 1
 # threadsafe: true
 
-# # handlers:
-# # - url: /.*
-# #   script: login.app
+# # # handlers:
+# # # - url: /.*
+# # #   script: login.app
 
 # # libraries:
 # # - name: webapp2
@@ -19,7 +19,7 @@
 # builtins:
 # - django_wsgi: on
 
-# handlers:
-# - url: /static/admin
-#   static_dir: static/admin
-#   expiration: '0'
+# # handlers:
+# # - url: /static/admin
+# #   static_dir: static/admin
+# #   expiration: '0'
