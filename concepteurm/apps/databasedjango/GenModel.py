@@ -1,6 +1,3 @@
-from django.db import models
-
-# Create your models here.
 class Users(models.Model):
     id = models.BigIntegerField(primary_key=True)
     email = models.CharField(max_length=254L, unique=True)
@@ -169,4 +166,8 @@ class UserRewards(models.Model):
     reward = models.ForeignKey(Rewards)
     is_valid = models.IntegerField(null=True, blank=True)
     expiration = models.DateField(null=True, blank=True)
+    
+
+
+
     
