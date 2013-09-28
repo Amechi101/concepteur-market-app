@@ -47,3 +47,32 @@ create table messagesr (
   foreign key (recipient_id) references users(id), /* duplicate connections(disregard): information flow: messager -> messages -> users */
   foreign key (recipient_id) references messages(id)
 );
+
+
+/* adding a address table & card table to my perosnal database. Need to make sense of a few things while creating the logic */
+
+create table address (
+  id bigint unsigned not null,
+  address varchar(50),
+  city varchar(50),
+  state varchar(50),
+  zip_code int(5),
+  country varchar(30),
+  isbilling boolean,
+  primary key (id),
+  foreign key (id) references users(id)
+);
+
+create table card (
+ id bigint unsigned not null,
+ cnumber bigint,
+ ccv int(5),
+ expire date,
+ name_on_card varchar(30),
+ primary key (id),
+ foreign key (id) references users(id)
+);
+
+
+
+

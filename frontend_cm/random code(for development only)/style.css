@@ -1,4 +1,57 @@
-<style>
+/* CSS Document for Concepteur Market */
+
+/*  Table of Contents
+
+0. Global CSS
+1. Personal Information
+2. Profile 
+3. Saved Looks
+4. Messages
+5. Friends
+6. Find People
+
+*/
+
+/*            Global CSS             */
+
+
+
+
+
+
+
+
+
+
+
+/*      Personal Information     */
+
+.p_info_middle_area {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 648.799px;
+  top: 931.929px;
+  z-index: 1041;
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .List {
   position: absolute;
   left: 0px;
@@ -79,7 +132,7 @@
   top: 1050.941px;
   z-index: 1042;
 }
-.BILLING_INFORMATION {
+.p_info {
   font-size: 49px;
   font-family: "FuturaStd";
   color: rgb( 178, 178, 178 );
@@ -239,3 +292,4 @@
   height: 602px;
   z-index: 1027;
 }
+*/
