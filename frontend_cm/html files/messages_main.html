@@ -11,7 +11,7 @@
 
 </head>
 
-<!-- This is the document for the structure for the saved looks area refer to page 34! 
+<!--    "This is for the messages main area refer to page 36 in the PDF"
 
 This is structured in HTML/HTML5 and will use CSS/CSS3, and is based on the UI/UX of the .PSD & PDF files.
 CSS naming structure throughout the site will be consistent in regards to the particular area serviced -->
@@ -53,19 +53,42 @@ CSS naming structure throughout the site will be consistent in regards to the pa
             </ul>
         </nav>
     </header>
-    
+
+    <div>
+        <a href="#">Messages</a>
+        <a href="#">Inbox</a>
+        <a href="#">Sent</a>
+        <a href="#">Trash</a>
+    </div>
+     
     <section>
-        <h1> Saved Looks </h1>    <!-- saved from the dressing room and loaded into private area, not viewable by anyone else.
-                                The user looks are uploaded from the private area and are actively live on the looks feed for friends to comment
-                                    and like your 'look' and flagged in the database as public-->
+        
+    
+ <!-- The  section where the messaging system will display the different views Messages,
+ Inbox, Sent, Trash. Javascript and Jquery will be need for this action. Also Django -->
+
+
+
+    </section>
     
 
-        <div>
-               <!--empty space until models are populated -->
-        </div>
-    </section>
 
-    <footer class="for footer">
+
+    <div>
+        <form method="get" action="/search-your-messages">
+            <input value="Search" name="text" class="focus" type="text"></input>
+            <input class="hide" type="submit" value="Ok" name=""></input>
+        </form> 
+    </div>
+    
+
+
+
+
+
+
+
+     <footer class="for footer">
         <nav>
             <h1>COMPANY INFORMTION</h1>
                 <ul>

@@ -11,7 +11,9 @@
 
 </head>
 
-<!-- This is the document for the structure for the saved looks area refer to page 34! 
+<!-- Users area to look for new friends view page 39. Certain aspects have been omitted/added (please ask me for what features
+have been taking out)
+
 
 This is structured in HTML/HTML5 and will use CSS/CSS3, and is based on the UI/UX of the .PSD & PDF files.
 CSS naming structure throughout the site will be consistent in regards to the particular area serviced -->
@@ -53,19 +55,48 @@ CSS naming structure throughout the site will be consistent in regards to the pa
             </ul>
         </nav>
     </header>
-    
+
+
+     
     <section>
-        <h1> Saved Looks </h1>    <!-- saved from the dressing room and loaded into private area, not viewable by anyone else.
-                                The user looks are uploaded from the private area and are actively live on the looks feed for friends to comment
-                                    and like your 'look' and flagged in the database as public-->
+        <h2>PEOPLE YOU MAY KNOW</h2>     
+    
+ <!-- The  section where users friends will populate,
+  Javascript and Jquery will be need for this action. Also Django -->
+
+
+
+    </section>
     
 
-        <div>
-               <!--empty space until models are populated -->
-        </div>
-    </section>
 
-    <footer class="for footer">
+
+    <div>
+        <h2>Search By</h2>
+        <form method="get" action="/search-for-users-friends"> <!--friends your already connected with-->
+            <div>
+                <input value="State" name="text" class="" type="text"></input>
+                <input class="hide" type="submit" value="Ok" name=""></input> <!--refer to awwwards .hide in CSS -->
+            </div>
+            <div>
+                <input value="City" name="text" class="" type="text"></input>
+                <input class="hide" type="submit" value="Ok" name=""></input>
+            </div>
+            <div>
+                <input value="Name" name="text" class="" type="text"></input>
+                <input class="hide" type="submit" value="Ok" name=""></input>
+            </div>
+        </form> 
+    </div>
+    
+
+
+
+
+
+
+
+     <footer class="for footer">
         <nav>
             <h1>COMPANY INFORMTION</h1>
                 <ul>
