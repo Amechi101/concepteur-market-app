@@ -4,9 +4,9 @@
  * @author Erik Strottmann
  */
 
-create database concepteur_market;
+-- create database concepteur_market;
 
-use concepteur_market;
+-- use concepteur_market;
 
 create table users (
   id bigint unsigned not null auto_increment,
