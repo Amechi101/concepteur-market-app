@@ -6,6 +6,67 @@
 <meta content="html/text; charset=UTF-8" >
 <script type="text/javascript" src=""></script>
 <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.6.0.min.js"> </script>
+<style>
+      
+ 
+ /* author Amechi Egbe */
+ 
+ 
+
+ 
+ html {
+ background-color: white;
+ padding: 25px;
+} 
+
+#banner {
+	position: fixed;
+	background: black;
+	width: 100%;
+	left: 0px;
+    top: 0px;
+    height: 80px;
+	display: inline-block;
+ }
+
+
+#logoImage {
+	position:relative;
+	left: -40px;
+	top: 0px;
+}
+
+
+
+.menu {
+    position:fixed;
+	bottom:0px;
+	margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.menu li{
+    display:inline;
+bottom: 0px;
+}
+.menu a{
+    display:inline-block;
+    padding:10px;
+
+}
+  
+
+
+.footer_gen {
+	position:relative;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding: 0;
+	border: black 0;
+	display:list-item;
+}
+
+</style>
 
 </head>
 
@@ -13,11 +74,12 @@
 This is structured in HTML/HTML5 and will use CSS/CSS3, and is based on the UI/UX of the .PSD & PDF files.
 CSS naming structure throughout the site will be consistent in regards to the particular area serviced -->
 <body>
-    <header class/id="for header">
-        <div class/id="for the drop down menu">
-            <a href="#"><img src="x-icon of user"></img>
-            <p>USER NAME</p></a>
-            <ul>  <!-- drop down-menu to be built using CSS/CSS3 or javascript. *preferred method CSS3 -->
+    <header> 
+        <span id="banner"></span>
+        <div><img src="../../../../../Documents/CodenStuffDream/logo_03.png"></div>
+        <!-- <li><a href="#"><img src="x-icon of user"></img>USER NAME</a> 
+        <nav class="top_menu">
+            <ul>  < drop down-menu to be built using CSS/CSS3 or javascript. *preferred method CSS3 
                 <li><a href="">PROFILE</a></li>
                 <li><a href="">SETTINGS</a></li>
                 <li><a href="">PERSONAL INFORMATION</a></li>
@@ -29,8 +91,9 @@ CSS naming structure throughout the site will be consistent in regards to the pa
                 <li><a href="">EDIT AVATAR</a></li>
                 <li><a href="">CONTACT US</a></li>
             </ul>
-        </div>
-        <nav>
+        </nav>
+        </li> -->
+        <nav class="menu">
             <ul>
                 <li><a href="profile.html">PROFILE</a></li>
                 <li><a href="settings.html">SETTINGS</a></li>
@@ -43,7 +106,7 @@ CSS naming structure throughout the site will be consistent in regards to the pa
                 <button><a href="shopnow.html">SHOP NOW</a></button>
             </ul>
         </nav>
-    </header>
+    </header> 
 
    <div>
        <!--This div contains the profile picture information for the user -->
@@ -126,12 +189,12 @@ CSS naming structure throughout the site will be consistent in regards to the pa
 <!--Looks Feed Start -->
 
    <p><span>LOOKS FEED</span></p>
-   <button type="button" class/id="">OPEN MOODBOARD</button> 
+  <!-- <button type="button" class/id="">OPEN MOODBOARD</button> -->
 
 <!-- Looks Feed End -->
 
 
-    <footer class="for footer">
+    <footer class="footer_gen">
         <nav>
     	<h1>COMPANY INFORMTION</h1>
     	    <ul>
@@ -162,5 +225,5 @@ CSS naming structure throughout the site will be consistent in regards to the pa
 
 
 </body>
-</html>
+</html> 
 
