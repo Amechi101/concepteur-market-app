@@ -1,5 +1,11 @@
-class Address(models.Model):
-    id = models.ForeignKey('Users', primary_key=True, db_column='id')
+#General model database stuff used for reference and testing. .
+
+
+
+
+
+class Address(models.Model):    #corresponds to a single database table
+    id = models.ForeignKey('Users', primary_key=True, db_column='id') #corresponds to a single column in database table  eg: id is column name
     address = models.CharField(max_length=50L, blank=True)
     city = models.CharField(max_length=50L, blank=True)
     state = models.CharField(max_length=50L, blank=True)
@@ -57,210 +63,6 @@ class ClothingTypes(models.Model):
     class Meta:
         db_table = 'clothing_types'
 
-class ConcepteurappClothing(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    designer = models.ForeignKey('ConcepteurappDesigners')
-    title = models.CharField(max_length=255L)
-    description = models.CharField(max_length=255L)
-    clothing_type = models.ForeignKey('ConcepteurappClothingtypes', null=True, db_column='clothing_type', blank=True)
-    class Meta:
-        db_table = 'concepteurapp_clothing'
-
-class ConcepteurappClothingcolors(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    clothing_id = models.BigIntegerField()
-    color_name = models.CharField(max_length=255L)
-    class Meta:
-        db_table = 'concepteurapp_clothingcolors'
-
-class ConcepteurappClothingcomments(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    clothing = models.ForeignKey(ConcepteurappClothing)
-    time_posted = models.DateTimeField()
-    body = models.TextField()
-    class Meta:
-        db_table = 'concepteurapp_clothingcomments'
-
-class ConcepteurappClothinglikes(models.Model):
-    id = models.IntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    clothing = models.ForeignKey(ConcepteurappClothing)
-    liked = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_clothinglikes'
-
-class ConcepteurappClothingtypes(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=255L)
-    class Meta:
-        db_table = 'concepteurapp_clothingtypes'
-
-class ConcepteurappDesigners(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=255L)
-    description = models.CharField(max_length=255L)
-    class Meta:
-        db_table = 'concepteurapp_designers'
-
-class ConcepteurappFriendconnect(models.Model):
-    id2 = models.ForeignKey('ConcepteurappFriends', primary_key=True, db_column='id2')
-    class Meta:
-        db_table = 'concepteurapp_friendconnect'
-
-class ConcepteurappFriends(models.Model):
-    id1 = models.ForeignKey('ConcepteurappUsers', primary_key=True, db_column='id1')
-    class Meta:
-        db_table = 'concepteurapp_friends'
-
-class ConcepteurappLookclothing(models.Model):
-    id = models.IntegerField(primary_key=True)
-    look = models.ForeignKey('ConcepteurappLooks')
-    clothing = models.ForeignKey(ConcepteurappClothing)
-    class Meta:
-        db_table = 'concepteurapp_lookclothing'
-
-class ConcepteurappLookcomments(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    look = models.ForeignKey('ConcepteurappLooks')
-    time_posted = models.DateTimeField()
-    body = models.TextField()
-    class Meta:
-        db_table = 'concepteurapp_lookcomments'
-
-class ConcepteurappLooklikes(models.Model):
-    id = models.IntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    look = models.ForeignKey('ConcepteurappLooks')
-    liked = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_looklikes'
-
-class ConcepteurappLooks(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    name = models.CharField(max_length=255L)
-    time_posted = models.DateTimeField()
-    is_private = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_looks'
-
-class ConcepteurappMessages(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    sender = models.ForeignKey('ConcepteurappUsers')
-    sent_time = models.DateTimeField()
-    read_time = models.DateTimeField()
-    body = models.TextField()
-    class Meta:
-        db_table = 'concepteurapp_messages'
-
-class ConcepteurappMessagesr(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    recipient = models.ForeignKey(ConcepteurappMessages)
-    sent_time = models.DateTimeField()
-    read_time = models.DateTimeField()
-    body = models.TextField()
-    class Meta:
-        db_table = 'concepteurapp_messagesr'
-
-class ConcepteurappModels(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    hair_color = models.CharField(max_length=255L)
-    hair_style = models.CharField(max_length=255L)
-    skin_color = models.CharField(max_length=255L)
-    eye_color = models.CharField(max_length=255L)
-    lip_size = models.CharField(max_length=255L)
-    class Meta:
-        db_table = 'concepteurapp_models'
-
-class ConcepteurappMoodboardclothing(models.Model):
-    id = models.IntegerField(primary_key=True)
-    moodboard = models.ForeignKey('ConcepteurappMoodboards')
-    clothing = models.ForeignKey(ConcepteurappClothing)
-    class Meta:
-        db_table = 'concepteurapp_moodboardclothing'
-
-class ConcepteurappMoodboardcomments(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    moodboard = models.ForeignKey('ConcepteurappMoodboards')
-    time_posted = models.DateTimeField()
-    body = models.TextField()
-    class Meta:
-        db_table = 'concepteurapp_moodboardcomments'
-
-class ConcepteurappMoodboardlikes(models.Model):
-    id = models.IntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    moodboard = models.ForeignKey('ConcepteurappMoodboards')
-    liked = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_moodboardlikes'
-
-class ConcepteurappMoodboards(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    name = models.CharField(max_length=255L)
-    time_posted = models.DateTimeField()
-    is_private = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_moodboards'
-
-class ConcepteurappOrderclothing(models.Model):
-    id = models.IntegerField(primary_key=True)
-    order = models.ForeignKey('ConcepteurappOrders')
-    clothing = models.ForeignKey(ConcepteurappClothing)
-    class Meta:
-        db_table = 'concepteurapp_orderclothing'
-
-class ConcepteurappOrders(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    time_purchased = models.DateTimeField()
-    class Meta:
-        db_table = 'concepteurapp_orders'
-
-class ConcepteurappRewards(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=255L)
-    description = models.CharField(max_length=255L)
-    point_cost = models.IntegerField(null=True, blank=True)
-    is_available = models.IntegerField(null=True, blank=True)
-    days_valid = models.IntegerField(null=True, blank=True)
-    reward_type = models.BigIntegerField(null=True, blank=True)
-    discount_amount = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_rewards'
-
-class ConcepteurappRewardtypes(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=255L)
-    class Meta:
-        db_table = 'concepteurapp_rewardtypes'
-
-class ConcepteurappUserrewards(models.Model):
-    id = models.IntegerField(primary_key=True)
-    user = models.ForeignKey('ConcepteurappUsers')
-    reward = models.ForeignKey(ConcepteurappRewards)
-    is_valid = models.IntegerField(null=True, blank=True)
-    expiration = models.DateField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_userrewards'
-
-class ConcepteurappUsers(models.Model):
-    id = models.BigIntegerField(primary_key=True)
-    email = models.CharField(max_length=254L, unique=True)
-    password = models.CharField(max_length=255L)
-    first_name = models.CharField(max_length=255L)
-    last_name = models.CharField(max_length=255L)
-    gender = models.CharField(max_length=1L)
-    birthday = models.DateField(null=True, blank=True)
-    reward_points_current = models.IntegerField(null=True, blank=True)
-    reward_points_lifetime = models.IntegerField(null=True, blank=True)
-    class Meta:
-        db_table = 'concepteurapp_users'
 
 class Designers(models.Model):
     id = models.BigIntegerField(primary_key=True)
@@ -497,3 +299,210 @@ class AuthUserUserPermissions(models.Model):
     permission = models.ForeignKey(AuthPermission)
     class Meta:
         db_table = 'auth_user_user_permissions'
+
+# Miscellaneous things. . . .
+
+class ConcepteurappClothing(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    designer = models.ForeignKey('ConcepteurappDesigners')
+    title = models.CharField(max_length=255L)
+    description = models.CharField(max_length=255L)
+    clothing_type = models.ForeignKey('ConcepteurappClothingtypes', null=True, db_column='clothing_type', blank=True)
+    class Meta:
+        db_table = 'concepteurapp_clothing'
+
+class ConcepteurappClothingcolors(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    clothing_id = models.BigIntegerField()
+    color_name = models.CharField(max_length=255L)
+    class Meta:
+        db_table = 'concepteurapp_clothingcolors'
+
+class ConcepteurappClothingcomments(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    clothing = models.ForeignKey(ConcepteurappClothing)
+    time_posted = models.DateTimeField()
+    body = models.TextField()
+    class Meta:
+        db_table = 'concepteurapp_clothingcomments'
+
+class ConcepteurappClothinglikes(models.Model):
+    id = models.IntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    clothing = models.ForeignKey(ConcepteurappClothing)
+    liked = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_clothinglikes'
+
+class ConcepteurappClothingtypes(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=255L)
+    class Meta:
+        db_table = 'concepteurapp_clothingtypes'
+
+class ConcepteurappDesigners(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=255L)
+    description = models.CharField(max_length=255L)
+    class Meta:
+        db_table = 'concepteurapp_designers'
+
+class ConcepteurappFriendconnect(models.Model):
+    id2 = models.ForeignKey('ConcepteurappFriends', primary_key=True, db_column='id2')
+    class Meta:
+        db_table = 'concepteurapp_friendconnect'
+
+class ConcepteurappFriends(models.Model):
+    id1 = models.ForeignKey('ConcepteurappUsers', primary_key=True, db_column='id1')
+    class Meta:
+        db_table = 'concepteurapp_friends'
+
+class ConcepteurappLookclothing(models.Model):
+    id = models.IntegerField(primary_key=True)
+    look = models.ForeignKey('ConcepteurappLooks')
+    clothing = models.ForeignKey(ConcepteurappClothing)
+    class Meta:
+        db_table = 'concepteurapp_lookclothing'
+
+class ConcepteurappLookcomments(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    look = models.ForeignKey('ConcepteurappLooks')
+    time_posted = models.DateTimeField()
+    body = models.TextField()
+    class Meta:
+        db_table = 'concepteurapp_lookcomments'
+
+class ConcepteurappLooklikes(models.Model):
+    id = models.IntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    look = models.ForeignKey('ConcepteurappLooks')
+    liked = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_looklikes'
+
+class ConcepteurappLooks(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    name = models.CharField(max_length=255L)
+    time_posted = models.DateTimeField()
+    is_private = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_looks'
+
+class ConcepteurappMessages(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    sender = models.ForeignKey('ConcepteurappUsers')
+    sent_time = models.DateTimeField()
+    read_time = models.DateTimeField()
+    body = models.TextField()
+    class Meta:
+        db_table = 'concepteurapp_messages'
+
+class ConcepteurappMessagesr(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    recipient = models.ForeignKey(ConcepteurappMessages)
+    sent_time = models.DateTimeField()
+    read_time = models.DateTimeField()
+    body = models.TextField()
+    class Meta:
+        db_table = 'concepteurapp_messagesr'
+
+class ConcepteurappModels(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    hair_color = models.CharField(max_length=255L)
+    hair_style = models.CharField(max_length=255L)
+    skin_color = models.CharField(max_length=255L)
+    eye_color = models.CharField(max_length=255L)
+    lip_size = models.CharField(max_length=255L)
+    class Meta:
+        db_table = 'concepteurapp_models'
+
+class ConcepteurappMoodboardclothing(models.Model):
+    id = models.IntegerField(primary_key=True)
+    moodboard = models.ForeignKey('ConcepteurappMoodboards')
+    clothing = models.ForeignKey(ConcepteurappClothing)
+    class Meta:
+        db_table = 'concepteurapp_moodboardclothing'
+
+class ConcepteurappMoodboardcomments(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    moodboard = models.ForeignKey('ConcepteurappMoodboards')
+    time_posted = models.DateTimeField()
+    body = models.TextField()
+    class Meta:
+        db_table = 'concepteurapp_moodboardcomments'
+
+class ConcepteurappMoodboardlikes(models.Model):
+    id = models.IntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    moodboard = models.ForeignKey('ConcepteurappMoodboards')
+    liked = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_moodboardlikes'
+
+class ConcepteurappMoodboards(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    name = models.CharField(max_length=255L)
+    time_posted = models.DateTimeField()
+    is_private = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_moodboards'
+
+class ConcepteurappOrderclothing(models.Model):
+    id = models.IntegerField(primary_key=True)
+    order = models.ForeignKey('ConcepteurappOrders')
+    clothing = models.ForeignKey(ConcepteurappClothing)
+    class Meta:
+        db_table = 'concepteurapp_orderclothing'
+
+class ConcepteurappOrders(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    time_purchased = models.DateTimeField()
+    class Meta:
+        db_table = 'concepteurapp_orders'
+
+class ConcepteurappRewards(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=255L)
+    description = models.CharField(max_length=255L)
+    point_cost = models.IntegerField(null=True, blank=True)
+    is_available = models.IntegerField(null=True, blank=True)
+    days_valid = models.IntegerField(null=True, blank=True)
+    reward_type = models.BigIntegerField(null=True, blank=True)
+    discount_amount = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_rewards'
+
+class ConcepteurappRewardtypes(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    name = models.CharField(max_length=255L)
+    class Meta:
+        db_table = 'concepteurapp_rewardtypes'
+
+class ConcepteurappUserrewards(models.Model):
+    id = models.IntegerField(primary_key=True)
+    user = models.ForeignKey('ConcepteurappUsers')
+    reward = models.ForeignKey(ConcepteurappRewards)
+    is_valid = models.IntegerField(null=True, blank=True)
+    expiration = models.DateField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_userrewards'
+
+class ConcepteurappUsers(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    email = models.CharField(max_length=254L, unique=True)
+    password = models.CharField(max_length=255L)
+    first_name = models.CharField(max_length=255L)
+    last_name = models.CharField(max_length=255L)
+    gender = models.CharField(max_length=1L)
+    birthday = models.DateField(null=True, blank=True)
+    reward_points_current = models.IntegerField(null=True, blank=True)
+    reward_points_lifetime = models.IntegerField(null=True, blank=True)
+    class Meta:
+        db_table = 'concepteurapp_users'
