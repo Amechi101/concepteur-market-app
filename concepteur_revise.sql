@@ -58,20 +58,21 @@ create table address (
   state varchar(50),
   zip_code int(5),
   country varchar(30),
-  isbilling boolean,
+  billing boolean,
   primary key (id),
   foreign key (id) references users(id)
 );
 
-create table card (
- id bigint unsigned not null,
- cnumber bigint,
- ccv int(5),
- expire date,
- name_on_card varchar(30),
- primary key (id),
- foreign key (id) references users(id)
-);
+-- No need for cards since we are not handling storage of the information.
+-- create table card (
+--  id bigint unsigned not null,
+--  cnumber bigint,
+--  ccv int(5),
+--  expire date,
+--  name_on_card varchar(30),
+--  primary key (id),
+--  foreign key (id) references users(id)
+-- );
 
 
 

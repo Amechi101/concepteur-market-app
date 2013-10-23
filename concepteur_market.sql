@@ -49,14 +49,16 @@ create table messages (
  * Stores the user's customizations to her 3D model. These values are stored
  * in hexadecimal, stored in varchar (cf. string) columns.
  */
+
+/* the model's owner */
 create table models (
   id bigint unsigned not null auto_increment,
-  user_id bigint unsigned not null, /* the model's owner */
-  hair_color varchar(255),
-  hair_style varchar(255),
-  skin_color varchar(255),
-  eye_color varchar(255),
-  lip_size varchar(255),
+  user_id bigint unsigned not null, 
+  hair_color int(50),
+  hair_style int(50),
+  skin_color int(50),
+  eye_color int(255),
+  lip_size int(255),
   primary key (id),
   foreign key (user_id) references users(id)
 );

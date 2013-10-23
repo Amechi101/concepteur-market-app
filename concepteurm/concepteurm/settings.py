@@ -23,6 +23,8 @@ MANAGERS = ADMINS
 #         # 'INSTANCE': 'concepteur-7823-m-002792:core',
 #     }
 # }
+
+#From Google Cloud Services
 import server
 import os
 if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
@@ -148,9 +150,16 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    # '/Users/amechiegbe/Downloads/CMdev/CMapp/concepteurm/templates/admin/base_site.html',
+    '/Users/amechiegbe/Downloads/CMdev/CMapp/concepteurm/templates',
+
 )
 
+#################### All apps need for concepteur market project #####################
+
 INSTALLED_APPS = (
+# Django Installed apps
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -158,12 +167,51 @@ INSTALLED_APPS = (
     # 'django.contrib.sites',
     # 'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'p_infoapp',
+    
+#Apps for Concepteur Market
+    
+    # 'p_infoapp',
+    # 'user_c_model',
+
+#Third Party Apps
+
+    #Userna#
+    'userena',
+    'guardian',
+    'easy_thumbnails',
+    'accounts',
+
+
 )
+
+############### Required information for USERNA (app) ###########################
+
+AUTHENTICATION_BACKENDS = (
+    'userena.backends.UserenaAuthenticationBackend',
+    'guardian.backends.ObjectPermissionBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+#Email backend
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@concepteurmarket.com'
+EMAIL_HOST_PASSWORD = 'columbia2015'
+
+# Misc Settings
+
+LOGIN_REDIRECT_URL = '/accounts/%(amechiegbe)s/'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
+
+ANONYMOUS_USER_ID = -1
+
+AUTH_PROFILE_MODULE = 'accounts.MyProfile'
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

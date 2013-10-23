@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+# from concepteurm import ProfileView
+# from django.utils.translation import ugettext as _
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -14,5 +16,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^p_infoapp/', include('p_infoapp.urls')),
+    # url(r'^p_infoapp/', include('p_infoapp.urls')),
+    # url(r'^accounts/profile', 'accounts.views.homePage'),
+    url(r'^accounts/', include('userena.urls')),
 )
