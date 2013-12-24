@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/homePage.js"></script>
+<link rel="stylesheet" type="text/css" href="css/homePage.css">
+</head>
+
+<body>
+<img alt="#" src="images/bg.png" id="bg_img"/>
+<div id="banner">
+	<img id="logoImage" src="images/logoImage.png" />
+	<nav>
+		<a id="openInfo">INFO</a>
+		<a id="openDesigner">OUR DESIGNERS</a>
+		<a id="openFeatures">FEATURES</a>
+		<img class="openSignUpOptions" src="images/signUpButton.png" />
+	</nav>
+</div>
+
+<!---------------------------- below are sometimes visible and sometimes not ------------------------------------>
+<div id="blanket" style="display:none;"></div>
+<div id="centerBox in_or_visible" class="closeAll">
+<div id="popUpDivInfo" class="noAction" style="display:none;">
+	<div id="centerBox PopupTitle">
+	<p>INFO</p>
+	</div>
+	<div id="centerBox terms_switch_div">
+	<ul id="terms_switch_ul">
+		<li class="eachContent" href=# onmouseover="changeContent('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'); ">ABOUT US</li>
+		<li class="eachContent" href=# onmouseover="changeContent('Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?')">TERMS & CONDITIONS</li>
+		<li class="eachContent" href=# onmouseover="changeContent(' At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat¡­')">PRIVACY POLICY</li>
+	</ul>
+	</div>
+	<div id="shown_text">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+	</div>
+	<div>
+	<a id="contactUsButton" class="closeAll"><img src="images/contactUsButton.png"/></a>
+	</div>
+</div>
+<div id="popUpDivDesigner" class="noAction" style="display:none;">
+	<div id="centerBox PopupTitle">
+	<p>OUR DESIGNERS</p>
+	</div>
+	<div id="centerBox ourDesignersDescription">
+	<p style="font-family:Tahoma;">qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?<br><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<a id="joinUsButton"><img src="images/joinUsButton.png"></a>
+</div>
+<div id="popUpDivDesignerForm" class="noAction" style="display:none;">
+	<div id="centerBox PopupTitle">
+		<p>OUR DESIGNERS</p>
+	</div>
+	<div id="formContent">
+	<form id="DesignerForm">
+	<div id="FormData">
+		<div id="DesignerFormLeft">
+			<div id="DesignerFormFirstDescp">
+				<p id="DesignerFormFirstDescp_1">Please fill details below</p>
+				<p id="DesignerFormFirstDescp_2">* Required</p>
+			</div>
+			<div id="DesignerFormFirstArea">
+			<input type="text" name="name" value="Name *" onfocus="if(this.value=='Name *') this.value='';"><br>
+			<input type="text" name="phone" value="Phone *" onfocus="if(this.value=='Phone *')this.value='';"><br>
+			<input type="text" name="email" value="Email *" onfocus="if(this.value=='Email *')this.value='';"><br>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Location of your office or shop</p>
+			</div>
+			<div id="DesignerFormArea">
+			<input type="text" name="address" value="Address *" onfocus="if(this.value=='Address *')this.value='';"><br>
+			<input type="text" name="city" value="City *" onfocus="if(this.value=='City *')this.value='';"><br>
+			<input type="text" name="state" value="State *" onfocus="if(this.value=='State *')this.value='';"><br>
+			<input type="text" name="postcode" value="Postcode *" onfocus="if(this.value=='Postcode *')this.value='';"><br>
+			<input type="text" name="country" value="Country *" onfocus="if(this.value=='Country *')this.value='';"><br>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">List of places your merchandise is sold *</p>
+			</div>
+			<div>
+				<textarea name="place" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Brief description of your style *</p>
+			</div>
+			<div>
+				<textarea name="style" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Tell us a bit about your story *</p>
+			</div>
+			<div>
+				<textarea name="story" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<textarea name="story" rows="3" cols="34">Website</textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Input your social media below</p>
+			</div>
+			<div id="DesignerFormArea">
+			<input type="text" name="facebook" value="Facebook" onfocus="if(this.value=='Facebook')this.value='';"><br>
+			<input type="text" name="twitter" value="Twitter" onfocus="if(this.value=='Twitter')this.value='';"><br>
+			<input type="text" name="pinterest" value="Pinterest" onfocus="if(this.value=='Pinterest')this.value='';"><br>
+			<input type="text" name="instagram" value="Instagram" onfocus="if(this.value=='Instagram')this.value='';"><br>
+			</div>
+			
+			<div id="rightMiddleQA">
+				<br>
+				<p id="rightMiddleQA_Descp">Note, the more non-required questions you answer the better we can evaluate every application:</p><br><br>
+				<p id="Q_1">Do you have your own product<br>photographer? *</p><br><br>
+				<p id="Q_2">Would same day shipping be an option for<br>you?(Labels supplied)</p>
+			</div>
+		</div>
+		
+		<div id="DesignerFormRight">
+			<div>
+				<p id="rightFirstLine">What is the frequency of new designs you create per season?</p>
+			</div>
+			<div>
+				<textarea name="frequency" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Average # of items you keep on hand?</p>
+			</div>
+			<div>
+				<textarea name="average" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">How do you distribute your product to your customers?</p>
+			</div>
+			<div>
+				<textarea name="distribution" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">What are the price points of your merchandise? *</p>
+			</div>
+			<div>
+				<textarea name="price_point" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">Average amount of sales per month? Enter dollar and cent amount *</p>
+			</div>
+			<div>
+				<textarea name="month_sale" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">What "Point of Sale" system  do you use</p>
+			</div>
+			<div>
+				<textarea name="system" rows="4" cols="34"></textarea>
+			</div>
+			<div>
+				<p id="DesignerFormDescp">The average margin you have on your merchandise?</p>
+			</div>
+			<div>
+				<textarea name="margin" rows="4" cols="34"></textarea>
+			</div>
+		</div>
+	</div>
+		<div id="formSend">
+		<input class="closeAll" type="submit" value="SEND" onclick="confirm('TAHNK YOU!');" />
+		</div>
+	</form>
+	
+	</div>
+</div>
+<div id="popUpDivFeatures" class="noAction" style="display:none;">
+	<p id="featureShow">Text for feature One</p>
+	<a href="JavaScript:slideshowBack()"><img src="images/back.jpg" /></a>
+	<a href="JavaScript:slideshowUp()"><img src="images/forward.jpg" /></a>
+	<br><br><br>
+	<button class="openSignUpOptions" type="button">SIGN UP</button>
+</div>
+<div id="popUpSignUpOptions" class="noAction" style="display:none;">
+	<h2>CONCEPTEUR MARKET</h2>
+	<a id="singUpWithFB" href=#><img src="images/signUpFB.png" /></a>
+	<br><br><br>
+	<a id="openSignUpWithEmail" href=#>Sign up with email address</a>
+	<br><br><br>
+	<a class="openLogIn" href=#>LOG IN</a>
+</div>
+<div id="popUpSignUpWithEmail" class="noAction" style="display:none;">
+	<h2>CONCEPTEUR MARKET</h2>
+	<p>Sign up with your Email address</p>
+	<form>
+		<input type="text" value="Name"><br><br>
+		<input type="text" value="Email"><br><br>
+		<input type="text" value="Password"><br><br>
+		<input type="text" value="Re-enter password"><br><br>
+		<input class="closeAll" type="submit" value="SIGN UP">
+	</form>
+	<p>By clicking on Sign up, you agree</p>
+	<p><a href=#>terms & conditions</a>  and  <a href=#>privacy policy</a></p>
+	<p>Already have an account?  <a class="openLogIn" href=#>LOG IN</a></p>
+	
+</div>
+<div id="popUpLogIn" class="noAction" style="display:none;">
+	<h2>CONCEPTEUR MARKET</h2>
+	<a id="logInWithFB" href=#><img src="images/logInFB.png" /></a>
+	<p>or use your details below</p>
+	<form>
+		<input type="text" value="Email"><br><br>
+		<input type="text" value="Password"><br><br>
+		<input class="closeAll" type="submit" value="LOG IN"><br><br>
+	</form>
+	<p>Don't you have an account?  <a class="openSignUpOptions" href=#>SIGN UP</a></p>
+</div>
+</div>
+<!---------------------------- above are sometimes visible and sometimes not ------------------------------------>
+
+<br />
+<br />
+
+
+</body>
+</html>

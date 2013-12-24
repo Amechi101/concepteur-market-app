@@ -1,0 +1,295 @@
+/* CSS Document for Concepteur Market */
+
+/*  Table of Contents
+
+0. Global CSS
+1. Personal Information
+2. Profile 
+3. Saved Looks
+4. Messages
+5. Friends
+6. Find People
+
+*/
+
+/*            Global CSS             */
+
+
+
+
+
+
+
+
+
+
+
+/*      Personal Information     */
+
+.p_info_middle_area {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 648.799px;
+  top: 931.929px;
+  z-index: 1041;
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.List {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1400px;
+  height: 2150px;
+  z-index: 1049;
+}
+.Reply___delt_copy {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1400px;
+  height: 2150px;
+  z-index: 1048;
+}
+.Group_12_copy {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1400px;
+  height: 2150px;
+  z-index: 1046;
+}
+._100_Tottenham_Road_London_Greather_London_N1_4D {
+  font-size: 9.615px;
+  font-family: "FuturaStd";
+  color: rgb( 141, 141, 141 );
+  line-height: 1.938;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 919.266px;
+  top: 1052.323px;
+  z-index: 1045;
+}
+.Address_City_State_Post_Code_Country_copy {
+  font-size: 10.817px;
+  font-family: "FuturaStd";
+  color: rgb( 0, 0, 0 );
+  line-height: 1.722;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 737.113px;
+  top: 1050.941px;
+  z-index: 1044;
+}
+._100_Tottenham_Road_London_Greather_London_N1_4D {
+  font-size: 9.615px;
+  font-family: "FuturaStd";
+  color: rgb( 141, 141, 141 );
+  line-height: 1.938;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 488.266px;
+  top: 1052.323px;
+  z-index: 1043;
+}
+.Address_City_State_Post_Code_Country {
+  font-size: 10.817px;
+  font-family: "FuturaStd";
+  color: rgb( 0, 0, 0 );
+  line-height: 1.722;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 306.113px;
+  top: 1050.941px;
+  z-index: 1042;
+}
+.p_info {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 648.799px;
+  top: 931.929px;
+  z-index: 1041;
+}
+.__copy_11 {
+  background-image: url("images/| copy 11.png");
+  position: absolute;
+  left: 289px;
+  top: 965px;
+  width: 823px;
+  height: 1px;
+  z-index: 1040;
+}
+.SHIPPING_INFORMATION {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 211.927px;
+  top: 931.929px;
+  z-index: 1039;
+}
+.Group_12 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1400px;
+  height: 2150px;
+  z-index: 1037;
+}
+.VISA______6727_Hanna_B__Simmons_07_14 {
+  font-size: 9.615px;
+  font-family: "FuturaStd";
+  color: rgb( 141, 141, 141 );
+  line-height: 1.938;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 916.497px;
+  top: 649.453px;
+  z-index: 1036;
+}
+.Credit_Card_Name_on_Card_Expire_date {
+  font-size: 10.817px;
+  font-family: "FuturaStd";
+  color: rgb( 0, 0, 0 );
+  line-height: 1.722;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 746.908px;
+  top: 647.509px;
+  z-index: 1035;
+}
+.Hanna_hanna_aol_com_Female_23_05_1982_London____ {
+  font-size: 9.615px;
+  font-family: "FuturaStd";
+  color: rgb( 141, 141, 141 );
+  line-height: 1.938;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 482.016px;
+  top: 665.769px;
+  z-index: 1034;
+}
+.Name_Email_Gender_Birthday_Location_Password {
+  font-size: 10.817px;
+  font-family: "FuturaStd";
+  color: rgb( 0, 0, 0 );
+  line-height: 1.722;
+  text-align: left;
+  -moz-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -webkit-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  -ms-transform: matrix( 1.66402178269348,0,0,1.66402178269348,0,0);
+  position: absolute;
+  left: 306.741px;
+  top: 666.003px;
+  z-index: 1033;
+}
+.PAYMENT_METHOD {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 656.039px;
+  top: 540.929px;
+  z-index: 1032;
+}
+.__copy_14 {
+  background-image: url("images/| copy 14.png");
+  position: absolute;
+  left: 289px;
+  top: 849px;
+  width: 823px;
+  height: 1px;
+  z-index: 1031;
+}
+.__copy_11 {
+  background-image: url("images/| copy 11.png");
+  position: absolute;
+  left: 289px;
+  top: 574px;
+  width: 823px;
+  height: 1px;
+  z-index: 1030;
+}
+.PERSONAL_INFO {
+  font-size: 49px;
+  font-family: "FuturaStd";
+  color: rgb( 178, 178, 178 );
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -webkit-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  -ms-transform: matrix( 0.65305579579496,7.23190507368521e-17,0,0.65305579579496,0,0);
+  position: absolute;
+  left: 235.492px;
+  top: 540.929px;
+  z-index: 1029;
+}
+.__copy_12 {
+  background-image: url("images/| copy 12.png");
+  position: absolute;
+  left: 700px;
+  top: 574px;
+  width: 1px;
+  height: 602px;
+  z-index: 1027;
+}
+*/
