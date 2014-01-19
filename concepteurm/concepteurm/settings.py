@@ -1,6 +1,4 @@
-# Django settings for concepteurm project.
-# import os
-# BASE_DIR = os.path.abspath(os.path.dirname(__file__)) + os.sep
+# Django settings for concepteurm project
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,53 +9,18 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#         'NAME': 'test',                      # Or path to database file if using sqlite3.
-#         # The following settings are not used with sqlite3:
-#         'USER': '',
-#         'PASSWORD': '',
-#         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-#         'PORT': '',                      # Set to empty string for default.
-#         # 'INSTANCE': 'concepteur-7823-m-002792:core',
-#     }
-# }
-
-#From Google Cloud Services
-import server
-import os
-if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
-    # Running on production App Engine, so use a Google Cloud SQL database.
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': 'concepteur-7823-m-002792:core',
-            'NAME': 'test',
-            'USER': '',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'test',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
+        # 'INSTANCE': 'concepteur-7823-m-002792:core',
     }
-# elif os.getenv('SETTINGS_MODE') == 'prod':
-#     # Running in development, but want to access the Google Cloud SQL instance
-#     # in production.
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',  #google.appengine.ext.django.backends.rdbms'
-#             'INSTANCE': 'concepteur-7823-m-002792:core',
-#             'NAME': 'test',
-#             'USER': '',
-#         }
-#     }
-else:
-    # Running in development, so use a local MySQL database.
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'test',
-            'USER': '',
-            'PASSWORD': '',
-        }
-    }
+}
 
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -141,7 +104,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'concepteurm.urls' #concepteurm.
+ROOT_URLCONF = 'concepteurm.urls' 
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'concepteurm.wsgi.application'
@@ -150,8 +113,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    # '/Users/amechiegbe/Downloads/CMdev/CMapp/concepteurm/templates/admin/base_site.html',
-    '/Users/amechiegbe/Downloads/CMdev/CMapp/concepteurm/templates',
+    '/Users/amechiegbe/Desktop/cm_dev/github_cm_dev/concepteurm/templates/admin',
+ 
 
 )
 
@@ -169,48 +132,17 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+)
     
 #Apps for Concepteur Market
     
-    # 'p_infoapp',
-    # 'user_c_model',
+
 
 #Third Party Apps
 
-    #Userna#
-    'userena',
-    'guardian',
-    'easy_thumbnails',
-    'accounts',
+ 
 
 
-)
-
-############### Required information for USERNA (app) ###########################
-
-AUTHENTICATION_BACKENDS = (
-    'userena.backends.UserenaAuthenticationBackend',
-    'guardian.backends.ObjectPermissionBackend',
-    'django.contrib.auth.backends.ModelBackend',
-)
-
-#Email backend
-
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'info@concepteurmarket.com'
-EMAIL_HOST_PASSWORD = 'columbia2015'
-
-# Misc Settings
-
-LOGIN_REDIRECT_URL = '/accounts/%(amechiegbe)s/'
-LOGIN_URL = '/accounts/signin/'
-LOGOUT_URL = '/accounts/signout/'
-
-ANONYMOUS_USER_ID = -1
-
-AUTH_PROFILE_MODULE = 'accounts.MyProfile'
 
 
 # A sample logging configuration. The only tangible logging

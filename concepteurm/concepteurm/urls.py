@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, include, url
-# from concepteurm import ProfileView
-# from django.utils.translation import ugettext as _
+
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin

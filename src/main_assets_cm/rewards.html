@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rewards</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <!--   CSS LINKS -->
+  
+    <!--  CSS for Icons  -->
+    <link rel="stylesheet" type="text/css" href="icons_cm/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    
+
+    <!--  CSS for resets  -->
+    <link rel="stylesheet" type="text/css" href="css/normalizeSub.css" />
+
+  <style type="text/css">
+/************** General styling section *************************/
+
+.ps-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: #555;
+  background: #fff;
+}
+
+.ps-container > div {
+  position: absolute;
+  width: 50%;
+}
+
+.ps-container > div > div,
+.ps-slidewrapper > nav,
+.ps-slides > div {
+  position: absolute;
+}
+
+.ps-header {
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  z-index: 1001;
+ background: rgb(33,33,33);
+}
+
+.ps-header h1 {
+  color: #ccc;
+  line-height: 3px;
+  margin: 0;
+  padding: 0 50px;
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+
+
+/*   nav section   */
+.ps-container .miniNav {
+float:left;
+margin:24px 0px 0 0px;
+
+}
+
+ .ps-container .miniNav ul li {
+   list-style:none;
+ }
+ 
+ 
+ .ps-container .miniNav ul li a {
+ text-decoration: none;
+  color: rgb(255,255,255);
+  font-family: "freight-sans-pro";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+  text-transform:none;
+  border:1px solid rgb(255,255,255);
+  padding:5px 10px;
+}
+
+.ps-container .miniNav ul li:nth-of-type(1) {
+margin-bottom:0;
+
+
+}
+
+.miniNav ul li a:hover {
+background: rgb(26,188,156);
+-webkit-transition: color 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  -ms-transition: color 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+/* point total  */
+
+.ps-header .cl_wrap {
+position:absolute;
+right:20px;
+bottom:10px;
+
+}
+
+
+.ps-header .cl_wrap  .userCurrent .userCPoints,
+.ps-header .cl_wrap  .userLife .userLPoints {
+color: rgb(18,194,134);
+  font-family: "freight-sans-pro";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+}
+
+.ps-container .userCurrent .userCPoints span::before {
+content:attr(data-current);
+padding-left:5px;
+}
+
+.ps-container .userLife .userLPoints span::before {
+content:attr(data-life);
+padding-left:5px;
+}
+
+
+/*********** Main content area ***********************/
+.ps-contentwrapper {
+  top: 150px;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.ps-content {
+  background:rgb(26,188,156);
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px 50px 50px;
+  overflow: auto;
+}
+
+.ps-content p {
+  line-height: 26px;
+  font-size: 1.3em;
+  font-family: "freight-sans-pro";
+  font-weight: 300;
+  font-style: normal;
+ color: rgb(255,255,255);
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  padding: 10px 15px;
+  text-align: justify;
+  border-top: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  }
+
+
+.no-touch .ps-content a:last-child:hover {
+  color: #b2d79d;
+  border-color: #b2d79d;
+}
+
+
+.ps-slidewrapper {
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ps-slides {
+  top: 0px;
+  bottom: 200px;
+  width: 100%;
+}
+
+.ps-slides > div {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 9999px rgba(255,255,255,0.2);
+}
+
+.ps-slidewrapper > nav {
+  width: 100%;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.ps-slidewrapper > nav > a {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: left;
+  box-shadow: inset 0 0 0 9999px rgba(26,188,156,0.7);
+  outline: none;
+}
+
+.ps-slidewrapper > nav > a:first-child {
+  box-shadow: inset 0 0 0 9999px rgba(26,188,156,0.5);
+}
+
+.no-touch .ps-slidewrapper > nav > a {
+  -webkit-transition: box-shadow 0.4s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out;
+  -ms-transition: box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.no-touch .ps-slidewrapper > nav > a:hover {
+  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.9);
+}
+
+.no-touch .ps-slidewrapper > nav > a:first-child:hover {
+  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.7);
+}
+
+
+.ps-slidewrapper > nav > a:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -50px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.ps-slidewrapper > nav > a:first-child:after {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  margin: -80px 0 0 -50px;
+}
+
+.ps-slides > div,
+.ps-slidewrapper > nav > a {
+  background-color: #fff;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.ps-move {
+  -webkit-transition: top 400ms ease-out;
+  -moz-transition: top 400ms ease-out;
+  -o-transition: top 400ms ease-out;
+  -ms-transition: top 400ms ease-out;
+  transition: top 400ms ease-out;
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+
+  .js .ps-container > div {
+    width: 100%;
+  }
+
+  .js .ps-header {
+    height: 50px;
+  }
+
+  .js .ps-header h1 {
+    line-height: 50px;
+    padding: 0px 20px;
+    letter-spacing: 4px;
+  }
+
+  .js .ps-slides {
+    bottom: 320px;
+    top: 50px;
+  }
+
+  .js .ps-slidewrapper > nav {
+    height: 100px;
+  }
+
+  .js .ps-contentwrapper {
+    top: auto;
+    height: 220px;
+    bottom: 100px;
+  }
+
+  .js .ps-content {
+    padding: 10px;
+  }
+
+  .js .ps-content h2 {
+    border-right: none;
+    font-size: 18px;
+    margin: 10px 0;
+    padding-top: 0;
+  }
+
+  .js .ps-content span.ps-price {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .js .ps-content p {
+    line-height: 20px;
+    border: none;
+    padding: 5px 10px;
+    height: 80px;
+    overflow-y: scroll;
+  }
+
+  .js .ps-content a:last-child {
+    font-size: 13px;
+    margin: 10px 20px 0 0;
+  }
+}
+
+/*  scrap code */
+
+/*.ps-content h2 {
+  padding: 10px 15px;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  letter-spacing: 4px;
+  margin: 10px 0 30px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.ps-content a:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: 4px;
+  float: right;
+  border: 3px solid #555;
+  padding: 3px;
+  text-indent: 4px;
+}
+
+.no-touch .ps-content a:last-child:hover {
+  color: #b2d79d;
+  border-color: #b2d79d;
+}
+*/
+
+
+</style>
+  
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  
+</head>
+<body>
+  <!-- Part 1: Wrap all page content here -->
+   
+    <section id="ps-container" class="ps-container">
+          <div class="ps-header">
+            <img class="logo" src="images/logo15.png"></img>
+            <h1>Rewards</h1>
+            <div class="cl_wrap">
+              <div class="userCurrent">
+                <span class="userCPoints">Current Points:<span data-current="4000"></span></span>
+              </div>
+              <div class="userLife">
+                <span class="userLPoints">Lifetime Points:<span data-life="10000"></span></span>
+              </div>
+            </div>
+            <nav class="miniNav">
+              <ul>
+                <li><a class="miniNavSub" href="profile.html">BACK TO PROFILE</a></li>
+              </ul>
+            </nav>
+          </div>
+            
+            <div class="ps-contentwrapper">
+          
+             <!-- Available rewards-->
+            
+            <div class="ps-content"> 
+              <div class="messageIf_not">
+                <p>Currently no available rewards</p>
+              </div>
+              <ul>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+              </ul>
+            </div>  
+      
+      <!-- Reward Pool-->
+              <div class="ps-content"> 
+              <div class="messageIf_not">
+                <p>Currently no rewards in your reward pool</p>
+              </div>
+              <ul>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+              </ul>
+            </div>  
+        
+        <!-- Badges (reward)-->
+       <div class="ps-content"> 
+              <div class="messageIf_not">
+                <p>No Badges yet</p>
+              </div>
+              <ul>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+              </ul>
+            </div>  
+
+         <!-- previously purchased rewards -->
+       <div class="ps-content"> 
+              <div class="messageIf_not">
+                <p>No rewards purchased yet</p>
+              </div>
+              <ul>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+                <li>
+                  <div class="userContent">
+                   <!-- enter content here -->
+                  </div>
+                </li>
+              </ul>
+            </div>  
+      
+        
+      </div><!-- /ps-contentwrapper -->
+      
+      <div class="ps-slidewrapper">
+      
+        <div class="ps-slides">
+          <div style="background-image:url(images/rewardsPurchase.png);"></div>
+          <div style="background-image:url(images/rewardPool.png);"></div>
+          <div style="background-image:url(images/badges.png);"></div>
+           <div style="background-image:url(images/previous.png);"></div>
+          
+        
+          
+        </div>
+        
+        <nav>
+          <a href="#" class="ps-prev" ></a>
+          <a href="#" class="ps-next" ></a>
+        </nav>
+        
+      </div><!-- /ps-slidewrapper -->
+      
+    </section><!-- /ps-container -->
+
+
+
+    </div> <!--end wrap -->
+
+    
+       <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+    <script src="js/jquery_cm.js"></script>
+   <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript">
+      $(function() {
+
+        Slider.init();
+      
+      });
+    </script>
+    <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    
+
+
+  </body>
+</html>
