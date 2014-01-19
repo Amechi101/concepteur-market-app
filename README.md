@@ -6,10 +6,3 @@ I've added a few files:
 
 ~ Erik
 
-===============
-
-9/23/13:
-
-For Yuan and Naomi, I have added the front-end documentation in frontend_cm, to help aid in the protocol and important info! I will add a best practice to the folder in the coming days.
-
--Amechi
