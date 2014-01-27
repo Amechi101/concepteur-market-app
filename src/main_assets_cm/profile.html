@@ -2,224 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title>Concepteur</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
   <!--   CSS LINKS -->
   
     <!--  CSS for Icons  -->
-    <link rel="stylesheet" type="text/css" href="icons_cm/foundation-icons/foundation-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
     <link rel="stylesheet" type="text/css" href="css/iconStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/subIconStyle.css">
+
     
     <!--  CSS for resets  -->
     <link rel="stylesheet" type="text/css" href="css/normalizeBase.css">
     <link rel="stylesheet" type="text/css" href="css/hiddenMenu.css">
 
     <!--  CSS for other styles  -->
-    <link rel="stylesheet" type="text/css" href="css/animations.css">
-    <link rel="stylesheet" type="text/css" href="css/notification(profile).css">
-      
-  <style type="text/css">
+ 
+    <link rel="stylesheet" type="text/css" href="css/homePageMain.css">
 
-/* general wrap and for 960 grid system */
+  <style type="text/css">
+   body {
+  background: url('images/home15.jpg') no-repeat 0% 50% fixed;
+  background-size:cover;
+ }
 
 .wrap {
-/*  padding: 70px 0 0 150px;*/
-padding: 30px 0 0 85px;
-
-}
-
-
-/*  logo settings */
-.logo, .mainHeadNav, .mainHeadNav2 {
-  text-decoration: none; 
-  position: absolute;
-  z-index: 100;
-}
-
-.mainHeadNav, .mainHeadNav2 {
-  font-family: "freight-sans-pro",sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.6em;
-  color: rgb(255,255,255);
-  letter-spacing:1px;
-}
-
-.mainHeadNav:hover , .mainHeadNav2:hover {
-  color: rgb(18, 194, 134);
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  transition: all 0.3s linear 0s;
-}
-
-
-.logo {
-  top: 10px;
-  margin: 0 auto;
-  left: 410px;
-  right: 0;
-  max-width: 100%;
-  background-image: url('images/logo15.png');
-  background-repeat:no-repeat;
-  height:40px;
-}
-
-.mainHeadNav {
-  top: 25px;
-  right: 250px;
-}
-
-.mainHeadNav2 {
-   top: 25px;
-  right: 30px;
-}
-
-
+background:none repeat scroll 0% 0% rgba(0,0,0,0.4) ;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+ }
+ 
 /*************  general info for grid area and box style *************/
 .grid_main {
   max-width: 1300px;
-  margin: 0 auto;
+  margin:0 0px 0 59px;
   list-style: none;
   text-align: center;
-  top: 0;
 }
+
 
 .grid_main .boxFeatures {
   float: left;
   position: relative;
-  top: 70px;
-  background: none;
-  width: 230px;
-  height: 230px;
-  margin: 0px 5% 0.3% 0px;
+  top: 300px;
+  background: rgba(0,0,0,0.5);
+  border-radius:50%;
+  width: 240px;
+  height: 240px;
+ margin: 2% 4% 0% 0px;
   overflow: hidden;
+
 }
 
 .grid_main .boxFeatures {
-
-/*border-top:1px solid rgb(255,255,255);*/
-transition:background 2s, border-color 2s ,border-radius 2s, border 2s;
-/* backface-visibility:visible;
-perspective:500px;
-perspective-origin:(50% 5%);*/
+transition: border 1s, background 1s, transform 2s;
 }
 
 .grid_main .boxFeatures:hover {
-/*transform:rotate3d(0, 90, 0,200deg);*/
 border:1px solid rgb(18, 194, 134);
-border-color: rgb(18, 194, 134);
-border-radius:50%;
-background:rgba(0,0,0,0.3);
-}
-
-
- .grid_main .userBox {
- background: none !important;
- border:0 !important;
-}
- 
-
-.grid_main .emptyBox {
-background: url(images/no1.png);
-
-} 
-
-/*************  (user info) first box  *************/
-
-.user_photo_container {
-margin-top:-5px;
-}
-
-
-.user_photo_container img {
-  margin-top: 18px;
-  border: 2px solid rgb(255,255,255);
-  border-radius: 50%;
-}
-
-.grid_main .user_photo_container figcaption {
-  padding-bottom: 30px;
-}
-
-.grid_main .user_name span {
-  color: rgb(255,255,255);
-  font-family: "freight-sans-pro","p22-underground";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
-
-.grid_main .user_inner li {
-  position: relative;
-  top: -215px;
-  padding: 32px 0 0 0;
-  background: rgb(255,255,255);
-  list-style: none;
-}
-
-.grid_main .user_inner li a {
-  text-decoration: none;
-  color: rgb(0,0,0);
-  font-family: "freight-sans-pro";
-  font-weight: 300;
-  font-style: normal;
-  font-size: 15px;
-  position:relative;
-  bottom:12px;
-}
-
-.grid_main .user_inner {
-  height: 100%;
-  width: 100%;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-  
-  backface-visibility: hidden;
-   transition: transform 0.4s, opacity 0.4s;
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s; 
-}
-
-
-.grid_main .user_inner:hover {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-
-.grid_main .user_inner a:hover {
-  color: rgb(18, 194, 134);
-
-  -webkit-transition: color 0.3s ease-in;
-  -moz-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-}
-
-.grid_main .user_name .userState {
-  color:rgb(255, 255, 255);
-  font-family: "freight-sans-pro","p22-underground";
-  font-weight: 300;
-  font-style: normal;
-  font-size: 13px;
+background:rgba(0,0,0,0.9);
+transform:scale(1.2);
 }
 
 /**********************  Rest of Box's apart of main area ****************/
@@ -230,246 +75,30 @@ height:100%;
 overflow:hidden;
 }
 
-.boxFeatures a {
-text-decoration:none;
-}
 
-
- .boxFeatures .inspire h2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 95px;
-  color: rgb(18, 194, 134);
-  font-family: "freight-sans-pro","p22-underground";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 25px;
-}
-
- .boxFeatures .inspire p {
-position: absolute;
-  left: 0;
-  right: 0;
-  bottom:80px;
+.boxFeatures .inspire h2,
+.boxFeatures .inspire p {
 color: rgb(18, 194, 134);
-  font-family: "freight-sans-pro","p22-underground";
-  font-weight: 300;
-  font-style: normal;
-}
-
-
-/*.boxFeatures .inspire h4 {
-
--webkit-transition: color 0.3s ease-in;
-  -moz-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
-  border-radius:50%;
-  transition: all 0.3s ease-in;
-  transform:scale(0);
-}
-
-
-
-
-.boxFeatures a:hover .inspire h4 {
-background:rgba(18, 194, 134,0.8);
--webkit-transition: color 0.3s ease-in;
-  -moz-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  transform:scale(1.3);
-  
-}
-
-
- .boxFeatures .inspire h4 {
-  text-decoration: none;
-  color: rgb(0,0,0);
-  font-family: "freight-sans-pro";
-  font-weight: 300;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 24;
-  padding: 0 8px;
- }
-*/
-
-/* Box Shapes */
-
-.box1 {
-border-top:1px solid rgb(255,255,255);
-/*border-bottom:1px solid rgb(255,255,255);*/
-}
-
-.box2 {
-/*border-top:1px solid rgb(255,255,255);*/
-border-bottom:1px solid rgb(255,255,255);
-}
-
-.box3 {
-border-right:1px solid rgb(255,255,255);
-border-bottom:1px solid rgb(255,255,255);
-}
-
-.box4 {
-border-top:1px solid rgb(255,255,255);
-border-left:1px solid rgb(255,255,255);
-}
-
-.box5 {
-border-top:1px solid rgb(255,255,255);
-
-}
-
-/********* Hidden Dashoboard ****************/
-
-#Dashboard {
-background:rgba(0,0,0,0.9);
-position:fixed;
-margin:0 auto;
-padding:0;
-width:50%;
-height:55%;
-overflow: hidden;
-z-index:3000;
-color: rgb(255,255,255);
-border-top:1px solid rgb(255,255,255);
-border-left:1px solid rgb(255,255,255);
-border-right:1px solid rgb(255,255,255);
-}
-
-#Dashboard {
-top:570px; /* For Javascript to allow for the hover */
-transition:top 2s, border-top 2s, border-left 2s, border-right 2s ;
-left:0;
-right:0;
-}
-
-#Dashboard:hover {
-top: 200px !important;
-border-top:1px solid rgb(18, 194, 134);
-border-left:1px solid rgb(18, 194, 134);
-border-right:1px solid rgb(18, 194, 134);
-}
-
-
-#Dashboard .dashTitle {
-color: rgb(18, 194, 134);
-  font-weight: 300;
-  font-size: 2.5em;
-text-align:center;
- text-transform:uppercase;
-}
-
-#Dashboard h2 {
-font-weight: 300;
-color:rgb(18, 194, 134);
-font-size: 1.0em;
-text-align:center;
-line-height:2;
- word-spacing:3px;
-}
-
-
-.dashInner, .dashInnerAdd, .dashTitle {
-font-family: "freight-sans-pro",sans-serif;
 font-style: normal;
- position:relative;
+font-family: "Satellite","p22-underground";
+position: absolute;
+left: 0;
+right: 0;
+font-weight: 400;
+text-transform:uppercase;
+letter-spacing:1px;
 }
- 
-    
-/* Designers, Points, Badges and Boutiques Info */
-   
-.dashInner {
-    border-top:rgb(18, 194, 134) 1px solid;
-    clear:both;
-    top:30px;
-}  
-    
- 
-    .dashInner li {
-        display:inline-block;
-        vertical-align:middle;
-        text-align:center;
-        padding-left:49px;
-        position:inherit !important;
-        margin:20px auto;
-        left:40px;
-        line-height:1.3;
-       }
-    
-    
-    .dashInner li span {
-      font-weight: 300;
-      color:rgb(255, 255, 255);
-      font-size: 1.1em;   
-      line-height:2px;
-     }
-     
-     .dashInner li span::before, 
-     .dashInner li span::after {
-      content:"";
-      position:absolute;
-      top:20px;
-      bottom:0px;
-      left:0px;
-      right:0px;
-      padding:35px 47px 20px 34px ;
-      margin-left:34px;
-      }
-     
-/* For Specific tally up in D, P, B & B   */
-     
-     .dashInner .dashInfo span::before,
-     .dashInner .dashInfo2 span::before,
-     .dashInner .dashInfo3 span::before,
-     .dashInner .dashInfo4 span::before {
-      content:attr(data-value);
-      color:rgb(18, 194, 134);
-     }
-      
-     .dashInner .dashInfo2 span::before {
-      margin-left:56px;
-      }
-      
-      .dashInner .dashInfo3 span::before {
-      margin-left:40px;
-      }
-      
-       .dashInner .dashInfo4 span::before {
-      margin-left:45px;
-      }
-      
-/* For Adding Boutiques, Designers and Personal Looks */
-    
-    .dashInnerAdd {
-        border-top:rgb(18, 194, 134) 1px solid;
-      }
-    
-    .dashInnerAdd li {
-      list-style:none;
-      margin:20px 0px 0 70px;
-      display:inline-block;
-    }
- 
-    .dashInnerAdd li a {
-        text-decoration: none;
-        transition:all 0.3s ease-in 0s;
-        color: rgb(255,255,255);
-        font-weight: 300;
-        font-size: 1.0em;
-        text-transform:none;
-        border:1px solid rgb(255,255,255);
-        padding:5px 10px;
-    }
-    
-    .dashInnerAdd li a:hover  {
-    border-color:rgb(18, 194, 134) !important;
-    color:rgb(18, 194, 134) !important;
-    }
+
+.boxFeatures .inspire h2 {
+ top: 95px;
+font-size: 1.4em;
+}
+
+.boxFeatures .inspire p {
+bottom:80px;
+}
+
+  
     
 </style>
   
@@ -489,13 +118,7 @@ font-style: normal;
       <!-- top navbar -->
       
       <header>
-        <nav id="Nav">
-          <ul class="mainHead">
-            <div class="logo"></div>
-           <!--  <a id="" href="#Dashboard" class="mainHeadNav">Dashboard</a> -->
-            <a href="#" class="mainHeadNav2">Shop Collection</a>
-          </ul>
-        </nav>
+        <div class="logo"></div>
       </header> 
       
     
@@ -505,165 +128,83 @@ font-style: normal;
       <nav id="bt-menu" class="bt-menu">
         <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
         <ul>
-            <li><a href="profile.html"><span class="icon-home"></span></a></li>
-            <li><a href="#">Company<i class="fi-info"></i></a></li>
-            <li><a href="#">Designers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Conditions</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
           <ul>
-          <li><a href="#" class="bt-icon icon-twitter">Twitter</a></li>
-          <li><a href="#" class="bt-icon icon-facebook">Facebook</a></li>
+  
+         <li><a >Copyright © 2014 Concepteur, All rights reserved. </a></li>
+       <!--    <li><a href="#" class="bt-icon icon-facebook">Facebook</a></li>  -->
         </ul>
       </nav>
       </section>
          
           <!-- grid -->
       <main class="grid_main">  
- <!--      <h3>DashBoard</h3> -->
-        <section class="boxFeatures userBox">
-        <div>
-          <figure class="user_photo_container">
-            <img src="images/user_icon.png" />
-            <figcaption class="user_name">
-              <span data-name="">Kelly Hanna</span>
-              </br><span data-city="" data-state="" class="userState">Manhattan, NY</span>
-            </figcaption>
-          </figure>
-          <ul class="user_inner">
-            <li><a href="#">Change Photo<i class="fi-photo"></i></a></li> <!--add icon -->
-            <li><a  class="md-trigger" data-modal="modal-3" href="#">View Notifications<i class="fi-megaphone"></i></a></li>  <!--add icon -->
-            <li><a href="account.html">Account<i class="fi-info"></i></a></li> <!--add icon -->
-            <li><a href="#">Settings<i class="fi-widget"></i></a></li>
-          </ul>
-        </div>
+
+        <section class="boxFeatures">
+          <a id="" href="#">
+            <div   class="inspire">
+              <h2>About Us</h2>   
+              <p>"Click 'N Tell"</p>
+            </div>
+          </a>
         </section>
+  
         
-       
-        <section class="boxFeatures box1">
-         <a href="live_feed.html">
-          <div   class="inspire">
-            <h2>Social Feed<span class="icon-feed pulse"></span></h2>   
-            <p> Discover with friends</p>
-          <!--   <h4>Enter<span class="icon-enter"></span></h4> -->
-          </div>
-           </a>
-        </section>
-   
-
- 
-        <section class="boxFeatures box2">
-          <a href="moodboard.html">
+        <section class="boxFeatures">
+          <a href="live_feed.html">
             <div class="inspire">
-              <h2>Inspiration Board<span class="icon-lamp tossing"></span></h2>  
-              <p> Create Your Own Designs</p>
-            <!--   <h4>Enter<span class="icon-enter"></span></h4> -->
-            </div>
-          </a>
-        </section>
-    
-         <section class="boxFeatures box3">
-          <a href="messages.html">
-            <div class="inspire">
-              <h2>Messages<span class="icon-comments"></span></h2>  
-              <p> Talk with friends</p>
-            <!--   <h4>Enter<span class="icon-enter"></span></h4> -->
+              <h2>Take A Look</h2>  
+              <p> "Discover"</p>
             </div>
           </a>
         </section>
 
-
-        <section class="boxFeatures box4">
-          <a href="friends.html">
+        <section class="boxFeatures">
+          <a href="#">
             <div class="inspire">
-              <h2>Friends<span class="icon-group"></h2>  
-              <p> Connect and Find friends</p>
-  <!--             <h4>Enter<span class="icon-enter"></span></h4> -->
+              <h2>Sign Up</h2>  
+              <p>"Simple"</p>
             </div>
           </a>
         </section>
 
         <section class="boxFeatures box5">
-          <a href="rewards.html">
+          <a href="#">
             <div class="inspire">
-              <h2>Rewards<span class="icon-dollar"></h2>  
-              <p>Rewards Area</p>
-           <!--    <h4>Enter<span class="icon-enter"></span></h4> -->
+              <h2>Sign-In</h2>  
+              <p>"All-Access"</p>
             </div>
           </a>
         </section>
-        
-  <!--       <section class="boxFeatures bounce">
-          <a href="create_model.html">
-            <div class="inspire">
-              <h2>3D Model<span class="icon-female"></span></h2>  
-              <p> Virtual Model</p>
-              <h4>Enter<span class="icon-enter"></span></h4>
-            </div>
-          </a>
-        </section> -->
-
-         <!-- nothing, just box as filler -->
-      <!--   <section class="boxFeatures floating emptyBox"></section> -->
-
-
-
+      
       </main>  <!-- end grid main-->
       
-      <!-- Dashboard start -->
-      <div id="Dashboard"> 
-        <h2 class="dashTitle">Dashboard</h2>
-        <nav>
-          <ul class="dashInnerAdd">
-          <h2>Share A Boutique, Designer or Personal Look With The Community!</h2>
-            <li><a href="#">Add a Boutique</a></li>
-            <li><a href="#"> Add a Designer</a></li>
-            <li><a href="#">Upload a Look</a></li>
-          </ul>
-        </nav>  
-          <ul class="dashInner">
-          <h2>View Contribution Stats and Reward Points </h2>
-            <li class="dashInfo"><span data-value="2">Badges</br> Earned</span></li>
-            <li class="dashInfo2"><span data-value="500">Current Reward</br>  Points</span></li>
-            <li class="dashInfo3"><span data-value="11"> Boutiques</br>  Added</span></li>
-            <li class="dashInfo4"><span data-value="4">Designers</br>  Added</span></li>
-          </ul>
-      </div>
-
+     
 
     </div> <!--end wrap -->
 
      
-<!-- Infomoration for USer Notification -->
-     <div class="md-modal md-effect-3" id="modal-3">
-      <div class="md-content">
-        <h3>Notifications<button class="md-close"><i class="fi-x"></i></button></h3>
-        <div class="md-user-content">
-          <ul>
-            <li><span class="md-notification"> No New Notifications</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-<div class="md-overlay"></div><!-- the overlay element -->
-
-<!--end USer Notification (info) --> 
 
        <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="js/jquery_cm.js"></script>
+    <script src="js/lib/jquery.js"></script>
     <script src="js/lib/jquery-ui-1.10.3.custom.js"></script>
     <script src="js/borderMenu_cm.js"></script>
-    <script src="js/classie_cm.js"></script>
-    <script src="js/modalEffects.js"></script>
+    <script src="js/lib/classie.js"></script>
     <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript">
       $(function() {
-        $('#Dashboard').height($(document).height());
+       
+
       });
-    </script>
+    </script> 
 
   </body>
 </html>

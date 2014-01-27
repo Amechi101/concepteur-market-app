@@ -3,240 +3,243 @@
   <head>
     <meta charset="utf-8">
     <title>Social Feed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="icons_cm/foundation-icons/foundation-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalizeBase.css">
-     <link rel="stylesheet" type="text/css" href="css/iconStyle.css">
-    <!--<script src="js/mrdoob/build/three.js"></script> -->
+    <!--   CSS LINKS -->
   
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
-	<style type="text/css">
+    <!--  CSS for Icons  -->
+   <!--  <link rel="stylesheet" type="text/css" href="css/subIconStyle.css"/> -->
+    
+    <!--  CSS for resets  -->
+    <link rel="stylesheet" type="text/css" href="css/normalizeBase.css"/>
+
+    <!--  CSS for other styles  -->
+
+    
+
+    <style type="text/css">
 
 body {
-background: rgba(0,0,0,0.7);
+background: white;
+
 }
 
 
-/*  logo settings */
-.liveMenu .logo, .set {
-  text-decoration: none; /*position: fixed;
-  */
-position: absolute;
-  z-index:400;
+/*   Top header   */
+.socialHeadInner, .socialHeadInner .logo,
+.socialHeadInner div.m-search {
+z-index:1000;
 }
 
-.liveMenu .logo {
- top: 10px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  background-image: url('images/logo15.png');
-  background-repeat:no-repeat;
-  width:397px;
-  height:50px;
+.socialHeadInner {
+ float:left;
+ width:100%;
+
+ padding:20px 0;
  }
-
-.set {
-  font-family: "freight-sans-pro",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5em;
-  top: 20px;
-  right: 40px;
-  color: rgb(255,255,255);
-}
-
-.set:hover {
- transition: color 0.3s ease-in;
- color:rgb(18, 194, 134);
-}
-
-
-
-
-.liveMenu .icon-home {
-position:relative;
-right:-30px;
-font-size:25px;
-}
-
-
-
-
-/*  header settings   */
-
-.liveMenu {
-position:fixed;
-width:100%;
-background:rgba(33,33,33,0.97);
-height:70px;
-border-bottom:1px solid rgb(18, 194, 134);
-padding-top:1px;
-z-index:90;
-
-}
-
-
-
-
-.liveMenu form {
-position:relative;
-left:10px;
-top:5px;
-}
-
-.liveMenu .topMenu {
-z-index:90;
-
-
-}
-
-.liveMenu .innerMenu {
-position:relative;
-left:10px;
-top:-15px;
-}
-
-.liveMenu .innerMenu > li {
-color:rgb(255,255,255);
-font-family: "freight-sans-pro",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:17px;
-}
-
-
-
-
-/* ********* Main Area ******************/
-
-/* general wrap and for 960 grid system */
-
-.wrap {
-/*padding: 0px 0 0 30px;*/
-margin:0;
-clear:both;
-}
-
-
-
-/*   settings for side nav   */  
-
-.grid_main .feedNav  {
-position:relative;
-float:left;
-top:100px;
-background-color:rgb(18,193, 118);
-height:100%;
-width:85px;
-
-
-}
-
-.grid_main .feedNav .feedNavInner li {
-text-align:center;
-border-bottom:1px white solid;
-
-}
-
-.grid_main .feedNav .feedNavInner li a {
-color: rgb(255,255,255);
-  font-size: 3.0em;
-  text-decoration:none;
-  display:block;
-
-}
-
-
-
-
-
-
-
-/*  for the live feed area general  */
-/*.grid_main {
-  padding: 30px 0px 0px 0px;
-  position:absolute;
-  max-width: 1300px;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-  overflow: hidden;
-}
-
-.grid_main .boxFeatures {
-  float: left;
-  position: relative;
-  top: 70px;
-  background: none scroll 0% 0% rgb(18, 194, 134);
-  width: 270px;
-  height: 250px;
-  border-radius: 0;
-  margin: 0px 0 0 0px;
-  overflow: hidden;
-}*/
-
-/*    for the first identification box (for the area)*/
-
-/*.fi-web {
-  position: relative;
-  right: -10px;
-}
-
-.inspire h2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100px;
-  color: rgb(255,255,255);
-  font-family: "freight-sans-pro","p22-underground";
-  font-weight: 500;
-  font-style: normal;
-  font-size: 20px;
-}
-*/
-
-/*  for the date box  */
-
 /*
-.grid_main .dataBox .boxFeatures {
-margin:0;
-background:rgb(0,0,0);
-
-}
-
-.grid_main .dataBox .boxFeatures h2 {
-color:rgb(18, 194, 134);
-}
-
-.grid_main .dataBox .boxFeatures:hover {
-transition: background 0.3s ease-in;
-background:rgba(255,255,255,0.2);
-opacity: 0.6;
-transition: opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
-}
-
-.grid_main .dataBox .boxFeatures .fi-loop {
-position:absolute;
-bottom:10px;
-color: rgb(255,255,255);
-  font-size: 2.5em;
-  margin 0 auto;
-  left:0;
-  right:0;
+.socialHeadInner .logo {
+top: 10px;
+  margin: 0 auto;
+  left: 410px;
+  right: 0;
+  max-width: 100%;
+  background-image: url('../../images/logo15.png');
+  background-repeat:no-repeat;
+  height:40px;
+  text-decoration: none; 
+  position: absolute;
+  z-index: 100;
 }*/
 
+/*   search box     */
+.socialHeadInner div.m-search {
+width:200px;
+position:relative;
+right:30px;
+float:right;
+font-size:0;
+border:2px solid rgb(26,188,156);
+background:rgb(255,255,255);
+}
 
 
+.socialHeadInner .m-search 
+input.m-search-input[placeholder="Search"] {
+font-family: "freight-sans-pro";
+font-weight: 300;
+font-style: normal;
+color:rgb(0,0,0);
+font-size: 18px;
+}
+
+.socialHeadInner .m-search input.m-search-input { 
+width:170px;
+border 0 none;
+color: rgb(0,0,0);
+  font-family: "freight-sans-pro";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  text-transform:none;
+  border:0;
+  }
+
+.socialHeadInner .m-search .m-search-submit { 
+height:30px;
+width:30px;
+vertical-align:top;
+border-left:40px solid blue;
+cursor:pointer;
+background-color:black;
+border:0;
+}
 
 
+/***********Side Bar Area ******************/
+
+.wrap .socialFeedSide {
+position:fixed;
+  background:rgba(18, 194, 134,1);
+  width:256px;
+  height:100%;
+  color:rgb(0,0,0);
+  border-right:1px solid rgb(255,255,255);
+}
+
+/* User Photo  */
+
+.socialFeedSide .user_photo_container {
+margin-top:-5px;
+margin-left:0px;
+padding:0 50px;
+border-bottom:1px solid rgb(255,255,255);
+width:156px;
+
+}
 
 
-</style>
+.socialFeedSide .user_photo_container img {
+  margin-top: 18px;
+  border-radius: 50%;
+}
+
+.socialFeedSide .user_photo_container figcaption {
+padding-bottom: 5px;
+text-align:center;
+
+
+}
+
+.socialFeedSide .user_name span {
+ color:rgb(0,0,0);
+  font-family: "freight-sans-pro","p22-underground";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4em;
+  letter-spacing:1px;
+    
+}
+
+.socialFeedSide .user_name .userState {
+  color:rgb(0, 0, 0);
+  font-family: "freight-sans-pro","p22-underground";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8em;
+   letter-spacing:1px;
+}
+
+/*  Menu Options  */
+
+
+.socialFeedSide .socialFeedNavInner {
+width:800px;
+padding: 0;     
+margin:0;
+
+}
+
+.socialFeedSide .socialFeedNavInner li {
+list-style-type:none;
+
+}
+
+.socialFeedSide .socialFeedNavInner li a {
+display:block;
+color:rgb(255, 255, 255);
+  font-family: "freight-sans-pro","p22-underground";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.3em;
+  text-decoration:none;
+  padding:3px 40px;
+  width:175px;
+  letter-spacing:1px;
+
+}
+
+.socialFeedSide .socialFeedNavInner:first-child li a {
+border-bottom:rgb(255,255,255) 1px solid;
+line-height:1.5;
+text-align:center;
+}
+
+
+.socialFeedSide .socialFeedNavInner li a  {
+transition: color 1s, transform 0.4s,border-bottom 1s ;
+  
+}
+
+
+.socialFeedSide .socialFeedNavInner li a:hover {
+color: rgb(0, 0, 0);
+transform: scale(1.3);
+border-bottom:0;
+}
+
+.socialFeedSide  .socialFeedNavSecond {
+padding:0;
+margin:0;
+position:absolute;
+bottom:35px;
+
+}
+
+.socialFeedSide  .socialFeedNavSecond a {
+display:inline;
+margin:0 24px;
+vertical-align:bottom;
+
+
+}
+
+.socialFeedSide  .socialFeedNavSecond .icon-dashboard,
+.socialFeedSide  .socialFeedNavSecond .icon-cog,
+.socialFeedSide  .socialFeedNavSecond .icon-info {
+color:rgb(255, 255, 255);
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.0em;
+  text-decoration:none;
+}
+
+.socialFeedSide  .socialFeedNavSecond .icon-dashboard,
+.socialFeedSide  .socialFeedNavSecond .icon-cog,
+.socialFeedSide  .socialFeedNavSecond .icon-info {
+transition: color 2s;
+}
+
+.socialFeedSide  .socialFeedNavSecond .icon-dashboard:hover,
+.socialFeedSide  .socialFeedNavSecond .icon-cog:hover,
+.socialFeedSide  .socialFeedNavSecond .icon-info:hover {
+color:rgb(0,0,0);
+
+}
+        
+
+  </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -249,56 +252,50 @@ color: rgb(255,255,255);
   <!-- Part 1: Wrap all page content here -->
     <div class="wrap grid">
 
-
-    
       <!-- top navbar -->
-      <header class="liveMenu">
-        <nav class="topMenu">
-         <!--  <ul class="innerMenu">
-            <li><span data-date="">Dec 10th, 2013</span></li>
-            <li><span data-time="" data-weather="" data-location="">9:31pm | New York, NY 33°F</span></li>
-          </ul> -->
-            <!-- <div id="sb-search" class="sb-search">
-                <form method="get" action="">
-                    <input class="sb-search-input"  placeholder="Search Feed Here..." name="search" type="text" value="" id="search"> 
-                    <input class="sb-search-submit" type="submit" value="OK">
-                </form>
-            </div> -->
-            <div>
-              <div class="logo" href="profile.html"></div>
-              <a href="#" class="set">Shop Collection</a>
-            </div>
-        </nav>
-      </header> 
+      <header>
+        <div class="socialHeadInner">
+        <!--   <div class="logo"></div> -->
+          <div id="sb-search" class="m-search">
+            <form action="">
+              <input class="m-search-input" placeholder="Search" type="text" value="" name="search" id="search">
+              <input class="m-search-submit" type="submit" value="OK">
+            </form>
+          </div>
+        </div>
+      </header>
+
+
+     
   
+        <section class="socialFeedSide">
+            <figure class="user_photo_container">
+              <img src="images/user_icon.png"/>
+              <figcaption class="user_name">
+                <span data-name="">Kelly Hanna</span>
+                </br><span data-city="" data-state="" class="userState">Manhattan, NY</span>
+              </figcaption>
+            </figure>
+        <nav class="socialFeedNav">
+          <ul class="socialFeedNavInner">
+            <li><a href="profile.html">Sign Out</a></li>
+            <li><a href="#">All</a></li>
+             <li><a href="#">What's New</a></li>
+            <li><a href="#">Trending Now</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Designers</a></li>
+            <li><a href="#">Your Uploads</a></li>
+          </ul>
+          <ul class="socialFeedNavSecond">
+            <a href="friends.html" class="icon-cog"></a>
+            <a href="account.html" class="icon-info"></a>
+          </ul>
+        </nav>
+        </section>
       <main class="grid_main">
-      <aside>
-          <nav class="feedNav">
-            <ul class="feedNavInner">
-              <li><a href="profile.html"><span class="icon-home"></span></a></li>
-              <li><a href="#"><span class="icon-plus"></span></a></li>
-              <li><a href="#"><span class="icon-lamp"></span></a></li>
-              <li><a href="#"><span class="icon-group"></span></a></li>
-              <li><a href="#"><span class="icon-female"></span></a></li>
-              <li><a href="#"><i class="fi-upload"></i></a></li>
-            </ul>
-          </nav>
-        </aside> 
-
-
-
-
-
-
-
-
-
+        
       </main>
     </div>
-
-
-
-
 
 
 
@@ -308,64 +305,10 @@ color: rgb(255,255,255);
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="js/jquery_cm.js"></script>
+    <script src="js/lib/jquery.js"></script>
     <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
-   <!-- <script>
-  // calling global variables to set up the scene, camera, render
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-
-  //The cube
-  var geometry = new THREE.CubeGeometry(1,1,1); //this gives the vetor points, and creates the barebone of the cube
-  var material = new THREE.MeshBasicMaterial({color:0x00ff00});  //this gives the color and texture (using material)
-  var cube = new THREE.Mesh(geometry, material);  //this takes the geometry and applies the material to it *The mesh can move around freely
-
-  scene.add(cube);
-
-  camera.position.z = 5;
-
-// render loop allows for the cube to disply *anything you want to move or change must come through the render loop
-  function render() {
-    requestAnimationFrame(render);
-    
-    //animate the box to do something
-      cube.rotation.x += 0.1;
-      cube.rotation.y += 0.02;
-
-
-    renderer.render(scene, camera);
-  }
-  render();
-
-</script> -->
-
-
-
-<!--        scrap code        -->
-
-<!-- <section class="boxFeatures">
-          <div class="inspire">
-            <h2>Kelly Hanna's</br>Live Feed<i class="fi-web"></i></h2>  
-          </div>
-        </section>
-
-
-  
-        <a class="dataBox" href="#">
-        <section class="boxFeatures">
-          <div class="inspire">
-            <h2>Tuesday, Dec 11th</h2>  
-              <i class="fi-loop"></i>
-          </div>
-        </section>
-        </a>     
- -->
-  <!--    <canvas></canvas> -->
   </body>
 </html>
 

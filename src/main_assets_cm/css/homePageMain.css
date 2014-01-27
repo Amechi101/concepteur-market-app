@@ -1,0 +1,44 @@
+
+
+/*  logo settings */
+.logo, .mainHeadNav2 {
+  text-decoration: none; 
+  position: absolute;
+  z-index: 100;
+}
+
+ .mainHeadNav2 {
+  font-family: "freight-sans-pro",sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.6em;
+  color: rgb(255,255,255);
+  letter-spacing:1px;
+}
+
+.mainHeadNav2:hover {
+  color: rgb(18, 194, 134);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s linear 0s;
+}
+
+
+.logo {
+  top: 10px;
+  left:30px;
+  right: 0;
+  max-width: 100%;
+  background-image: url('../../images/logo25.png');
+  background-repeat:no-repeat;
+  height:50px;
+}
+
+.mainHeadNav2 {
+   top: 25px;
+  right: 30px;
+}
+
+

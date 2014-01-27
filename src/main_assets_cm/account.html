@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="icons_cm/foundation-icons/foundation-icons.css">
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
-    <link rel="stylesheet" type="text/css" href="css/gridforms.css" />
-    <link rel="stylesheet" type="text/css" href="css/hiddenMenu.css">
+
+    <!--   CSS LINKS -->
+  
+    <!--  CSS for Icons  -->
+ 
+    <link rel="stylesheet" type="text/css" href="css/subIconStyle.css">
+    
+    <!--  CSS for resets  -->
     <link rel="stylesheet" type="text/css" href="css/normalizeBase.css">
-    <link rel="stylesheet" type="text/css" href="css/iconStyle.css">
-      <link rel="stylesheet" type="text/css" href="css/subIconStyle.css">
+
+
+    <!--  CSS for other styles  -->
+      <link rel="stylesheet" type="text/css" href="css/homePageMain.css">
+    <link rel="stylesheet" type="text/css" href="css/gridforms.css" />
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
@@ -21,45 +28,10 @@
  
 
 /**********    reset end ********/
-/* general wrap and for 960 grid system */
 .wrap {
   padding: 120px 140px 0 140px;
 }
 
-/*  logo settings */
-.logo,.set {
-  text-decoration: none; /*position: fixed;
-  */
-position: absolute;
-  z-index: 100;
-}
-
-.logo {
-  top: 10px;
-  margin: 0 auto;
-  left: -55px;
-  right: 0;
-}
-
-.set {
-  font-family: "freight-sans-pro",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.8em;
-  top: 20px;
-  right: 25px;
-  color: rgb(255,255,255);
-}
-
-.set:hover {
-  color: rgb(18, 194, 134);
-
-  -webkit-transition: color 0.3s ease-in;
-  -moz-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-}
 
 </style>
  
@@ -77,28 +49,20 @@ position: absolute;
       <!-- top navbar -->
       
      
+       
       <header>
-        <span>
-          <img class="logo" src="images/logo15.png"></img>
-          <a href="#" class="set">Shop Collection</a>
-        </span>
+        <nav id="Nav">
+          <ul class="mainHead">
+            <div class="logo"></div>
+         
+            <a href="live_feed.html" class="mainHeadNav2">Back To Feed</a>
+          </ul>
+        </nav>
       </header> 
       
-      <section>
-      <nav id="bt-menu" class="bt-menu">
-        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-        <ul>
-            <li><a href="profile.html"><span class="icon-home"></span></a></li>
-            <li><a href="#">Company<i class="fi-info"></i></a></li>
-            <li><a href="#">Designers</a></li>
-            <li><a href="#">Contact Us</i></a></li>
-          </ul>
-          <ul>
-          <li><a href="#" class="bt-icon icon-twitter">Twitter</a></li>
-          <li><a href="#" class="bt-icon icon-facebook">Facebook</a></li>
-        </ul>
-      </nav>
-      </section>
+    
+  
+
 
     
             <form action="" method="post" class="grid-form"> 
@@ -157,92 +121,6 @@ position: absolute;
                   </span>
                   <div class="formSave"><input type="submit" value="Save"></input></div>
                 </fieldset>
-              <br/>
-                
-                 <fieldset class="formShip">
-                 <legend>Shipping Address</legend><input type="checkbox" name="Same as Billing<" value="yes"><span class="formCheck">Same as Billing</span>
-                  <span data-row-span="1">
-                    <span data-field-span="1"> 
-                      <label>Address 1</label>
-                      <input type="text" name="Address 1"></input>
-                    </span>
-                  </span>
-                    
-                  <span data-row-span="1">
-                    <span data-field-span="1"> 
-                      <label>Address 2</label>
-                      <input type="text" name="Address 2"></input>
-                    </span>
-                  </span>
-                    
-                  <span data-row-span="4">
-                    <span data-field-span="1">
-                      <label>City</label> 
-                      <input type="text" name="City"></input>
-                    </span>
-                    <span data-field-span="1">
-                      <label>State</label> 
-                      <select>
-                        <option title="" value="">NY</option>
-                        <option title="" value="">LA</option>
-                      </select>
-                    </span>
-                    <span data-field-span="1">
-                      <label>Zip Code</label> 
-                      <input type="text" name="Zip Code"></input>
-                    </span>
-                    <span data-field-span="1">
-                      <label>Country</label> 
-                      <select>
-                        <option title="" value="">USA</option>
-                      </select>
-                    </span>
-                  </span>
-                  <div class="formSave"><input type="submit" value="Save"></input></div>
-                </fieldset>
-                 
-                <br/>
-                <fieldset>
-                 <legend>Billing Address</legend>
-                  <span data-row-span="1">
-                    <span data-field-span="1"> 
-                      <label>Address 1</label>
-                      <input type="text" name="Address 1"></input>
-                    </span>
-                  </span>
-                    
-                  <span data-row-span="1">
-                    <span data-field-span="1"> 
-                      <label>Address 2</label>
-                      <input type="text" name="Address 2"></input>
-                    </span>
-                  </span>
-                    
-                  <span data-row-span="4">
-                    <span data-field-span="1">
-                      <label>City</label> 
-                      <input type="text" name="City"></input>
-                    </span>
-                    <span data-field-span="1">
-                      <label>State</label> 
-                      <select>
-                        <option title="" value="">NY</option>
-                        <option title="" value="">LA</option>
-                      </select>
-                    </span>
-                    <span data-field-span="1">
-                      <label>Zip Code</label> 
-                      <input type="text" name="Zip Code"></input>
-                    </span>
-                    <span data-field-span="1">
-                      <label>Country</label> 
-                      <select>
-                        <option title="" value="">USA</option>
-                      </select>
-                    </span>
-                  </span>
-                  <div class="formSave"><input type="submit" value="Save"></input></div>
-                </fieldset>
             </form>  
 
   </div> <!--end wrap -->
@@ -251,9 +129,7 @@ position: absolute;
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="js/jquery_cm.js"></script>
-<script src="js/borderMenu_cm.js"></script>
-    <script src="js/classie_cm.js"></script>
+    <script src="js/lib/jquery.js"></script>
 <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 

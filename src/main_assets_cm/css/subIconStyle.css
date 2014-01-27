@@ -1,18 +1,12 @@
 /*  For Profile HTML   */
 
-.boxFeatures .inspire .icon-lamp, .icon-comments,.icon-group,.icon-dollar,.icon-feed, .icon-female {
+.boxFeatures .inspire .icon-signup, .icon-enter,.icon-question,.icon-bulb{
 position: absolute;
 top:-30px;
 right:0;
 left:0;
 }
 
-.boxFeatures .inspire .icon-enter {
-  position: relative;
-  right: -4px;
- bottom:-1px;
-
-}
 
 /*     For HiddenMenu   */
 .bt-menu .icon-home {
