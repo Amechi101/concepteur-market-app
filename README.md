@@ -1,4 +1,4 @@
-Concept Overview
+Project Overview
 ================
 The main goal of the application is to build an open resource for users to find the latest and greatest independent designers. Users will have an array of merchandise/designers to search from being able to research product information, location of products, trending items within the platform and etc. Users that sign-up however will have additional features such as liking & commenting on products, uploading products(Pending Review) and altering any information we have available. 
 
