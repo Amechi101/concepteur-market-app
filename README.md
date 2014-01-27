@@ -12,7 +12,6 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 
 - New Name for the project is: 'Indieitude'
 
-
 Folders:
 ===============
 - frontEndAssets: contain all the client-side components
