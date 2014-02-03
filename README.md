@@ -15,7 +15,7 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 Folders:
 ===============
 - front-end-assets: contains all the client-side components
-- poject-documents: contains all of important project documents to read 
+- project-documents: contains all of important project documents to read 
 
 
 
