@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Social Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--   CSS LINKS -->
+  
+    <!--  CSS for Icons  -->
+   <link rel="stylesheet" type="text/css" href="css/iconData.css"/> 
+    
+    <!--  CSS for resets  -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+
+    <!--  CSS for other styles  -->
+     <link rel="stylesheet" type="text/css" href="css/hiddenMenu.css"/> 
+    
+
+    <style type="text/css">
+
+
+
+
+      /*   Top header   */
+.socialHeadInner, .socialHeadInner .logo{
+z-index:1000;
+}
+
+.socialHeadInner {
+position:fixed;
+ width:100%;
+ top:0;
+  background:rgba(0,0,0,1);
+ padding-bottom:50px;
+ }
+/*
+.socialHeadInner .logo {
+top: 10px;
+  margin: 0 auto;
+  left: 410px;
+  right: 0;
+  max-width: 100%;
+  background-image: url('../../images/logo15.png');
+  background-repeat:no-repeat;
+  height:40px;
+  text-decoration: none; 
+  position: absolute;
+  z-index: 100;
+}*/
+
+
+ .wrap header nav {
+position:relative;
+text-align:center;
+width:100%;
+top:20px;
+
+}
+
+
+.wrap header nav .socialNavHeader li {
+display:inline-block;
+list-style-type:none;
+padding:0 10px;
+}
+
+.wrap header nav .socialNavHeader li:nth-of-type(3)
+ {
+border-right:white solid 1px;
+margin-right:-5px;
+
+}
+
+.wrap header nav .socialNavHeader li a {
+font-family: "satellite";
+font-weight: 400;
+font-style: normal;
+text-transform:none;
+text-decoration:none;
+font-size: 1.1em;
+color:rgb(255,255,255);
+
+}
+
+
+
+
+/*   search box     */
+.socialFeedSide div.m-search {
+position:absolute;
+right:30px;
+bottom:115px;
+z-index:3000;
+border-top:solid white 1px;
+padding-top:10px;
+border-bottom:solid white 1px;
+padding-bottom:10px;
+
+}
+
+
+.socialFeedSide .m-search input.m-search-input[type="text"],
+.socialFeedSide .m-search input.m-search-input[placeholder="Search"] {
+font-family: "satellite";
+font-weight: 400;
+font-style: normal;
+text-transform:none;
+font-size: 1.1em;
+}
+
+.socialFeedSide .m-search input.m-search-input[type="text"] { 
+color: rgb(0,0,0);
+float:left;
+width:150px;
+}
+
+.socialFeedSide .m-search input.m-search-submit { 
+height:30px;
+width:30px;
+float:left;
+cursor:pointer;
+border:0;
+background:black;
+}
+
+
+/*********** Side Bar Area ******************/
+
+/*  Menu Options  */
+
+.socialFeedSide p, .socialFeedSide li a {
+font-family: "satellite","p22-underground";
+font-weight: 400;
+font-style: normal;
+}
+
+
+
+ .socialFeedSide  {
+
+padding-top:80px;    
+position:fixed;
+width:20%;
+left:0;
+background:rgba(18, 194, 134,1);
+height:100%;
+color:rgb(0,0,0);
+z-index:99999; 
+}
+
+
+/*  Menu Area  */
+
+
+
+.socialFeedSide .socialFeedNavInner li {
+list-style-type:none;
+padding:10px 15px;
+}
+
+.socialFeedSide .socialFeedNavInner li a {
+display:block;
+color:rgb(255, 255, 255);
+  font-size: 1.5em;
+  text-decoration:none;
+ letter-spacing:1px;
+
+}
+
+.socialFeedSide .socialFeedNavInner:first-child li a {
+line-height:1.5;
+text-align:center;
+}
+
+
+.socialFeedSide .socialFeedNavInner li a  {
+transition: color 1s, transform 0.4s,border-bottom 1s ;
+  
+}
+
+
+.socialFeedSide .socialFeedNavInner li a:hover {
+color: rgb(0, 0, 0);
+transform: scale(1.3);
+border-bottom:0;
+}
+
+/*  Social links Side Menu */
+
+.socialFeedSide  .socialFeedNavSecond {
+padding:0;
+margin:0;
+position:absolute;
+bottom:30px;
+right:0;
+width:20%;
+}
+
+.socialFeedSide  .socialFeedNavSecond p {
+text-align:center;
+margin-bottom:10px;
+font-size:1.3em;
+}
+
+.socialFeedSide > .socialFeedNavSecond .socialFeedNavSecondInner {
+margin-left:99px;
+
+}
+
+.socialFeedSide .socialFeedNavSecond a {
+display:block;
+float:left;
+letter-spacing:25px;
+
+}
+
+
+.socialFeedSide  .socialFeedNavSecond .icon-facebook,
+.socialFeedSide  .socialFeedNavSecond .icon-twitter {
+color:rgb(255, 255, 255);
+font-weight: 300;
+font-style: normal;
+font-size: 1.5em;
+text-decoration:none;
+
+}
+
+.socialFeedSide  .socialFeedNavSecond .icon-facebook,
+.socialFeedSide  .socialFeedNavSecond .icon-twitter {
+transition: color 2s;
+}
+
+.socialFeedSide  .socialFeedNavSecond .icon-facebook:hover,
+.socialFeedSide  .socialFeedNavSecond .icon-twitter:hover {
+color:rgb(0,0,0);
+}
+
+        
+
+  </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  
+  </head>
+    <body>
+  <!-- Part 1: Wrap all page content here -->
+    <div class="wrap grid">
+
+      <!-- top navbar -->
+      <header>
+        <div class="socialHeadInner">  
+          <div class="logo">
+            <a href="#"></a>
+          </div> 
+          <nav>
+            <ul class="socialNavHeader">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">For Designers</a></li>
+              <li><a href="#">Login</a></li> 
+              <li><a href="#">Sign Up</a></li>
+            </ul>
+          </nav>
+              
+      </header>
+
+      <!-- side menu start -->
+      <section>
+      <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul>
+  
+         <li><a >Copyright © 2014 Concepteur, All rights reserved. </a></li>
+        </ul>
+      </nav>
+      </section>
+
+
+     
+  
+        <section class="socialFeedSide">
+              <nav class="socialFeedNav">
+                <ul class="socialFeedNavInner">
+                  <li><a href="#">All</a></li>
+                  <li><a href="#">What's New</a></li>
+                  <li><a href="#">Trending Now</a></li>
+                  <li><a href="#">Collection</a></li>
+                  <li><a href="#">Designers</a></li>
+                  <li><a href="#">Location</a></li>
+                </ul>
+              </nav>
+
+          <div class="socialFeedNavSecond">
+             <p> Follow Us</p>
+            <div class="socialFeedNavSecondInner">
+            <a href="friends.html" class="icon-facebook"></a>
+            <a href="account.html" class="icon-twitter"></a>
+            </div>
+          </div>
+
+          <div id="sb-search" class="m-search line">
+            <form action="">
+              <input class="m-search-input" placeholder="Search" type="text" value="" name="search" id="search">
+              <input class="m-search-submit" type="submit" value="">
+            </form>
+          </div>
+        </div>
+      
+        </section>
+      <ul class="grid_main">
+        
+      </ul>
+    </div>
+
+
+
+
+
+          <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+    <script src="js/lib/jQuery/jquery.js"></script>
+    <script src="js/borderMenu.js"></script>
+    <script src="js/classie.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+  </body>
+</html>
+
