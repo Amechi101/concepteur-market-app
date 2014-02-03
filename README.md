@@ -14,8 +14,8 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 
 Folders:
 ===============
-- frontEndAssets: contain all the client-side components
-- concepteurm: contain the python/django setup files
+- front-end-assets: contains all the client-side components
+- poject-documents: contains all of important project documents to read 
 
 
 
