@@ -65,9 +65,8 @@ Access Denied for Non-members:
 
 Access Granted for Members:
 
-===============================================================
 
-Designer Area 
+Designers
 ===================================
 The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information General Information and Product Information. The General information area will be a one-time save where the designers can update the information at anytime. The Product Information area will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in General Information will be propagated to ease the redundancy of adding simple information over again in the Product information area, as well in the Product Information area.
 
