@@ -1,11 +1,12 @@
 Application Specification 
 ==========================
+==========================
 
-USER (End)
-----------------
+Users
+======
 
 Critical UX Feature List
-========================
+------------------------
 - All
 Aggregates the content in the designated content area, regardless of product specifications.
 
@@ -52,48 +53,44 @@ Non-Critical UX feature list
 - Social Media Links
 
 
-Permissions (Not allowed to have): 
-======================
-personal feed
-settings
-Like Products
-Comment on Products
-Notifications 
-Alter information on products
+Permissions 
+------------
+Access Denied for Non-members:
+- Personal feed
+- Settings
+- Like Products
+- Comment on Products
+- Notifications 
+- Alter information on products
+
+Access Granted for Members:
 
 ===============================================================
 
 Designer Area 
--------------
-The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information.
-Their will be two areas where designers will input information General Information and Product Information. The General information area will be a one-time save where the designers can update the information at anytime. The Product Information area will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in General Information will be propagated to ease the redundancy of adding simple information over again in the Product information area, as well in the Product Information area.
-
-- General Information
-
-- Product Information
+===================================
+The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information General Information and Product Information. The General information area will be a one-time save where the designers can update the information at anytime. The Product Information area will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in General Information will be propagated to ease the redundancy of adding simple information over again in the Product information area, as well in the Product Information area.
 
 
 Critical UX Feature List(General Information)
-========================
+-------------------------------------
 
 
 Critical UX Feature List(Personal Information)
-========================
+----------------------------------------
 
 
 
+Database Architecture Best Practices  & Guidelines
+==================================================
+- Name case should be camel case e.g. hiThere
+- Stray away from creating redundancy
+
+Front-End Development Best Practices & Guidelines
+=================================================
 
 
 
-
-Database Architecture and scheme
-================================
-
-Assigned:  
-Project Date Of Completion:
-
-Requirements
-============
 
 
 
