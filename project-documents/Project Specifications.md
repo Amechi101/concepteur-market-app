@@ -96,7 +96,13 @@ Permissions
 - All-Access(Everything a non-member cannot do)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Publisher)
 
-**Fashion Publishers are allowed to Add**:
+Levels Below:
+
+**Fashionista**
+
+--> They have no editing power, (basic level you begin at)
+
+**Fashion Publisher are allowed to Add**:
 
 --> Adding Product Tags
 
