@@ -9,10 +9,9 @@ Where they will have their permissions and how they use the features to navigate
 
 - **Designer Admin Area**: 
 
-This allows the designers to join the platform (upon being invited) and add information at their own time, while making an updates to
-the product information they add for users to see.
+This allows the designers to join the platform (upon being invited) and add information at their own time, while making any updates tothe product information they add for users to see.
 
-- **Indieitude** Admin Area**: 
+- **Indieitude Admin Area**: 
 
 This will be the master access for ourselves to govern the backend of the site, to approve user changes(see permissions in Users 
 for more detail), Add our on content to the platform, using a similar methodology to the **designers** product upload and govern any other data in the site such as adding designers, deleting, and etc..
@@ -95,7 +94,35 @@ Permissions
 
 **Access Granted for Members**:
 - All-Access(Everything a non-member cannot do)
-- *Alter information on products (This permission is given to members achieving an influencer level of: Editor)
+- *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Publisher)
+
+**Fashion Publishers are allowed to Add**:
+
+--> Adding Product Tags
+
+--> Adding Product Links
+
+--> Adding Boutiques
+
+**Next level is (Fashion Editor), they are allowed to Delete/Add**:
+
+--> Adding Product Tags
+
+--> Adding Product Links
+
+--> Adding Boutiques
+
+**Final level is (Fashioneer), they are allowed to Delete/Add**:
+
+--> Adding Product Tags
+
+--> Adding Product Links
+
+--> Adding Boutiques
+
+--> Fiber Content
+
+--> A, B (See Designer Admin Area: General Information)
 
 
 Designers Admin Area
