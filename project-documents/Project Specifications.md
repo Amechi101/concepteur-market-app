@@ -51,8 +51,7 @@ Shows if the user has any new comments or announcements
 
 - **Settings**:
 
-Lets the user change name, username, email, Birthday, City, State, Country and Password(if they did not sign-up with Facebook Log-In)
-
+Lets the user change Name, Username, email, Birthday, City, State, Country and Password
 
 Non-Critical UX feature list
 ----------------------------
@@ -86,7 +85,7 @@ Designers
 ===================================
 The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be a one-time save where the designers can update the information at anytime. The **Product Information area** will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
-- The #'s and single-letter code show what will sourced and shown to the users via on the product data from the designers input area either **General Information** or **Product Information**.
+- The #'s and single-letter code show what will sourced and shown to the users via on the product data from the designers input area **General Information** and **Product Information**.
 
 Critical UX Feature List(General Information)
 ----------------------------------------
