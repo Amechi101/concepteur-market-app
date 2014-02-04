@@ -66,7 +66,7 @@ Non-Critical UX feature list
 
 Permissions 
 ------------
-Access Denied for Non-members:
+**Access Denied for Non-members**:
 - Personal feed
 - Settings
 - Like Products
@@ -74,10 +74,10 @@ Access Denied for Non-members:
 - Notifications 
 - Alter information on products
 
-Access Granted for Non-members:
+**Access Granted for Non-members**:
 - Viewing and Browsing product information
 
-Access Granted for Members:
+**Access Granted for Members**:
 - All-Access(Everything a non-member cannot do)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Editor)
 
@@ -97,7 +97,13 @@ select which name appears for Users to see on the product information
 
 - **Contact Information [internal info. For the Indieitude Team]**: 
 
-This is Private information the designer provided if need we need to contact them. Information includes --> Phone # - Address[Street # & Name, State, City, Zip Code] - Email
+This is Private information the designer provided if need we need to contact them. Information includes:
+
+--> Phone # 
+
+--> Address[Street # & Name, State, City, Zip Code] 
+
+--> Email
 
 - **(10) Boutiques or Shapes they sell at [if applicable]**:
 
