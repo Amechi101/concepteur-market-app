@@ -86,6 +86,8 @@ Designers
 ===================================
 The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information General Information and Product Information. The General information area will be a one-time save where the designers can update the information at anytime. The Product Information area will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in General Information will be propagated to ease the redundancy of adding simple information over again in the Product information area, as well in the Product Information area.
 
+- The #'s and single-letter code show what will be shown to the users via on the product data.
+
 
 Critical UX Feature List(General Information)
 ----------------------------------------
@@ -113,16 +115,59 @@ This is only if the designer owns a physical store, then we would need their add
 
 Critical UX Feature List(Product Information)
 ----------------------------------------
+- (1) Product Name:
+
+What the name of the product is e.g. Blazer Shirt, Valdenas Green Dress
+
+- (2) Product Description:
+
+This is a detailed description of the product describing it with a short synopsis.
+
+- (3) Fiber Content:
+
+What the product is made up of, and given the percentages. e.g. Nylon, Silk
+
+- (4) Available colors:
+
+Colors the designer has available for the product
+
+- (5) Fit Sizes
+
+Standard sizes, and guidelines
+
+- (6) Novelty of Product [if applicable]:
+
+Helps shows if the product is ultra rare or one of a kind
+
+--> Handmade
+
+--> Limited Edition
+
+--> One-Off-Item
+
+- (7) Product Tags [if applicable]:
+
+Refines the search for the users to find the product
+
+- (8) Made In NY [if applicable]:
+
+Shows if the product is made in NY
+
+- (11) Product links:
+
+lets the designer at links to sites their product is being sold on
+
+- (12) Product Image(s):
+
+The designer adds product images to showcase the product
 
 
 
-Database Architecture Best Practices  & Guidelines
-==================================================
-- Name case should be camel case e.g. hiThere
-- Stray away from creating redundancy
 
-Front-End Development Best Practices & Guidelines
-=================================================
+
+
+
+
 
 
 
