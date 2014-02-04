@@ -1,10 +1,27 @@
 Application Specification 
 ==========================
 ==========================
+The application will be divide into three core parts: 
+
+- **Users**: 
+
+Where they will have their permissions and how they use the features to navigate throughout the site
+
+- **Designer Admin Area**: 
+
+This allows the designers to join the platform (upon being invited) and add information at their own time, while making an updates to
+the product information they add for users to see.
+
+- **Indieitude** Admin Area**: 
+
+This will be the master access for ourselves to govern the backend of the site, to approve user changes(see permissions in Users 
+for more detail), Add our on content to the platform, using a similar methodology to the **designers** product upload and govern any other data in the site such as adding designers, deleting, and etc..
+
+
 
 Users
 ======
-This information is for the users presentation information(View). It is with this list we will create the Models(Logic behind the view) and Templates(The buidling structure of the View). This will follow the MVC format of thinking.
+This information is for the users presentation information(View). It is with this list we will create the Models(Logic behind the view) and Templates(The building structure of the View). This will follow the MVC format of thinking.
 
 - **Login**:
 User can Login via facebook or using an email/password combination 
@@ -81,7 +98,7 @@ Permissions
 - *Alter information on products (This permission is given to members achieving an influencer level of: Editor)
 
 
-Designers
+Designers Admin Area
 ===================================
 The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be a one-time save where the designers can update the information at anytime. The **Product Information area** will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
@@ -166,7 +183,8 @@ lets the designer at links to sites their product is being sold on
 The designer adds product images to showcase the product
 
 
-
+Indieitude Admin Area
+===================================
 
 
 
