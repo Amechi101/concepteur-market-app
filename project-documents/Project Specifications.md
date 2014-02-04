@@ -102,7 +102,7 @@ Levels Below:
 
 --> They have no editing power, (basic level you begin at)
 
-**Fashion Publisher are allowed to Add**:
+**Fashion Publisher is allowed to Add**:
 
 --> Adding Product Tags
 
@@ -110,21 +110,21 @@ Levels Below:
 
 --> Adding Boutiques
 
-**Next level is (Fashion Editor), they are allowed to Delete/Add**:
+**Next level (Fashion Editor), is allowed to Delete/Add**:
 
---> Adding Product Tags
+--> Product Tags
 
---> Adding Product Links
+--> Product Links
 
---> Adding Boutiques
+--> Boutiques
 
-**Final level is (Fashioneer), they are allowed to Delete/Add**:
+**Final level (Fashioneer), is allowed to Delete/Add**:
 
---> Adding Product Tags
+--> Product Tags
 
---> Adding Product Links
+--> Product Links
 
---> Adding Boutiques
+--> Boutiques
 
 --> Fiber Content
 
