@@ -6,50 +6,50 @@ Users
 ======
 This information is for the users presentation information(View). It is with this list we will create the Models(Logic behind the view) and Templates(The buidling structure of the View). This will follow the MVC format of thinking.
 
-- Login:
+- **Login**:
 User can Login via facebook or using an email/password combination 
 
-- Sign-Up:
+- **Sign-Up**:
 User can Sign-Up via facebook or using an email/password combination 
 
 Critical UX Feature List
 ------------------------
-- All:
+- **All**:
 
 Aggregates the content in the designated content area, regardless of product specifications.
 
-- What's New:
+- **What's New**:
 
 Aggregates the content in the designated content area, searching from the latest uploads from Designers & Indieitude Team, searching from Most Recent.
 
-- Trending Now:
+- **Trending Now**:
 
 Aggregates the content in the designated content area, searching content that is either Liked and/or Commented the most in a given time frame, E.g. hour, day or week
 
-- Collection:
+- **Collection**:
 
 Aggregates the content in the designated content area, allowing the user to filter through choices from categories e.g. Clothing, Accessories and etc
 
-- Designers:
+- **Designers**:
 
 Aggregates the content in the designated content area, allowing the user to filter through different Designers within the platform, them another sub-level to filter through their specific choices within the selection.
 
-- Location:
+- **Location**:
 
 Aggregates the content in the designated content area, searching for content affiliated with designers merchandise in a particular area
 
 
 Available for users after they Sign-up or Log-In
 ------------------------------------------------
-- Personal Feed:
+- **Personal Feed**:
 
 Aggregates the content in the designated content area, that the user liked on different products 
 
-- Notifications:
+- **Notifications**:
 
 Shows if the user has any new comments or announcements 
 
-- Settings:
+- **Settings**:
 
 Lets the user change name, username, email, Birthday, City, State, Country and Password(if they did not sign-up with Facebook Log-In)
 
@@ -90,51 +90,51 @@ The Designers that would like to join the platform to added and maintain their o
 
 Critical UX Feature List(General Information)
 ----------------------------------------
-- (9) Name:
+- **(9) Name**:
 
 This information will be the name the designer goes by, and if the designer uses a different name for their label, a checkbox will be provided to allow the designer to
 select which name appears for Users to see on the product information
 
-- Contact Information [internal info. For the Indieitude Team]: 
+- **Contact Information [internal info. For the Indieitude Team]**: 
 
 This is Private information the designer provided if need we need to contact them. Information includes --> Phone # - Address[Street # & Name, State, City, Zip Code] - Email
 
-- (10) Boutiques or Shapes they sell at [if applicable]:
+- **(10) Boutiques or Shapes they sell at [if applicable]**:
 
 Information need from them, would be Name of Boutique/Shop & State/City it is located in
 
-- (A) Specialties: 
+- **(A) Specialties**: 
 
 Whatever product the designer specializes in making, e.g. Accessories, Bags, Jeans
 
-- (B) Designer Store information [if applicable]:
+- **(B) Designer Store information [if applicable]**:
 
 This is only if the designer owns a physical store, then we would need their address to advertise to users on the product information.
 
 
 Critical UX Feature List(Product Information)
 ----------------------------------------
-- (1) Product Name:
+- **(1) Product Name**:
 
 What the name of the product is e.g. Blazer Shirt, Valdenas Green Dress
 
-- (2) Product Description:
+- **(2) Product Description**:
 
 This is a detailed description of the product describing it with a short synopsis.
 
-- (3) Fiber Content:
+- **(3) Fiber Content**:
 
 What the product is made up of, and given the percentages. e.g. Nylon, Silk
 
-- (4) Available colors:
+- **(4) Available colors**:
 
 Colors the designer has available for the product
 
-- (5) Fit Sizes
+- **(5) Fit Sizes**
 
 Standard sizes, and guidelines
 
-- (6) Novelty of Product [if applicable]:
+- **(6) Novelty of Product [if applicable]**:
 
 Helps shows if the product is ultra rare or one of a kind
 
@@ -144,19 +144,19 @@ Helps shows if the product is ultra rare or one of a kind
 
 --> One-Off-Item
 
-- (7) Product Tags [if applicable]:
+- **(7) Product Tags [if applicable]**:
 
 Refines the search for the users to find the product
 
-- (8) Made In NY [if applicable]:
+- **(8) Made In NY [if applicable]**:
 
 Shows if the product is made in NY
 
-- (11) Product links:
+- **(11) Product links**:
 
 lets the designer at links to sites their product is being sold on
 
-- (12) Product Image(s):
+- **(12) Product Image(s)**:
 
 The designer adds product images to showcase the product
 
