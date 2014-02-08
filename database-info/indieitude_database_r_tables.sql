@@ -4,12 +4,13 @@ Database table for Indieitude
 @Authors:
 
 Amechi Egbe
+Yeshwant Dasari 
+August Tan
 
 */
 
 
 /**************** User tables ********************/
-
 
 create table users (
   users_id bigint unsigned not null auto_increment,
