@@ -4,18 +4,6 @@
 
 -- use concepteur_market;
 
-create table users (
-  id bigint unsigned not null auto_increment,
-  email varchar(254) unique not null,
-  password varchar(255) not null,
-  first_name varchar(255),
-  last_name varchar(255),
-  gender char(1),
-  birthday date,
-  reward_points_current int,
-  reward_points_lifetime int,
-  primary key (id)
-);
 
 /*
  * Stores only one entry for each friendship. That is, if users A and B are

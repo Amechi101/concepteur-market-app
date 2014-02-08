@@ -1,0 +1,300 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="initial-scale=1"/>
+		<!--*****CSS LINKS******-->
+
+		<!--  CSS for Icons  -->
+		<link rel="stylesheet" type="text/css" href="css/iconData.css"/> 
+
+		<!--  CSS for resets  -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+
+		<!--  CSS for other styles  -->
+		<link rel="stylesheet" type="text/css" href="css/hiddenMenu.css"/> 
+		<link rel="stylesheet" href="css/GGS.css">
+		<link rel="stylesheet" href="css/grid.css">
+
+		<!--****Script tags needed to be in-between the head tags****-->
+		<script src="js/GGS.js"></script>
+
+		
+		
+		<style type="text/css">
+
+
+.wrap .headWrap .logoWrap, .wrap .headWrap nav ul, 
+wrap .socialFeedSide .socialFeedNavInner, .wrap .grid_main {
+padding: 0 0.75em;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+/*   Top header   */
+.headerWrap, .wrap header .socialIcons, .logoWrap {
+z-index:1000;
+}
+
+.headerWrap {
+position:fixed;
+width:100%;
+top:0;
+left:0;
+background:rgb(0,0,0);
+}
+
+/* 			.logoWrap .logo {
+top: 10px;
+margin: 0 auto;
+left: 410px;
+right: 0;
+max-width: 100%;
+background-image: url('images/logo99.png');
+background-repeat:no-repeat;
+height:40px;
+text-decoration: none; 
+position: absolute;
+z-index: 100;
+} */
+
+
+.wrap header nav  {
+text-align:center;
+}
+
+.wrap header nav ul {
+padding:1.1em 0 1.1em; 
+width:50%;
+margin-left:25%;
+
+}
+
+.wrap header nav .socialNavHeader li {
+display:inline-block;
+list-style-type:none;
+padding:0 0.625em;
+}
+
+.wrap header nav .socialNavHeader li:nth-of-type(3)
+{
+border-right:white solid 1px;
+margin-right:-0.3125em;
+
+}
+
+.wrap header nav .socialNavHeader li a {
+font-weight: 400;
+text-transform:none;
+text-decoration:none;
+font-size: 1.1em;
+color:rgb(255,255,255);
+
+}
+/*********** Side Bar Area ******************/
+
+/*  Menu Options  */
+
+.socialFeedSide p, .socialFeedSide li a {
+font-size: 1.2em;
+}
+
+
+
+
+/*  Menu Area  */
+
+.socialFeedSide  {
+position:fixed;
+padding-top:90px; 
+width:12.5%;
+left:0;
+background:rgb(127, 140, 141);
+z-index:1;
+height:100%;
+overflow:hidden;
+}
+
+
+
+.socialFeedSide .socialFeedNavInner li {
+list-style-type:none;
+padding:10%;
+}
+
+.socialFeedSide .socialFeedNavInner li a {
+display:block;
+color:rgb(255, 255, 255);
+
+text-decoration:none;
+
+
+}
+
+.socialFeedSide .socialFeedNavInner:first-child li a {
+
+text-align:center;
+}
+
+
+.socialFeedSide .socialFeedNavInner li a  {
+transition: color 1s ;
+
+}
+
+
+.socialFeedSide .socialFeedNavInner li a:hover {
+color: rgb(0, 0, 0);
+
+}
+
+.wrap #grid_main {
+position:relative;
+z-index:0;
+width:87.5%;
+margin:0 12%;
+padding-top:0;
+}
+
+.wrap #grid_main li {
+display:inline-block;
+list-style-type:none;
+}
+
+
+.wrap #grid_main .onImg {
+border:1px red solid;
+
+}
+
+.wrap #grid_main .item {
+width:19.5%;
+}
+
+/*		
+
+.wrap header .socialIcons {
+position:fixed;
+top:19px;
+right:170px;
+width:12.5%;
+text-align:center;
+  
+}
+
+.wrap header .socialIcons a {
+ padding:0% 9%;
+    
+}
+
+.wrap header .socialIcons .icon-facebook,
+.wrap header .socialIcons .icon-twitter {
+color:rgb(255, 255, 255);
+font-size: 1.1em;
+text-decoration:none;
+}
+*/
+		</style>
+
+		 <!--
+        This script enables structural HTML5 elements in old IE.
+        http://code.google.com/p/html5shim/ -->
+	    <!--[if lt IE 9]>
+	    <script src = "//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+
+	</head>
+	<body>
+		<div class="wrap">
+            
+            <!-- top navbar -->
+			<header>
+				<div class="headerWrap wrapper">
+					<div class="logoWrap">  
+						<div class=""></div>
+						<a href="#"></a>
+					</div> 
+					<nav>
+					<ul class="socialNavHeader">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">For Designers</a></li>
+						<li><a href="#">Login</a></li> 
+						<li><a href="#">Sign Up</a></li>
+					</ul>
+					</nav>
+				</div>
+				<div class="socialIcons">
+					<a href="#" class="icon-facebook"></a>
+			        <a href="#" class="icon-twitter"></a>
+				</div> 
+			</header>
+			
+			<!-- Information Sub section(within top nav area) -->
+			<section>
+          		<nav id="bt-menu" class="bt-menu">
+            	<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+            	<ul>
+	              <li><a href="#">Privacy Policy</a></li>
+	              <li><a href="#">Terms</a></li>
+	              <li><a href="#">Conditions</a></li>
+	              <li><a href="#">Contact Us</a></li>
+            	</ul>
+            	<ul>
+					<li><a >Copyright © 2014 Concepteur, All rights reserved. </a></li>
+           		</ul>
+         		</nav>
+       		</section>
+
+            <!-- side menu start -->
+    		<aside>
+        		<nav class="wrapper socialFeedSide">
+         			<ul class="socialFeedNavInner">
+			            <li><a href="#">All</a></li>
+			            <li><a href="#">What's New</a></li>
+			            <li><a href="#">Trending Now</a></li>
+			            <li><a href="#">Collection</a></li>
+			            <li><a href="#">Designers</a></li>
+			            <li><a href="#">Location</a></li>
+          			</ul>
+        		</nav>
+    		</aside>
+
+			<!-- Main content of images -->
+    		<ul id="grid_main"  class="wrapper">
+	      		<li><a href="#"><img class="onImg item" src="images/test.jpg"/></a></li>
+	      		<li><a href="#"><img class="onImg item w2" src="images/test2.jpg"/></a></li>
+	      		<li><a href="#"><img class="onImg item" src="images/test3.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test4.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test5.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test6.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test7.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test8.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test9.jpg"/></a> </li>
+	      		<li><a href="#"><img class="onImg item" src="images/test10.jpg"/></a> </li>
+	      	</ul>
+	    </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        <script src="js/lib/jQuery/jquery-1.11.0.js"></script>
+        <script src="js/borderMenu.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/lib/masonry/masonry.pkgd.js"></script>
+        <script type="text/javascript">
+        var container = document.querySelector('#grid_main');
+        var msnry = new Masonry(container, {
+        	columnWidth:0,
+        	itemSelector:'.item'
+        });
+        </script>
+        <script type="text/javascript" src="//use.typekit.net/uee5rje.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </body>
+</html>
