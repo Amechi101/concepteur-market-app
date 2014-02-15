@@ -22,7 +22,7 @@
 	background: black;
 	border: none;
 	width: 70px;
-	height: 70px;
+	height: 60px;
 	text-indent: -900em;
 	overflow: hidden;
 	position: relative;
@@ -166,7 +166,7 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
 	width: 100%;
-	top: 75px;
+	top: 65px;
 	left: 0;
 	margin: 0;
 }
