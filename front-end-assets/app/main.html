@@ -11,6 +11,8 @@
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
 		<link rel="shortcut icon" href=""> 
+		<script src="js/lib/angular/angular.js"></script>
+        <script src="js/controller.js"></script>
 		
 		<!--*****CSS LINKS******-->
 
@@ -317,7 +319,7 @@ background:black;
           border-radius: 2px;
      -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  display: none; /** Hide items initially to avoid a flicker effect **/
+    display: inline-block; /** Hide items initially to avoid a flicker effect **/
   cursor: pointer;
   padding: 4px;
 }
@@ -330,7 +332,25 @@ background:black;
 #tiles li img {
   display: block;
 }
-		
+
+#tiles li::after {
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transition:background 2s;
+} 
+
+
+#tiles li:hover::after {
+background:rgba(0,0,0,0.3);
+}
+#tiles li .product-info {
+	display: none;
+}
+
 		</style>
 
 		<!--
@@ -444,7 +464,15 @@ background:black;
 
 			<div id="main" role="main" ng-controller="imageAddCrtl">
 				<ul id="tiles"  class="">
-		      		<li  ng-repeat="image in imageInfo"><img  src="{{image.path}}"/></li>
+		      		<li  ng-repeat="image in imageInfo">
+		      			<img  ng-src="{{image.imageUrl}}">
+		      			<div class="product-info">
+		      				<p>Designer</p>
+		      				<span class="product-stats">
+		      					<!-- Amount of likes to go here with icon -->
+		      				</span>
+		      			</div>
+		      		</li>
 		      	</ul>	
 	      	</div>
 	   	</div>
@@ -457,8 +485,7 @@ background:black;
         <!-- Critical Libraries -->
         <script src="js/lib/jQuery/jquery-1.11.0.js"></script>
         <script src="js/lib/wookmark/jquery.wookmark.js"></script>
-        <script src="js/lib/angular/angular.js"></script>
-        <script src="js/controller.js"></script>
+        <!--<script src="js/lib/angular/angular-route.js"></script> -->
         
         
         <!--  Less Libraries -->
@@ -478,7 +505,7 @@ background:black;
 		</script>
 		<script type="text/javascript">
 		    (function ($){
-		   
+		       
 		      var $tiles = $('#tiles'),
 		          $handler = $('li', $tiles),
 		          $main = $('#main'),
@@ -487,7 +514,7 @@ background:black;
 		          options = {
 		            autoResize: true, // This will auto-update the layout when the browser window is resized.
 		            container: $main, // Optional, used for some extra CSS styling
-		            offset: 20, // Optional, the distance between grid items
+		            offset: 3, // Optional, the distance between grid items
 		            itemWidth: 210 // Optional, the width of a grid item
 		          };
 
@@ -517,9 +544,7 @@ background:black;
 
 		        if (closeToBottom) {
 		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
-		          var $items = $('li', $tiles),
-		              $firstTen = $items.slice(0, 10);
-		          	  $tiles.append($firstTen.clone());
+		         
 
 		          applyLayout();
 		        }
