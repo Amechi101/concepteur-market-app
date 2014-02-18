@@ -15,7 +15,13 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 Folders:
 ===============
 - front-end-assets: contains all the client-side components
-- project-documents: contains all of important project documents to read 
 
+- project-Specifications: contains all of important project documents to read 
+
+- database-info: contains anything related to the database
+
+- venv: is a **virtual environment** that contains the project dependencies for Python, Django, pip and anything else to create a fresh development environment
+
+- indieitude-project: contains the **Actual** django project folder where we have the apps, models and settings.py. Which we will be using to launch the product and actually creating the templates, business logic and etc.
 
 
