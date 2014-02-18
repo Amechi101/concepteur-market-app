@@ -40,13 +40,13 @@ create table Product (
   color_name varchar(255),
   size_types varchar(7),
   fiber_context text,
-  pro_price unsigned float,
+  pro_price unsigned decimal(6,2) not null,
   pro_tags varchar(255),
-  made_in_ny boolean,
-  novelty_of_item varchar(255),
-  primary key (product_id)
+  made_ny boolean,
+  novelty varchar(255),
+  primary key (product_id),
   foreign key (pro_img_id) references product_images(pro_img_id),
-  foreign key (did) references designer(did),
+  foreign key (d_id) references designer(did)
 );
 
 
@@ -70,8 +70,8 @@ create table Product_images (
   pid bigint unsigned not null,
   did bigint unsigned not null,
   primary key (pro_img_id),
-  foreign key (pid) references product(pid),
-  foreign key (did) references designer(did)
+  foreign key (pid) references product (pid),
+  foreign key (did) references designer (did)
 );
 
 --Tables for users likes/comments on the product
@@ -112,7 +112,7 @@ create table Designer (
   d_city varchar(50),
   d_zipcode unsigned int,
   d_specialities boolean,
-  foreign key (pid) references product(pid)
+  foreign key (pid) references product(pid),
   foreign key (bid) references boutiques(bid)
 );
 
