@@ -9,7 +9,6 @@ August Tan
 
 */
 
-
 /**************** User tables ********************/
 
 create table Users (
@@ -40,7 +39,7 @@ create table Product (
   color_name varchar(255),
   size_types varchar(7),
   fiber_context text,
-  pro_price unsigned decimal(6,2) not null,
+  pro_price unsigned decimal(6,2) not null, /* better practice to use decimals to store in the database */
   pro_tags varchar(255),
   made_ny boolean,
   novelty varchar(255),
@@ -66,7 +65,7 @@ create table Product_types (
 
 create table Product_images (
   pro_img_id bigint unsigned not null auto_increment,
-  pro_img mediumblob,
+  pro_img_filename varchar(255), /* changed from data type mediumblob --> filename as the images will be stored in the server instead for a lighter database */
   pid bigint unsigned not null,
   did bigint unsigned not null,
   primary key (pro_img_id),
@@ -119,7 +118,7 @@ create table Designer (
 
 create table Boutiques (
   bid bigint unsigned not null auto_increment,
-  b_image mediumblob,
+  b_image_filename varchar(255), /* changed from data type mediumblob --> filename as the images will be stored in the server instead for a lighter database */
   b_name varchar(255),
   b_address text,
   b_city varchar(50),

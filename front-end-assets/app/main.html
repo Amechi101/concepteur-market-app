@@ -333,7 +333,7 @@ background:black;
   display: block;
 }
 
-#tiles li::after {
+/*#tiles li::after {
 content:"";
 position:absolute;
 top:0;
@@ -346,10 +346,220 @@ transition:background 2s;
 
 #tiles li:hover::after {
 background:rgba(0,0,0,0.3);
+}*/
+
+
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(153,204,51,0.9);
+	z-index: 2000;
 }
-#tiles li .product-info {
-	display: none;
+
+
+/* Effects */
+.overlay-scale {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+	transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
+
+.overlay-scale.open {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);	
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+
+/*********** Overlay for product content area ***********************/
+.ps-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: #555;
+  background: #fff;
+
+}
+
+.ps-container > div {
+  position: absolute;
+  width: 40%;  /* change to 50% for base design */
+}
+
+/* remove this class when switching to base design*/
+.ps-container > .ps-header {
+   width:60%;  
+}
+
+
+.ps-container > div > div,
+.ps-slidewrapper > nav,
+.ps-slides > div {
+  position: absolute;
+}
+
+
+/* Header section   */
+.ps-header {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  z-index: 1001;
+  background: rgb(33,33,33);
+}
+
+
+
+/* Overlay for product content area */
+
+
+
+.ps-slidewrapper {
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ps-slides {
+  top: 0px;
+  bottom: 200px;
+  width: 100%;
+}
+
+.ps-slides > div {
+  width: 100%;
+  height: 100%;
+
+}
+
+.ps-slidewrapper > nav {
+  width: 100%;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.ps-slidewrapper > nav > a {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: left;
+  outline: none;
+}
+
+
+.no-touch .ps-slidewrapper > nav > a {
+  -webkit-transition: box-shadow 0.4s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out;
+  -ms-transition: box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.no-touch .ps-slidewrapper > nav > a:hover {
+  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.9);
+}
+
+.no-touch .ps-slidewrapper > nav > a:first-child:hover {
+  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.7);
+}
+
+
+.ps-slidewrapper > nav > a:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -50px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.ps-slidewrapper > nav > a:first-child:after {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  margin: -80px 0 0 -50px;
+}
+
+.ps-slides > div,
+.ps-slidewrapper > nav > a {
+  background-color: #fff;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.ps-move {
+  -webkit-transition: top 400ms ease-out;
+  -moz-transition: top 400ms ease-out;
+  -o-transition: top 400ms ease-out;
+  -ms-transition: top 400ms ease-out;
+  transition: top 400ms ease-out;
+}
+
+
+@media screen and (max-width: 860px) {
+
+  .js .ps-container > div {
+    width: 100%;
+  }
+
+  .js .ps-header {
+    height: 50px;
+  }
+
+
+  .js .ps-slides {
+    bottom: 320px;
+    top: 50px;
+  }
+
+  .js .ps-slidewrapper > nav {
+    height: 100px;
+  }
+
+
+}
+
+
+
 
 		</style>
 
@@ -460,22 +670,38 @@ background:rgba(0,0,0,0.3);
 				</nav>
 			</header>
 			<!-- Main content of images -->
-			<div class="space"></div>
+			<div  class="space"></div>
+
 
 			<div id="main" role="main" ng-controller="imageAddCrtl">
 				<ul id="tiles"  class="">
-		      		<li  ng-repeat="image in imageInfo">
-		      			<img  ng-src="{{image.imageUrl}}">
-		      			<div class="product-info">
-		      				<p>Designer</p>
-		      				<span class="product-stats">
-		      					<!-- Amount of likes to go here with icon -->
-		      				</span>
-		      			</div>
-		      		</li>
-		      	</ul>	
-	      	</div>
-	   	</div>
+		      		<a href="#" id="trigger-overlay">
+		      			<li   ng-repeat="image in imageInfo">
+			      			<img  ng-src="{{image.productImages[0]}}"/>
+		      			</li>
+		      		</a>
+		      		<div class="overlay overlay-scale">
+		      			<section id="ps-container" class="ps-container">
+            				<div class="ps-header">
+                
+            				</div>
+      						<div class="ps-slidewrapper">
+       							<div class="ps-slides">
+									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.3.zoom.jpg);"></div>
+									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.2.zoom.jpg);"></div>
+									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.1.zoom.jpg);"></div>
+									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.0.zoom.jpg);"></div>
+								</div>
+        						<nav>
+									<a href="#" class="ps-prev" ></a>
+									<a href="#" class="ps-next" ></a>
+								</nav>
+					        </div><!-- /ps-slidewrapper -->
+						</section><!-- /ps-container -->
+					</div> <!--end overlay -->
+				</ul>
+			</div>
+		</div> <!-- End container -->
 
 
 		<!-- Le javascript
@@ -493,6 +719,7 @@ background:rgba(0,0,0,0.3);
         <script src="js/lib/less-critical/application-searchbar.js"></script>
        	<script src="js/lib/less-critical/jquery.dlmenu.js"></script>
         <script src="js/lib/less-critical/jquery.imagesloaded.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
 
         <!-- Scripts to call in Libraries -->
 		<script>
@@ -503,6 +730,13 @@ background:rgba(0,0,0,0.3);
 				$( '#dl-menu' ).dlmenu();
 			});
 		</script>
+		<script type="text/javascript">
+			$(function() {
+
+			Slider.init();
+
+			});
+    	</script>
 		<script type="text/javascript">
 		    (function ($){
 		       
@@ -556,7 +790,49 @@ background:rgba(0,0,0,0.3);
 		      // Capture scroll event.
 		      $window.bind('scroll.wookmark', onScroll);
 		    })(jQuery);
-  	</script>
+  		</script>
+  		<script type="text/javascript">
+	  		(function() {
+				var triggerBttn = document.getElementById( 'trigger-overlay' ),
+					overlay = document.querySelector( 'div.overlay' ),
+					closeBttn = overlay.querySelector( 'button.overlay-close' );
+					transEndEventNames = {
+						'WebkitTransition': 'webkitTransitionEnd',
+						'MozTransition': 'transitionend',
+						'OTransition': 'oTransitionEnd',
+						'msTransition': 'MSTransitionEnd',
+						'transition': 'transitionend'
+					},
+					transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+					support = { transitions : Modernizr.csstransitions };
+
+				function toggleOverlay() {
+					if( classie.has( overlay, 'open' ) ) {
+						classie.remove( overlay, 'open' );
+						classie.add( overlay, 'close' );
+						var onEndTransitionFn = function( ev ) {
+							if( support.transitions ) {
+								if( ev.propertyName !== 'visibility' ) return;
+								this.removeEventListener( transEndEventName, onEndTransitionFn );
+							}
+							classie.remove( overlay, 'close' );
+						};
+						if( support.transitions ) {
+							overlay.addEventListener( transEndEventName, onEndTransitionFn );
+						}
+						else {
+							onEndTransitionFn();
+						}
+					}
+					else if( !classie.has( overlay, 'close' ) ) {
+						classie.add( overlay, 'open' );
+					}
+				}
+
+				triggerBttn.addEventListener( 'click', toggleOverlay );
+				closeBttn.addEventListener( 'click', toggleOverlay );
+			})();
+		</script>
 
 		
 		
