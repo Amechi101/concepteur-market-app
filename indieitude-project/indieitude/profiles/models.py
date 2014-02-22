@@ -60,7 +60,16 @@ class MyUserManager(object):
 		)
 
 
-		user = 
+	
+
+
+def hello(hi):
+    print 4 + 5
+
+
+
+
+
 		
 
 
