@@ -60,7 +60,20 @@
 # 		)
 
 
+<<<<<<< HEAD
 # 		user = 
+=======
+	
+
+
+def hello(hi):
+    print 4 + 5
+
+
+
+
+
+>>>>>>> 978563c9c036b1e1f6f7cdf8f2479ea3ead41f3e
 		
 
 
