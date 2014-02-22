@@ -17,7 +17,7 @@ create table Users (
   password varchar(255) not null,
   u_points int not null,
   u_title varchar(255),
-  user_name varchar(255),
+  user_name unique varchar(255),
   f_name varchar(255),
   l_name varchar(255),
   birthday date,
