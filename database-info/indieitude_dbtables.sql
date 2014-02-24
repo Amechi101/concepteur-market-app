@@ -9,18 +9,21 @@ August Tan
 
 */
 
+-- Important: We do not need to add Primary Keys for the tables as Django does this automatically for us in the models while auto_incrementing as well for us *************
+
 /**************** User tables ********************/
 
 create table Users (
   uid bigint unsigned not null auto_increment,
   email varchar(255) unique not null,
   password varchar(255) not null,
-  u_points int not null,
-  u_title varchar(255),
-  user_name unique varchar(255),
   f_name varchar(255),
   l_name varchar(255),
+  user_name unique varchar(255),
   birthday date,
+  u_points int not null,
+  avatar_filename varchar(255),
+  influencer_level varchar(255),
   city varchar(50),
   state varchar(2),
   primary key (uid)
@@ -103,7 +106,10 @@ create table Product_Comments (
 create table Designer (
   did bigint unsigned not null auto_increment,
   d_name varchar(255),
-  d_labelname varchar(255), 
+  d_labelname varchar(255),
+  d_image_filename varchar(255), /* changed from data type mediumblob --> filename as the images for designers will be stored in the server instead for a lighter database */
+  d_video_filename varchar(255), /* added filename as the videos of designers will be stored in the server  */
+  b_name varchar(255),
   d_phone_number unsigned int,
   d_email varchar(255),
   d_address text,
@@ -118,7 +124,6 @@ create table Designer (
 
 create table Boutiques (
   bid bigint unsigned not null auto_increment,
-  b_image_filename varchar(255), /* changed from data type mediumblob --> filename as the images will be stored in the server instead for a lighter database */
   b_name varchar(255),
   b_address text,
   b_city varchar(50),
@@ -144,7 +149,8 @@ Users (
   email, 
   password, 
   u_points, 
-  u_title, 
+  influencer_level,
+  avatar_filename,
   username, 
   f_name, 
   l_name, 
@@ -158,6 +164,8 @@ Designer (
    did, 
    d_name, 
    d_labelname, 
+   d_image_filename,
+   d_video_filename,
    d_phone,
    d_email, 
    d_address, 
@@ -173,11 +181,12 @@ Product (
   pro_name,
   pro_desc, 
   color_name, 
+  size_types,
   fiber_context, 
   pro_price, 
   pro_tags,              
-  made_in_NY, 
-  novelity_of_items
+  made_ny, 
+  novelity
 )
   Primary Key: pid
 
@@ -188,8 +197,8 @@ Product_types (
 Primary Key: pro_types_id
 
 Product_images (
-  pro_img_id, 
-  pro_img, 
+  pro_img_id,
+  pro_img_filename, 
   pid, 
   did
 )
@@ -199,7 +208,6 @@ Foreign key: pid referencing product.pid
 
 Boutiques (
   bid, 
-  b_img, 
   b_name, 
   b_address, 
   b_city, 
@@ -236,8 +244,4 @@ pro_bou (
   Primary key: pid, bid
   Foreign key: pid referencing product.pid
                Bid referencing boutique.bid
-
-
-
-
 
