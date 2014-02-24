@@ -82,7 +82,7 @@ Non-Critical user feature list
 - Privacy Policy 
 - Conditions
 - Contact Us
-- Designer Stories
+- Designer Stories (Videos)
 - Social Media Links
 
 
@@ -95,6 +95,7 @@ Permissions
 - Commenting on Products
 - Notifications 
 - Altering information on products
+- Having no Points or Influence Level Title
 
 **Access Granted for Non-members**:
 - Viewing and Browsing product information 
@@ -103,7 +104,7 @@ Permissions
 - All-Access(Everything a non-member cannot do)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
 
-User Title Influencer Levels:
+Influencer Level Titles:
 -----------------
 **Fashionista** Default level
 
