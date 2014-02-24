@@ -14,12 +14,12 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 
 Folders:
 ===============
-- front-end-assets: contains all the client-side components
+- Front-end-assets: contains all the client-side components
 
-- project-Specifications: contains all of important project documents to read 
+- Project-Specifications: contains the application overview and use case 
 
-- database-info: contains anything related to the database
+- Database-info: contains anything related to the database
 
-- indieitude-project: contains the **Actual** django project folder where we have the apps, models and settings.py. Which we will be using to launch the product and actually creating the templates, business logic and etc.
+- Indieitude-project: contains the **Actual** django project folder where we have the apps, models and settings.py. Which we will be using to launch the product and actually creating the templates, business logic and etc.
 
 
