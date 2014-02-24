@@ -13,7 +13,7 @@ This allows the designers to join the platform (**upon being invited and gaining
 
 - **Indieitude Admin Area**: 
 
-This will be the master admin for ourselves to govern the backend of the site, to approve user changes(**see permissions in Users for more detail**), Add our own content(product pictures and information) to the platform, using the same upload procudure as the **designers** product upload and govern any other data in the site such as adding designers, deleting users, and etc..
+This will be the master admin for ourselves to govern the backend of the site, to approve user changes (**see permissions in Users for more detail**), Add our own content(product pictures and information) to the platform, using the same upload procudure as the **designers** product upload and govern any other data in the site such as adding designers, deleting users, and etc..
 
 
 Users (use case)
@@ -23,10 +23,10 @@ This information is for the users.
 It is with this list we will create in Django the Models (**Logic behind the view and database layer**) , View (**the portion that selects which data to display and how to display it, is handled by views and templates**) and Controller (**the portion that delegates to a view depending on user input, is handled by the framework itself by following your URLconf and calling the appropriate Python function for the given URL**). This will follow the MVC format.
 
 - **Login**:
-Users can Login via facebook or using an email/password combination 
+Users can Login via facebook or entering an email/password combination
 
 - **Sign-Up**:
-Users can Sign-Up via facebook or using an email/password combination 
+Users can Sign-Up via facebook or entering an email/password combination 
 
 Critical User Feature List
 ------------------------
@@ -70,15 +70,16 @@ Shows if the user has any new comments or announcements
 
 - **Settings**:
 
-Lets the user change Name, Username, email, Birthday, City, State, Country and Password
+Lets the user change Name, Username, Email, Birthday, City, State, Profile Picture and Password
 
-Non-Critical UX feature list
+Non-Critical user feature list
 ----------------------------
 - About Us
 - Terms
 - Privacy Policy 
 - Conditions
 - Contact Us
+- Designer Stories
 - Social Media Links
 
 
@@ -87,25 +88,25 @@ Permissions
 **Access Denied for Non-members**:
 - Personal feed
 - Settings
-- Like Products
-- Comment on Products
+- Liking Products
+- Commenting on Products
 - Notifications 
-- Alter information on products
+- Altering information on products
 
 **Access Granted for Non-members**:
-- Viewing and Browsing product information
+- Viewing and Browsing product information 
 
 **Access Granted for Members**:
 - All-Access(Everything a non-member cannot do)
-- *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Publisher)
+- *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
 
 Levels Below:
 
-**Fashionista**
+**Fashionista** Default level
 
---> They have no editing power, (basic level you begin at)
+--> They have no editing power, (basic level everyone begins at)
 
-**Fashion Publisher is allowed to Add**:
+**Fashion Editor is allowed to Add**:
 
 --> Adding Product Tags
 
@@ -113,64 +114,48 @@ Levels Below:
 
 --> Adding Boutiques
 
-**Next level (Fashion Editor), is allowed to Delete/Add**:
 
---> Product Tags
-
---> Product Links
-
---> Boutiques
-
-**Final level (Fashioneer), is allowed to Delete/Add**:
-
---> Product Tags
-
---> Product Links
-
---> Boutiques
-
---> Fiber Content
-
---> A, B (See Designer Admin Area: General Information)
-
-
-Designers Admin Area
+Designers Admin Area (use case)
 ===================================
-The Designers that would like to join the platform to added and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be a one-time save where the designers can update the information at anytime. The **Product Information area** will be the 'main' and critical component where the designers will upload the information onto the platform for user viewing, but will be able to update the information at anytime. SOme of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
+The Designers that would like to join the platform to add and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be where the designers can update basic information at anytime. The **Product Information area** will be the **main** and critical component where the designers will upload the information onto the platform for users viewing, but will be able to update the already uploaded information at anytime. Some of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
 - The #'s and single-letter code show what will sourced and shown to the users via on the product data from the designers input area **General Information** and **Product Information**.
 
-Critical UX Feature List(General Information)
+- **Login**:
+Designers can Login using email/password combination 
+
+- **Invited**:
+Designers can get invited by signup with email, name and phone# 
+
+
+Critical Designer Feature List (General Information)
 ----------------------------------------
 - **(9) Name**:
 
-This information will be the name the designer goes by, and if the designer uses a different name for their label, a checkbox will be provided to allow the designer to
-select which name appears for Users to see on the product information
+This information will be the name the designer goes by, and if the designer uses a different name for their label, a checkbox will be provided to allow the designer to select which name appears for Users to see on the product information
 
 - **Contact Information [internal info. For the Indieitude Team]**: 
 
-This is Private information the designer provided if need we need to contact them. Information includes:
+This is Private information the designer provides if need we need to contact them. Information includes:
 
---> Phone # 
-
---> Address[Street # & Name, State, City, Zip Code] 
+--> Phone# 
 
 --> Email
 
-- **(10) Boutiques or Shapes they sell at [if applicable]**:
+- **(10) Boutiques or Shops they sell at [if applicable]**:
 
-Information need from them, would be Name of Boutique/Shop & State/City it is located in
+Information needed from them, would be Name of Boutique/Shop & State/City Boutique/Shop is located in
 
 - **(A) Specialties**: 
 
-Whatever product the designer specializes in making, e.g. Accessories, Bags, Jeans
+Whatever the designer specializes in making, e.g. Accessories, Bags, Jeans
 
 - **(B) Designer Store information [if applicable]**:
 
 This is only if the designer owns a physical store, then we would need their address to advertise to users on the product information.
 
 
-Critical UX Feature List(Product Information)
+Critical Designer Feature List (Product Information)
 ----------------------------------------
 - **(1) Product Name**:
 
@@ -190,11 +175,11 @@ Colors the designer has available for the product
 
 - **(5) Fit Sizes**
 
-Standard sizes, and guidelines
+Sizes the product is available in
 
 - **(6) Novelty of Product [if applicable]**:
 
-Helps shows if the product is ultra rare or one of a kind
+Helps shows if the product is ultra rare or one of a kind, E.g.:
 
 --> Handmade
 
@@ -202,9 +187,11 @@ Helps shows if the product is ultra rare or one of a kind
 
 --> One-Off-Item
 
+--> Etc..
+
 - **(7) Product Tags [if applicable]**:
 
-Refines the search for the users to find the product
+Refines the search for the users to filter the product and helps for SEO
 
 - **(8) Made In NY [if applicable]**:
 
@@ -217,6 +204,23 @@ lets the designer at links to sites their product is being sold on
 - **(12) Product Image(s)**:
 
 The designer adds product images to showcase the product
+
+- **(12) Designer Video (optional)**:
+
+The designer adds a 90sec video introducing themselves and story behind their product/themselves 
+
+Permissions 
+------------
+**Access Denied for Non-Designers not on the platform**:
+- Cannot login to the Designer Admin Area
+
+**Access Granted for Non-Designers not on the platform**:
+- Same as Users(Non-members) **see Access Granted for Non-members(User) in permissions for more detail**
+
+**Access Granted for Designers Invited on the platform**:
+- All-Access(Everything a non-member cannot do)
+- *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
+
 
 
 Indieitude Admin Area
