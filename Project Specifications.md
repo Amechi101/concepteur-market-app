@@ -3,33 +3,36 @@ Application Specification
 ==========================
 The application will be divide into three core parts: 
 
-- **Users**: 
+- **User Area**: 
 
 Where they will have their permissions and how they use the features to navigate throughout the site
 
 - **Designer Admin Area**: 
 
-This allows the designers to join the platform (upon being invited) and add information at their own time, while making any updates tothe product information they add for users to see.
+This allows the designers to join the platform (**upon being invited and gaining access**) and add information at their own time, while making any updates to the product information they add for users to see.
 
 - **Indieitude Admin Area**: 
 
-This will be the master access for ourselves to govern the backend of the site, to approve user changes(see permissions in Users 
-for more detail), Add our on content to the platform, using a similar methodology to the **designers** product upload and govern any other data in the site such as adding designers, deleting, and etc..
+This will be the master admin for ourselves to govern the backend of the site, to approve user changes(**see permissions in Users for more detail**), Add our own content(product pictures and information) to the platform, using the same upload procudure as the **designers** product upload and govern any other data in the site such as adding designers, deleting users, and etc..
 
 
-
-Users
+Users (use case)
 ======
-This information is for the users presentation information(View). It is with this list we will create the Models(Logic behind the view) and Templates(The building structure of the View). This will follow the MVC format of thinking.
+This information is for the users. 
+
+It is with this list we will create in Django the Models (**Logic behind the view and database layer**) , View (**the portion that selects which data to display and how to display it, is handled by views and templates**) and Controller (**the portion that delegates to a view depending on user input, is handled by the framework itself by following your URLconf and calling the appropriate Python function for the given URL**). This will follow the MVC format.
 
 - **Login**:
-User can Login via facebook or using an email/password combination 
+Users can Login via facebook or using an email/password combination 
 
 - **Sign-Up**:
-User can Sign-Up via facebook or using an email/password combination 
+Users can Sign-Up via facebook or using an email/password combination 
 
-Critical UX Feature List
+Critical User Feature List
 ------------------------
+
+Menu options for Users to select product items available to all users who are non-members or members:
+
 - **All**:
 
 Aggregates the content in the designated content area, regardless of product specifications.
@@ -40,7 +43,7 @@ Aggregates the content in the designated content area, searching from the latest
 
 - **Trending Now**:
 
-Aggregates the content in the designated content area, searching content that is either Liked and/or Commented the most in a given time frame, E.g. hour, day or week
+Aggregates the content in the designated content area, searching content that is either Liked and/or Commented the most in a given time frame, E.g. hour, day or week 
 
 - **Collection**:
 
