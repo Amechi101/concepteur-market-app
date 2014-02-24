@@ -126,7 +126,6 @@ The #'s and single-letter code show what will sourced from the database storing 
 
 **General Information** and **Product Information** will show all the necessary sections for designers to input information
 
-
 Login/Signup Requirements
 ----------------------------
 
@@ -225,13 +224,12 @@ Permissions
 
 **Access Granted for Non-Designers not on the platform**:
 - Same as Users(Non-members) **see Access Granted for Non-members(User) in permissions for more detail**
-- **Can request to get invited by signing up via a desginated designer signup on homepage
+- Can request to get invited by signing up via the desginated designer signup on our homepage
 
 **Access Granted for Designers Invited on the platform**:
 - Add Product information that will be displayed to the user
 - Delete Product Information already uploaded
 - Edit Product information alreay uploaded
-
 
 
 Indieitude Admin Area
