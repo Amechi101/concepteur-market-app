@@ -22,6 +22,9 @@ This information is for the users.
 
 It is with this list we will create in Django the Models (**Logic behind the view and database layer**) , View (**the portion that selects which data to display and how to display it, is handled by views and templates**) and Controller (**the portion that delegates to a view depending on user input, is handled by the framework itself by following your URLconf and calling the appropriate Python function for the given URL**). This will follow the MVC format.
 
+Login/Signup Requirements
+------------------------
+
 - **Login**:
 Users can Login via facebook or entering an email/password combination
 
@@ -119,7 +122,13 @@ Designers Admin Area (use case)
 ===================================
 The Designers that would like to join the platform to add and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be where the designers can update basic information at anytime. The **Product Information area** will be the **main** and critical component where the designers will upload the information onto the platform for users viewing, but will be able to update the already uploaded information at anytime. Some of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
-- The #'s and single-letter code show what will sourced and shown to the users via on the product, some of which users can adjust. **General Information** and **Product Information** will show all the necessary fill out sections and divide ths input information
+The #'s and single-letter code show what will sourced from the database storing from the  **General Information** and **Product Information** and shown to the users on the product, some of which users can adjust. 
+
+**General Information** and **Product Information** will show all the necessary sections for designers to input information
+
+
+Login/Signup Requirements
+----------------------------
 
 - **Login**:
 Designers can Login using email/password combination 
