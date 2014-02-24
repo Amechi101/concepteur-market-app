@@ -119,7 +119,7 @@ Designers Admin Area (use case)
 ===================================
 The Designers that would like to join the platform to add and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be where the designers can update basic information at anytime. The **Product Information area** will be the **main** and critical component where the designers will upload the information onto the platform for users viewing, but will be able to update the already uploaded information at anytime. Some of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
-- The #'s and single-letter code show what will sourced and shown to the users via on the product data from the designers input area **General Information** and **Product Information**.
+- The #'s and single-letter code show what will sourced and shown to the users via on the product, some of which users can adjust. **General Information** and **Product Information** will show all the necessary fill out sections and divide ths input information
 
 - **Login**:
 Designers can Login using email/password combination 
@@ -205,7 +205,7 @@ lets the designer at links to sites their product is being sold on
 
 The designer adds product images to showcase the product
 
-- **(12) Designer Video (optional)**:
+- **(13) Designer Video (optional)**:
 
 The designer adds a 90sec video introducing themselves and story behind their product/themselves 
 
@@ -216,10 +216,12 @@ Permissions
 
 **Access Granted for Non-Designers not on the platform**:
 - Same as Users(Non-members) **see Access Granted for Non-members(User) in permissions for more detail**
+- **Can request to get invited by signing up via a desginated designer signup on homepage
 
 **Access Granted for Designers Invited on the platform**:
-- All-Access(Everything a non-member cannot do)
-- *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
+- Add Product information that will be displayed to the user
+- Delete Product Information already uploaded
+- Edit Product information alreay uploaded
 
 
 
