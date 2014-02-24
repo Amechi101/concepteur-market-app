@@ -103,8 +103,8 @@ Permissions
 - All-Access(Everything a non-member cannot do)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
 
-Levels Below:
-
+User Title Infuencer Levels:
+-----------------
 **Fashionista** Default level
 
 --> They have no editing power, (basic level everyone begins at)
@@ -120,7 +120,7 @@ Levels Below:
 
 Designers Admin Area (use case)
 ===================================
-The Designers that would like to join the platform to add and maintain their own content, will have their own admin area to upload product information. Their will be two areas where designers will input information **General Information** and **Product Information**. The **General information area** will be where the designers can update basic information at anytime. The **Product Information area** will be the **main** and critical component where the designers will upload the information onto the platform for users viewing, but will be able to update the already uploaded information at anytime. Some of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
+The Designers that would like to join the platform to add and maintain their own content, will have their own admin area to upload product information to the database. Their will be two areas where designers will input information to the database **General Information** and **Product Information**. The **General information area** will be where the designers can update basic information at anytime. The **Product Information area** will be the **main** and critical component where the designers will upload the information onto the platform for users viewing, but will be able to update the already uploaded information at anytime. Some of the information however in **General Information** will be propagated to ease the redundancy of adding simple information over again in the **Product information area**, as well in the **Product Information area**.
 
 The #'s and single-letter code show what will sourced from the database storing from the  **General Information** and **Product Information** and shown to the users on the product, some of which users can adjust. 
 
@@ -228,13 +228,20 @@ Permissions
 
 **Access Granted for Designers Invited on the platform**:
 - Add Product information that will be displayed to the user
+- Add Video about themeselves
 - Delete Product Information already uploaded
 - Edit Product information alreay uploaded
 
-
 Indieitude Admin Area
 ===================================
+This is the Master Area(our Admin Area) we will have access to moniter and control everything. We will of course have to add admins and give them these permissions (**which Django does automatically for superusers**).
 
+What we control:
+----------------
+- Deleting Users & Designers from the database
+- Approving what users (that are members) add on the products **See User Title Infuencer Levels for more info**
+- Searching database for users
+- Adding Product information that we see, which can be altered by Users(Members) Note: **We will only add designers items that are not affliated with out platform, and if a designer joins after we have already added a product that happens to be theirs, they must alert us if they would like something to be added or deleted (*if they choose) but do not have the permission to change products directly that we upload.**
 
 
 
