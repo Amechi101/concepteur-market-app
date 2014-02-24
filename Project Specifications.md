@@ -75,8 +75,18 @@ Shows if the user has any new comments or announcements
 
 Lets the user change Name, Username, Email, Birthday, City, State, Profile Picture and Password
 
+- **Points**:
+
+The user will start with 0 points and through commenting & liking products and inviting friends on the platform they will be able to able to accumulate points and rise through the ranks(Influncer levels)
+
+- **Influence level**:
+
+This ranking system of how we define the levels of users based on an accumalating of points, that will determine 
+what extra things they can do within the platform.
+
 Non-Critical user feature list
 ----------------------------
+**This information will be manily located on the homepage**
 - About Us
 - Terms
 - Privacy Policy 
@@ -95,13 +105,13 @@ Permissions
 - Commenting on Products
 - Notifications 
 - Altering information on products
-- Having no Points or Influence Level Title
+- Having no points or Influence Level Title
 
 **Access Granted for Non-members**:
 - Viewing and Browsing product information 
 
 **Access Granted for Members**:
-- All-Access(Everything a non-member cannot do)
+- All-Access(Everything a non-member cannot do or doesnt have)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
 
 Influencer Level Titles:
