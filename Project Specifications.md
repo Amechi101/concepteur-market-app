@@ -13,7 +13,7 @@ This allows the designers to join the platform (**upon being invited and gaining
 
 - **Indieitude Admin Area**: 
 
-This will be the master admin for ourselves to govern the backend of the site, to approve user changes (**see permissions in Users for more detail**), Add our own content(product pictures and information) to the platform, using the same upload procudure as the **designers** product upload and govern any other data in the site such as adding designers, deleting users, and etc..
+This will be the master admin for ourselves to govern the backend of the site, to approve user changes (**see permissions in Users for more detail**), Add our own content(product pictures and information) to the platform, using the same upload procedure as the **designers** product upload and govern any other data in the site such as adding designers, deleting users, and etc..
 
 
 Users (use case)
@@ -103,7 +103,7 @@ Permissions
 - All-Access(Everything a non-member cannot do)
 - *Alter information on products (This permission is given to members achieving an influencer level of: Fashion Editor)
 
-User Title Infuencer Levels:
+User Title Influencer Levels:
 -----------------
 **Fashionista** Default level
 
@@ -224,33 +224,25 @@ Permissions
 
 **Access Granted for Non-Designers not on the platform**:
 - Same as Users(Non-members) **see Access Granted for Non-members(User) in permissions for more detail**
-- Can request to get invited by signing up via the desginated designer signup on our homepage
+- Can request to get invited by signing up via the designated designer signup on our homepage
 
 **Access Granted for Designers Invited on the platform**:
 - Add Product information that will be displayed to the user
-- Add Video about themeselves
+- Add Video about themselves
 - Delete Product Information already uploaded
-- Edit Product information alreay uploaded
+- Edit Product information already uploaded
 
-Indieitude Admin Area
+Indieitude Admin Area (use case)
 ===================================
-This is the Master Area(our Admin Area) we will have access to moniter and control everything. We will of course have to add admins and give them these permissions (**which Django does automatically for superusers**).
+This is the Master Area(our Admin Area) we will have access to monitor and control everything. We will of course have ways to add admins and give them these permissions (**which Django does automatically or Manually by making them superusers**).
 
 What we control:
 ----------------
 - Deleting Users & Designers from the database
-- Approving what users (that are members) add on the products **See User Title Infuencer Levels for more info**
-- Searching database for users
-- Adding Product information that we see, which can be altered by Users(Members) Note: **We will only add designers items that are not affliated with out platform, and if a designer joins after we have already added a product that happens to be theirs, they must alert us if they would like something to be added or deleted (*if they choose) but do not have the permission to change products directly that we upload.**
-
-
-
-
-
-
-
-
-
-
-
-
+- Approving what users (that are members) add on the products **See User Title Influencer Levels for more info**
+- Search database for Users & Designers
+- Adding Product information that we see, which can be altered by Users(Members) Note: **We will only add designers items that are not affiliated with out platform, and if a designer joins after we have already added a product that happens to be theirs, they must alert us if they would like something to be added or deleted (*if they choose) but do not have the permission to change products directly that we upload.**
+- Add video for designers
+- Monitor activity level for users, and comments (scanning ones that are not appropriate)
+- Registering Designers to the application, which will give them access to their own admin area
+- Editing Product information
