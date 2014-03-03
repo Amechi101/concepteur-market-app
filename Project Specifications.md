@@ -86,11 +86,10 @@ what extra things they can do within the platform.
 
 Non-Critical user feature list
 ----------------------------
-**This information will be manily located on the homepage**
+**This information will be mainly located in the information area**
 - About Us
-- Terms
+- Terms & Conditions
 - Privacy Policy 
-- Conditions
 - Contact Us
 - Designer Stories (Videos)
 - Social Media Links
