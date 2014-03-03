@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie"><![endif]-->
-<!--[if gte IE 9]><!--><html lang="en" class="no-js" ng-app="indieApp"><!--<![endif]-->
+<!--[if gte IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
 	<head>
 		<meta charset="UTF-8" />
@@ -11,572 +11,26 @@
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
 		<link rel="shortcut icon" href=""> 
-		<script src="js/lib/angular/angular.js"></script>
-        <script src="js/controller.js"></script>
 		
 		<!--*****CSS LINKS******-->
-
-		<!--  CSS for Icons  -->
 		<link rel="stylesheet" type="text/css" href="css/icon-data.css"/> 
-
-		<!--  CSS for resets  -->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-
-		<!--  CSS for other styles  -->
-
-		<link rel="stylesheet" type="text/css" href="css/main-menu.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/> 
+		<link rel="stylesheet" type="text/css" href="css/main.css"/> 
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css"/>
 
 		<!--****Script tags needed to be in-between the head tags****-->
-		<script src="js/lib/less-critical/modernizr.custom.32600.js"></script>
-		
-		
-		
-		<style type="text/css"> 
- body {
-background-color:rgb(189, 195, 199);    
-    
-} 
-
-/***************   Top header  ***************** */
-.headerWrap{
-z-index:1000;
-}
-
-.headerWrap {
-position:fixed;
-width:100%;
-top:0;
-left:0;
-background:rgb(0,0,0);
-}
-
-.headerWrap  nav.headerInner {
- position:relative;
- padding:0px;
- margin:0;
-}
-
-/* .logoWrap .logo {
-top: 10px;
-margin: 0 auto;
-left: 410px;
-right: 0;
-max-width: 100%;
-background-image: url('images/logo99.png');
-background-repeat:no-repeat;
-height:40px;
-text-decoration: none; 
-position: absolute;
-z-index: 100;
-} */
-
-
-/* login-signup options */
-
-.wrap .headerInner ul.socialNavHeader {
-float: left;
-text-align:center;
-padding:0;
-margin:0;
-position:relative;
- top:20px;
- left:730px;
-background:none;
-  
-}
-
-.wrap .headerInner ul.socialNavHeader li {
-display:inline-block;
-list-style-type:none;
-padding:0 0.725em;
-
-}
-
-.wrap .headerInner ul.socialNavHeader li:nth-of-type(2) {
-border-left:white solid 1px;
-}
-
-.wrap .headerInner ul.socialNavHeader li a {
-font-weight: 400;
-text-transform:none;
-text-decoration:none;
-font-size: 1.3em;
-color:rgb(255,255,255);
-	-webkit-transition: color 0.3s;
-	-moz-transition: color 0.3s;
-	transition: color 0.3s;
-
-}
-
-.wrap .headerInner ul.socialNavHeader li:first-child a::before {
-	position: absolute;
-	top: 50%;
-	left: 22%;
-	color: transparent;
-	content: '.';
-	text-shadow: 0 0 transparent;
-	font-size: 1.2em;
-	-webkit-transition: text-shadow 0.3s, color 0.3s;
-	-moz-transition: text-shadow 0.3s, color 0.3s;
-	transition: text-shadow 0.3s, color 0.3s;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	transform: translateX(-50%);
-	pointer-events: none;
-}
-
-.wrap .headerInner ul.socialNavHeader li:first-child a:hover::before,
-.wrap .headerInner ul.socialNavHeader li:first-child a:focus::before {
-	color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
-}
-
-.wrap .headerInner ul.socialNavHeader li:first-child a:hover,
-.wrap .headerInner ul.socialNavHeader li:first-child a:focus {
-	color: rgb(18,194,134);
-}
-
-/* second child hover */
-
-.wrap .headerInner ul.socialNavHeader li:last-child a::before {
-	position: absolute;
-	top: 50%;
-	left: 74%;
-	color: transparent;
-	content: '.';
-	text-shadow: 0 0 transparent;
-	font-size: 1.2em;
-	-webkit-transition: text-shadow 0.3s, color 0.3s;
-	-moz-transition: text-shadow 0.3s, color 0.3s;
-	transition: text-shadow 0.3s, color 0.3s;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	transform: translateX(-50%);
-	pointer-events: none;
-}
-
-.wrap .headerInner ul.socialNavHeader li:last-child a:hover::before,
-.wrap .headerInner ul.socialNavHeader li:last-child a:focus::before {
-	color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
-}
-
-.wrap .headerInner ul.socialNavHeader li:last-child a:hover,
-.wrap .headerInner ul.socialNavHeader li:last-child a:focus {
-color: rgb(18,194,134);
-}
-
-/********* Search-Bar  Top Header ********/
-.wrap .headerInner div.tl-search {
-    position:relative;
-    margin-right:30px;
-    width:0%;
-    margin-top:10px;
-    min-width:60px;
-    height:50px;
-    float:right;
-   
-    overflow:hidden;
-    -webkit-transition:width 0.3s;
-    -moz-transition:width 0.3s;
-    transition:width 0.3s;
-    -webkit-backface-visibility:hidden;
-}
-
-.wrap .headerInner .tl-search-input {
-  position:absolute;
-  top:0;
-  right:0;
-    border:none;
-    outline:none;
-    background:white;
-    width:100%;
-    height:40px;
-    margin:0;
-    z-index:0;
-    padding: 0px 65px 0px 20px;
-    font-family:inherit;
-    font-size:20px;
-    color:rgb(18,194,134);
-}
-
-.wrap .headerInner  .tl-search-submit {
-   background:rgb(255,255,255);
-   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
-    filter: alpha(opacity=0);
-    opacity:0;
-    color:transparent;
-    border:none;
-    outline:none;
-    z-index:-1;
-}
-
-
-.wrap .headerInner .tl-search input[type="search"].tl-search-input {
- -webkit-appearance:none;
- -webkit-border-radius:0px;
-}
-
-
-/* color place holding text with prefixes */
- .wrap .headerInner  .tl-search-input::-webkit-input-placeholder {
-    color: #efb480;
-}
- 
- .wrap .headerInner .tl-search-input:-moz-placeholder {
-    color: rgb(0,0,0);
-}
- 
-.wrap .headerInner .tl-search-input::-moz-placeholder {
-    color: rgb(0,0,0);
-}
- 
- .wrap .headerInner  .tl-search-input:-ms-input-placeholder {
-    color: #efb480;
-}
-
-.wrap .headerInner  .tl-icon-search,
-.wrap .headerInner  .tl-search-submit {
-    width:60px;
-    height:40px;
-    display:block;
-    position:absolute;
-    right:0;
-    top:0;
-    padding:0;
-    margin:0;
-    line-height:40px;
-    text-align:center;
-    cursor:pointer;
-}
-
-.wrap .headerInner .tl-icon-search {
-z-index:90;
-font-size:22px;
-font-family:'icomoon';
-color:rgb(255,255,255);
-background:black;
- speak:none;
- font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;   
-}
-
-.wrap .headerInner .tl-search .tl-icon-search:before {
-    content: "\e609";
-}
-
-
-/* Open State */
-.wrap .headerInner .tl-search.tl-search-open,
-.no-js .tl-search {
-    width:30%;
-}
-
-.wrap .headerInner .tl-search.tl-search-open .tl-icon-search,
-.no-js .tl-search .ti-icon-search {
- background:#da6d0d;
-  color:rgb(0,0,0);
-  z-index:11;
-}
-
- .wrap .headerInner .tl-search.tl-search-open .tl-search-submit,
-.no-js .tl-search .tl-search-submit {
-    z-index: 90;
-}
-
-
-/*****************  Main grid area  *********************/
-
-.wrap .space {
- padding-bottom:10px;  
- position:relative;
- width:100%;
- right:0;
- top:0;
- left:0;
-  bottom:0;
-  text-align:center;
- margin-top:80px;
-}
-
-#tiles {
-  list-style-type: none;
-  position: relative; /** Needed to ensure items are laid out relative to this container **/
-  margin: 0;
-  padding: 0;
-}
-
-/**
- * Grid items
- */
-#tiles li {
-  width: 200px;
-  background-color: #ffffff;
-  border: 1px solid #dedede;
-          border-radius: 2px;
-     -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-    display: inline-block; /** Hide items initially to avoid a flicker effect **/
-  cursor: pointer;
-  padding: 4px;
-}
-
-#tiles li.inactive {
-  visibility: hidden;
-  opacity: 0;
-}
-
-#tiles li img {
-  display: block;
-}
-
-/*#tiles li::after {
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-transition:background 2s;
-} 
-
-
-#tiles li:hover::after {
-background:rgba(0,0,0,0.3);
-}*/
-
-
-
-/* Overlay style */
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(153,204,51,0.9);
-	z-index: 2000;
-}
-
-
-/* Effects */
-.overlay-scale {
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
-	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
-	transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
-}
-
-.overlay-scale.open {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);	
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-	transition: transform 0.4s, opacity 0.4s;
-}
-
-@media screen and (max-height: 30.5em) {
-	.overlay nav {
-		height: 70%;
-		font-size: 34px;
-	}
-	.overlay ul li {
-		min-height: 34px;
-	}
-}
-
-
-/*********** Overlay for product content area ***********************/
-.ps-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-transform: uppercase;
-  color: #555;
-  background: #fff;
-
-}
-
-.ps-container > div {
-  position: absolute;
-  width: 40%;  /* change to 50% for base design */
-}
-
-/* remove this class when switching to base design*/
-.ps-container > .ps-header {
-   width:60%;  
-}
-
-
-.ps-container > div > div,
-.ps-slidewrapper > nav,
-.ps-slides > div {
-  position: absolute;
-}
-
-
-/* Header section   */
-.ps-header {
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  z-index: 1001;
-  background: rgb(33,33,33);
-}
-
-
-
-/* Overlay for product content area */
-
-
-
-.ps-slidewrapper {
-  left: 0px;
-  top: 0px;
-  height: 100%;
-  overflow: hidden;
-}
-
-.ps-slides {
-  top: 0px;
-  bottom: 200px;
-  width: 100%;
-}
-
-.ps-slides > div {
-  width: 100%;
-  height: 100%;
-
-}
-
-.ps-slidewrapper > nav {
-  width: 100%;
-  height: 200px;
-  bottom: 0px;
-  right: 0px;
-  z-index: 1000;
-}
-
-.ps-slidewrapper > nav > a {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  float: left;
-  outline: none;
-}
-
-
-.no-touch .ps-slidewrapper > nav > a {
-  -webkit-transition: box-shadow 0.4s ease-in-out;
-  -moz-transition: box-shadow 0.4s ease-in-out;
-  -ms-transition: box-shadow 0.4s ease-in-out;
-  -o-transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
-}
-
-.no-touch .ps-slidewrapper > nav > a:hover {
-  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.9);
-}
-
-.no-touch .ps-slidewrapper > nav > a:first-child:hover {
-  box-shadow: inset 0 0 0 9999px rgba(33,33,33,0.7);
-}
-
-
-.ps-slidewrapper > nav > a:after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  margin: -20px 0 0 -50px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-left: 1px solid #000;
-  border-top: 1px solid #000;
-}
-
-.ps-slidewrapper > nav > a:first-child:after {
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  margin: -80px 0 0 -50px;
-}
-
-.ps-slides > div,
-.ps-slidewrapper > nav > a {
-  background-color: #fff;
-  background-position: center top;
-  background-repeat: no-repeat;
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-.ps-move {
-  -webkit-transition: top 400ms ease-out;
-  -moz-transition: top 400ms ease-out;
-  -o-transition: top 400ms ease-out;
-  -ms-transition: top 400ms ease-out;
-  transition: top 400ms ease-out;
-}
-
-
-@media screen and (max-width: 860px) {
-
-  .js .ps-container > div {
-    width: 100%;
-  }
-
-  .js .ps-header {
-    height: 50px;
-  }
-
-
-  .js .ps-slides {
-    bottom: 320px;
-    top: 50px;
-  }
-
-  .js .ps-slidewrapper > nav {
-    height: 100px;
-  }
-
-
-}
-
-
-
-
-		</style>
-
-		<!--
-        This script enables structural HTML5 elements in old IE.
-        http://code.google.com/p/html5shim/ -->
-	    <!--[if lt IE 9]>
-	    <script src = "//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
+		<script src="js/lib/main-important/jquery-1.11.0.js"></script>
+		<script src="js/lib/other/modernizr.custom.32600.js"></script>
+		<!--<script src="js/lib/main-important/angular.js"></script> -->
+		<!--<script src="js/lib/angular/angular-route.js"></script> -->
+        <!--<script src="js/controller.js"></script>-->		
 	</head>
 	<body>
 		<div class="wrap">
 			<header class="headerWrap">
 				<nav class="headerInner">
 					<div class="logoWrap">  
-						<div class=""></div>
-						<a href="#"></a>
+						<a href="main.html"><div class="logo"></div></a>
 					</div> 
 					<div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
@@ -657,8 +111,8 @@ background:rgba(0,0,0,0.3);
 						</ul>
 					</div><!-- /dl-menuwrapper -->
 					<ul class="socialNavHeader">
-						<li><a href="#">login</a></li> 
-						<li><a href="#">signup</a></li>
+						<li><a href="registration/signup.html">Login / Signup </a></li> 
+						<li><a href="../information/information-page.html" ><span class="s-icon-info"></span></a></li> 
 					</ul>
 					<div id="tl-search" class="tl-search">
 	    				<form>
@@ -673,31 +127,259 @@ background:rgba(0,0,0,0.3);
 			<div  class="space"></div>
 
 
-			<div id="main" role="main" ng-controller="imageAddCrtl">
-				<ul id="tiles"  class="">
+			<div id="main" role="main">
+				<ul id="tiles">
 		      		<a href="#" id="trigger-overlay">
-		      			<li   ng-repeat="image in imageInfo">
-			      			<img  ng-src="{{image.productImages[0]}}"/>
-		      			</li>
+		      			<li><img  src="http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0529_2.jpg"/></li>
+		      			<li><img  src="img/test.jpg"/></li>
+		      			<li><img  src="img/test2.jpg"/></li>
+		      			<li><img  src="img/test3.jpg"/></li>
+		      			<li><img  src="img/test4.jpg"/></li>
+		      			<li><img  src="img/test5.jpg"/></li>
+		      			<li><img  src="img/test6.jpg"/></li>
+		      			<li><img  src="img/test7.jpg"/></li>
+		      			<li><img  src="img/test8.jpg"/></li>
+		      			<li><img  src="img/test9.jpg"/></li>
+		      			<li><img  src="img/test10.jpg"/></li>
+		      			<li><img  src="img/test11.jpg"/></li>
+		      			<li><img  src="img/test12.jpg"/></li>
+		      			<li><img  src="img/test13.jpg"/></li>
+		      			<li><img  src="img/test14.jpg"/></li>
+		      			<li><img  src="img/test15.jpg"/></li>
 		      		</a>
 		      		<div class="overlay overlay-scale">
 		      			<section id="ps-container" class="ps-container">
-            				<div class="ps-header">
-                
-            				</div>
       						<div class="ps-slidewrapper">
        							<div class="ps-slides">
-									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.3.zoom.jpg);"></div>
-									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.2.zoom.jpg);"></div>
-									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.1.zoom.jpg);"></div>
-									<div style="background-image:url(http://images01.nastygal.com/resources/nastygal/images/products/processed/40402.0.zoom.jpg);"></div>
+									<div style="background-image:url(http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0529_2.jpg);"></div>
+									<div style="background-image:url(http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0512_1.jpg);"></div>
+									<div style="background-image:url(http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0538_1.jpg);"></div>
+									<div style="background-image:url(http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0534_3.jpg);"></div>
 								</div>
+								<div class="product-likes">
+						            <span class="ps-icon-heart-empty"></span>
+						        </div>
+						        <div class="product-badge">
+					                <!-- <img src="img/madelogo-1.png"> -->
+					            </div>
         						<nav>
 									<a href="#" class="ps-prev" ></a>
 									<a href="#" class="ps-next" ></a>
 								</nav>
 					        </div><!-- /ps-slidewrapper -->
-						</section><!-- /ps-container -->
+					        <div class="ps-header">
+                				<div class="ps-inner-third">
+                					<div class="panel-group" id="accordion">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+										    	<h4 class="panel-title">
+										        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										          		Product Information
+										        	</a>
+										      	</h4>
+										    </div>
+										    <div id="collapseOne" class="panel-collapse collapse in">
+												<div class="panel-body">
+					                				<div class="product-change">
+				                						<p>Changed By: Morgan Carper</p>
+				                						<p>Uploaded By: Morgan Carper</p>
+				                						<p><span>Novelty:</span> Hand-Made</p>
+				                					</div>
+				                					<div class="product-info">
+					                					<div class="product-main">
+					                						<h1>Fern Canyon Dress</h1>
+                											<h2><span>Designer:</span> Morgan Carper</h2>
+                											<p> $229.00</p>
+					                					</div>
+					                					<div class="product-size">
+				                							<p>Available Sizes</p>
+				                							<span class="size">S</span>
+				                							<span class="size">M</span>
+					                					</div>
+					                					<div class="product-colors">
+					                						<p>Colors</p>
+				                							<span class="color"></span>
+				                							<span class=""></span>
+					                					</div>
+					                					<div class="product-desc">
+					                						<p>
+					                							Sleeveless printed dress with fitted bodice, full circle skirt, center back hidden zipper closure and contrast paneling. Fully lined. 100% Silk; Lining: 100% Polyester. 
+					                						</p>
+					                					</div>
+					                				</div>
+												</div>
+										    </div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+												  		Designer Information
+													</a>
+												</h4>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+														Current boutique locations
+													</a>
+												</h4>
+										    </div>
+										    <div id="collapseThree" class="panel-collapse collapse">
+											    <div class="panel-body">
+											        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+											    </div>
+										    </div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+														Fit Standards
+													</a>
+												</h4>
+										    </div>
+										    <div id="collapseFour" class="panel-collapse collapse">
+											    <div class="panel-body">
+											        <table cellpadding='0' cellspacing='0' class='table table-striped'>
+														<tbody>
+															<tr>
+															    <th>Size</th>
+															    <th>Pants</th>
+															    <th>US</th>
+															    <th>UK</th>
+															    <th>AUS</th>
+															    <th>EU</th>
+															    <th>ITY</th>
+															    <th>JPN</th>
+															    <th>CAN</th>
+															</tr>
+															<tr>
+															    <td>XXS</td>
+															    <td>24</td>
+															    <td>0</td>
+															    <td>4</td>
+															    <td>4</td>
+															    <td>32</td>
+															    <td>36, 38</td>
+															    <td>XXS</td>
+															    <td>XXS</td>
+															</tr>
+															<tr>
+															    <td>XS</td>
+															    <td>25, 26</td>
+															    <td>2</td>
+															    <td>6</td>
+															    <td>6</td>
+															    <td>34</td>
+															    <td>38</td>
+															    <td>XS</td>
+															    <td>XS</td>
+															</tr>
+															<tr>
+															    <td>S</td>
+															    <td>27, 28</td>
+															    <td>4</td>
+															    <td>8</td>
+															    <td>8</td>
+															    <td>36</td>
+															    <td>40</td>
+															    <td>S</td>
+															    <td>S</td>
+															</tr>
+															<tr>
+															    <td>M</td>
+															    <td>29, 30</td>
+															    <td>6</td>
+															    <td>10</td>
+															    <td>10</td>
+															    <td>38</td>
+															    <td>42</td>
+															    <td>M</td>
+															    <td>M</td>
+															</tr>
+															<tr>
+															    <td>L</td>
+															    <td>30</td>
+															    <td>8</td>
+															    <td>12</td>
+															    <td>12</td>
+															    <td>40</td>
+															    <td>44</td>
+															    <td>L</td>
+															    <td>L</td>
+															</tr>
+															<tr>
+															    <td>XL</td>
+															    <td>31, 32</td>
+															    <td>10</td>
+															    <td>14</td>
+															    <td>14</td>
+															    <td>42</td>
+															    <td>46</td>
+															    <td>XL</td>
+															    <td>XL</td>
+															</tr>
+															<tr>
+															    <td>XXL</td>
+															    <td>32</td>
+															    <td>12</td>
+															    <td>16</td>
+															    <td>16</td>
+															    <td>44</td>
+															    <td>48</td>
+															    <td>XXL</td>
+															    <td>XXL</td>
+															</tr>
+														</tbody>
+													</table>
+											    </div>
+										    </div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+														Product Links
+													</a>
+												</h4>
+										    </div>
+										    <div id="collapseFive" class="panel-collapse collapse">
+											    <div class="panel-body">
+											        <ul class="product-share">
+					                					<li><a href="#">View Comments</a></li>
+					                					<li><a href="#">Improve Product</a></li>
+					                					<li><a href="#">Designer Info</a></li>
+					                					<li><a href="#">Add To Personal Feed</a></li> 
+	                								</ul>	
+											    </div>
+										    </div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+														Product Tags
+													</a>
+												</h4>
+										    </div>
+										    <div id="collapseSix" class="panel-collapse collapse">
+											    <div class="panel-body">
+											        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+											    </div>
+										    </div>
+										</div>
+									</div> <!-- accordian end -->
+                				</div>  <!-- container for accordian  -->         				
+            				</div> <!-- accordian end -->
+						</section><!-- ps-header end -->
 					</div> <!--end overlay -->
 				</ul>
 			</div>
@@ -709,132 +391,56 @@ background:rgba(0,0,0,0.3);
         <!-- Placed at the end of the document so the pages load faster -->
 
         <!-- Critical Libraries -->
-        <script src="js/lib/jQuery/jquery-1.11.0.js"></script>
-        <script src="js/lib/wookmark/jquery.wookmark.js"></script>
-        <!--<script src="js/lib/angular/angular-route.js"></script> -->
-        
+        <script src="js/lib/main-important/jquery.wookmark.js"></script>
         
         <!--  Less Libraries -->
-        <script src="js/lib/less-critical/classie.js"></script>
-        <script src="js/lib/less-critical/application-searchbar.js"></script>
-       	<script src="js/lib/less-critical/jquery.dlmenu.js"></script>
-        <script src="js/lib/less-critical/jquery.imagesloaded.js"></script>
-        <script type="text/javascript" src="js/slider.js"></script>
+        <script src="js/lib/other/classie.js"></script>
+        <script src="js/lib/other/application-searchbar.js"></script>
+        <script src="js/lib/other/overlay-product.js"></script>
+       	<script src="js/lib/other/jquery.dlmenu.js"></script>
+        <script src="js/lib/other/jquery.imagesloaded.js"></script>
+        <script src="js/lib/other/slider.js"></script>
+        <script src="bootstrap-3.1.1-dist/js/bootstrap.js"/></script>
 
         <!-- Scripts to call in Libraries -->
 		<script>
-        	new UISearch(document.getElementById('tl-search'));
+        	new UISearch( document.getElementById( 'tl-search' ) );
         </script>
 		<script>
 			$(function() {
 				$( '#dl-menu' ).dlmenu();
 			});
 		</script>
-		<script type="text/javascript">
+		<script>
 			$(function() {
 
 			Slider.init();
 
 			});
     	</script>
-		<script type="text/javascript">
-		    (function ($){
-		       
-		      var $tiles = $('#tiles'),
-		          $handler = $('li', $tiles),
-		          $main = $('#main'),
-		          $window = $(window),
-		          $document = $(document),
-		          options = {
-		            autoResize: true, // This will auto-update the layout when the browser window is resized.
-		            container: $main, // Optional, used for some extra CSS styling
-		            offset: 3, // Optional, the distance between grid items
-		            itemWidth: 210 // Optional, the width of a grid item
-		          };
+		
+		<script>
+			(function ($){
+			      var handler = $('#tiles li');
 
-		      /**
-		       * Reinitializes the wookmark handler after all images have loaded
-		       */
-		      function applyLayout() {
-		        $tiles.imagesLoaded(function() {
-		          // Destroy the old handler
-		          if ($handler.wookmarkInstance) {
-		            $handler.wookmarkInstance.clear();
-		          }
+			      handler.wookmark({
+			          // Prepare layout options.
+			          autoResize: true, // This will auto-update the layout when the browser window is resized.
+			          offset: 20, // Optional, the distance between grid items
+			          itemWidth: 210 // Optional, the width of a grid item
+			      });
 
-		          // Create a new layout handler.
-		          $handler = $('li', $tiles);
-		          $handler.wookmark(options);
-		        });
-		      }
-
-		      /**
-		       * When scrolled all the way to the bottom, add more tiles
-		       */
-		      function onScroll() {
-		        // Check if we're within 100 pixels of the bottom edge of the broser window.
-		        var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
-		            closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
-
-		        if (closeToBottom) {
-		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
-		         
-
-		          applyLayout();
-		        }
-		      };
-
-		      // Call the layout function for the first time
-		      applyLayout();
-
-		      // Capture scroll event.
-		      $window.bind('scroll.wookmark', onScroll);
-		    })(jQuery);
+			     
+			        handler.wookmark();
+			 
+    		})(jQuery);
   		</script>
-  		<script type="text/javascript">
-	  		(function() {
-				var triggerBttn = document.getElementById( 'trigger-overlay' ),
-					overlay = document.querySelector( 'div.overlay' ),
-					closeBttn = overlay.querySelector( 'button.overlay-close' );
-					transEndEventNames = {
-						'WebkitTransition': 'webkitTransitionEnd',
-						'MozTransition': 'transitionend',
-						'OTransition': 'oTransitionEnd',
-						'msTransition': 'MSTransitionEnd',
-						'transition': 'transitionend'
-					},
-					transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-					support = { transitions : Modernizr.csstransitions };
 
-				function toggleOverlay() {
-					if( classie.has( overlay, 'open' ) ) {
-						classie.remove( overlay, 'open' );
-						classie.add( overlay, 'close' );
-						var onEndTransitionFn = function( ev ) {
-							if( support.transitions ) {
-								if( ev.propertyName !== 'visibility' ) return;
-								this.removeEventListener( transEndEventName, onEndTransitionFn );
-							}
-							classie.remove( overlay, 'close' );
-						};
-						if( support.transitions ) {
-							overlay.addEventListener( transEndEventName, onEndTransitionFn );
-						}
-						else {
-							onEndTransitionFn();
-						}
-					}
-					else if( !classie.has( overlay, 'close' ) ) {
-						classie.add( overlay, 'open' );
-					}
-				}
-
-				triggerBttn.addEventListener( 'click', toggleOverlay );
-				closeBttn.addEventListener( 'click', toggleOverlay );
-			})();
-		</script>
-
-		
-		
+  			<!--
+        This script enables structural HTML5 elements in old IE.
+        http://code.google.com/p/html5shim/ -->
+	    <!--[if lt IE 9]>
+	    <script src = "//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
 	</body>
 </html>

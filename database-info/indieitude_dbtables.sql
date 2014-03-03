@@ -38,10 +38,9 @@ create table Users (
 create table Product (
   pid bigint unsigned not null auto_increment,
   pro_name varchar(255),
-  pro_desc text,
+  pro_desc text,  /*  Fiber content wil go in the product description */
   color_name varchar(255),
   size_types varchar(7),
-  fiber_context text,
   pro_price unsigned decimal(6,2) not null, /* better practice to use decimals to store in the database */
   pro_tags varchar(255),
   made_ny boolean,

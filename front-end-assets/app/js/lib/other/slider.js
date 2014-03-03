@@ -1,4 +1,4 @@
- var Slider = (function () {
+var Slider = (function () {
 
     var $container = $('#ps-container'),
         
@@ -53,7 +53,7 @@
         updateNavImages = function () {
 
             // updates the background image for the navigation arrows
-            var configPrev = (current < 0) ? $slides.eq(current - 1  ).css('background-image') : $slides.eq(itemsCount - 1).css('background-image'),
+            var configPrev = (current < 0) ? $slides.eq(current - 1 ).css('background-image') : $slides.eq(itemsCount - 1).css('background-image'),
                 configNext = (current > itemsCount - 1 ) ? $slides.eq(current + 1 ).css('background-image') : $slides.eq(0).css('background-image');
 
             $navprev.css('background-image', configPrev);
@@ -105,7 +105,7 @@
             // update current value
             if (dir === 'next') {
 
-                (current < 0) ?  ++current : --current ;
+                (current < 0) ? ++current : --current ;
 
             } else if (dir === 'prev') {
 
@@ -130,7 +130,7 @@
 
             setTimeout(function () {
 
-                // move the current item and slide to the top or bottom depending on the direction 
+                // move the current item and slide to the top or bottom depending on the direction
                 $currentItem.addClass('ps-move').css({
                     top: (dir === 'next') ? '100%' : '-100%',
                     zIndex: 1
