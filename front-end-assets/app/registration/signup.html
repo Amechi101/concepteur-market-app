@@ -13,11 +13,10 @@
 		<link rel="shortcut icon" href=""> 
 		
 		<!--*****CSS LINKS******-->
-		<link rel="stylesheet" type="text/css" href="../css/icon-data.css"/> 
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/> 
 		<link rel="stylesheet" type="text/css" href="../css/main.css"/> 
 		<link rel="stylesheet" type="text/css" href="../css/forms.css"/> 
-		
+		<link rel="stylesheet" type="text/css" href="../bootstrap-3.1.1-dist/css/bootstrap.css"/>
 
 		<!--****Script tags needed to be in-between the head tags****-->
 		<script src="../js/lib/main-important/jquery-1.11.0.js"></script>
@@ -28,92 +27,99 @@
 	</head>
 	<body>
 		<div class="wrap">
-			<header class="headerWrap">
-				<nav class="headerInner">
-					<div class="logoWrap">  
-						<a href="../main.html"><div class="logo"></div></a>
+			<header id="header">
+                <nav class="top">
+            		<div class="slogan">	
+		            	<div id="dl-menu" class="dl-menuwrapper">
+							<button class="dl-trigger">Open Menu</button>
+							<ul class="dl-menu">
+							    <li>
+								    <a href="#">Menu</a>
+								    <ul class="dl-submenu">    
+							            <li><a href="#">All</a></li>
+							            <li><a href="#">What's New</a></li>
+							            <li><a href="#">Trending</a></li>
+							            <li>
+							            	<a href="#">Collection</a>
+							            	<ul class="dl-submenu">
+							            		<li>
+							            			<a href="#">Clothing</a>
+							            			<ul class="dl-submenu">
+									            		<li>
+									            			<a href="#">Tops</a>
+									            			<ul class="dl-submenu">
+									            				<li><a href="#">Sweaters</a></li>
+											            		<li><a href="#">Long Sleeve</a></li>
+											            		<li><a href="#">Tees & Tanks</a></li>
+											            		<li><a href="#">Short Sleeve</a></li>
+											            		<li><a href="#">Blouses/Shirts</a></li>
+											            		<li><a href="#">Sleeveless</a></li>
+									            			</ul>
+									            		</li>
+									            		<li>
+									            			<a href="#">Bottoms</a>
+									            			<ul class="dl-submenu">
+									            				<li><a href="#">Jeans</a></li>
+											            		<li><a href="#">Pants</a></li>
+											            		<li><a href="#">Shorts</a></li>
+											            		<li><a href="#">Skrits</a></li>
+											            		<li><a href="#">Leggings & Tights</a></li>
+									            			</ul>
+									            		</li>
+									            		<li><a href="#">Dresses</a></li>
+									            		<li><a href="#">Rompers & Jumpers</a></li>
+									            		<li><a href="#">Jackets & Blazers</a></li>
+									            		<li><a href="#">Outerwear</a></li>
+							            			</ul>
+							            		</li>
+							            		<li><a href="#">Lingerie</a></li>
+							            		<li>
+							            			<a href="#">Accessories</a>
+							            			<ul class="dl-submenu">
+							            				<li><a href="#">Jewelry</a></li>
+							            				<li><a href="#">Belts</a></li>
+									            		<li><a href="#">Hats & Gloves</a></li>
+									            		<li><a href="#">Sunglasses</a></li>
+									            		<li><a href="#">Scarves & Snoods</a></li>
+									            		<li><a href="#">Other</a></li>
+							            			</ul>
+							            		</li>
+							            		<li><a href="#">Bags</a></li>
+							            		<li>
+							            			<a href="#">Shoes</a>
+							            			<ul class="dl-submenu">
+							            				<li><a href="#">Boots</a></li>
+							            				<li><a href="#">Flats</a></li>
+									            		<li><a href="#">Pumps & Heels</a></li>
+									            		<li><a href="#">Sneakers</a></li>
+									            		<li><a href="#">Wedges</a></li>
+							            			</ul>
+							            		</li>
+							            	</ul>
+							            </li>
+							            <li><a href="#">Designers</a></li>
+							            <li>
+							            	<a href="#">Location</a>
+							            	<ul class="dl-submenu">
+							            		<li><a href="#">New York City</a></li>
+							            	</ul>
+							            </li>
+				          			</ul>
+								</li>
+							</ul>
+						</div><!-- /dl-menuwrapper -->
+					</div> <!-- slogan end -->
+					<div class="logoWrap">
+						<a href="main.html"><img src="../img/logo.png" class="logo"/></a>
 					</div> 
-					<div id="dl-menu" class="dl-menuwrapper">
-						<button class="dl-trigger">Open Menu</button>
-						<ul class="dl-menu">
-						    <li>
-							    <a href="#">Menu</a>
-							    <ul class="dl-submenu">    
-						            <li><a href="#">All</a></li>
-						            <li><a href="#">What's New</a></li>
-						            <li><a href="#">Trending</a></li>
-						            <li>
-						            	<a href="#">Collection</a>
-						            	<ul class="dl-submenu">
-						            		<li>
-						            			<a href="#">Clothing</a>
-						            			<ul class="dl-submenu">
-								            		<li>
-								            			<a href="#">Tops</a>
-								            			<ul class="dl-submenu">
-								            				<li><a href="#">Sweaters</a></li>
-										            		<li><a href="#">Long Sleeve</a></li>
-										            		<li><a href="#">Tees & Tanks</a></li>
-										            		<li><a href="#">Short Sleeve</a></li>
-										            		<li><a href="#">Blouses/Shirts</a></li>
-										            		<li><a href="#">Sleeveless</a></li>
-								            			</ul>
-								            		</li>
-								            		<li>
-								            			<a href="#">Bottoms</a>
-								            			<ul class="dl-submenu">
-								            				<li><a href="#">Jeans</a></li>
-										            		<li><a href="#">Pants</a></li>
-										            		<li><a href="#">Shorts</a></li>
-										            		<li><a href="#">Skrits</a></li>
-										            		<li><a href="#">Leggings & Tights</a></li>
-								            			</ul>
-								            		</li>
-								            		<li><a href="#">Dresses</a></li>
-								            		<li><a href="#">Rompers & Jumpers</a></li>
-								            		<li><a href="#">Jackets & Blazers</a></li>
-								            		<li><a href="#">Outerwear</a></li>
-						            			</ul>
-						            		</li>
-						            		<li><a href="#">Lingerie</a></li>
-						            		<li>
-						            			<a href="#">Accessories</a>
-						            			<ul class="dl-submenu">
-						            				<li><a href="#">Jewelry</a></li>
-						            				<li><a href="#">Belts</a></li>
-								            		<li><a href="#">Hats & Gloves</a></li>
-								            		<li><a href="#">Sunglasses</a></li>
-								            		<li><a href="#">Scarves & Snoods</a></li>
-								            		<li><a href="#">Other</a></li>
-						            			</ul>
-						            		</li>
-						            		<li><a href="#">Bags</a></li>
-						            		<li>
-						            			<a href="#">Shoes</a>
-						            			<ul class="dl-submenu">
-						            				<li><a href="#">Boots</a></li>
-						            				<li><a href="#">Flats</a></li>
-								            		<li><a href="#">Pumps & Heels</a></li>
-								            		<li><a href="#">Sneakers</a></li>
-								            		<li><a href="#">Wedges</a></li>
-						            			</ul>
-						            		</li>
-						            	</ul>
-						            </li>
-						            <li><a href="#">Designers</a></li>
-						            <li>
-						            	<a href="#">Location</a>
-						            	<ul class="dl-submenu">
-						            		<li><a href="#">New York City</a></li>
-						            	</ul>
-						            </li>
-			          			</ul>
-							</li>
-						</ul>
-					</div><!-- /dl-menuwrapper -->
-					<ul class="socialNavHeader">
-						<li><a href="signup.html">Login / Signup </a></li>
-						<li><a href="../information/information-page.html" ><span class="s-icon-info"></span></a></li> 
+    				<ul class="right">
+                    	<li class="login"><a href="signup.html"  >Login / Signup</a></li>
+                		<li class="social">
+				            <a href="../information/information-page.html" class="info">Information</a>
+				            <a href="#" class="facebook">Facebook</a>
+				            <a href="#" class="twitter">Twitter</a>
+				            <a href="#" class="pinterest">Pinterest</a>
+        				</li>
 					</ul>
 					<div id="tl-search" class="tl-search">
 	    				<form>
@@ -121,67 +127,64 @@
 					        <input class="tl-search-submit" type="submit" value="">
 					        <span class="tl-icon-search"></span>
 					    </form>
-					</div>
+    				</div>
 				</nav>
-			</header>
-			<!-- Main content of images -->
-			<div  class="space"></div>
+      		</header>
+      		<div  class="space"></div>
 
-		<div class="block">
-		    <div class="inner width-2">
-		        <div class="box-login">
-		            <div class="head">
-		                 <h2 class="heading-title">Start Discovering</h2>
+			<div class="box-login">
+			    <div class="head">
+			         <h2 class="heading-title">Start Discovering</h2>
 
-		                <p align="center"><em>Log in with your Facebook</em>
-		                </p>
-		            </div>
-		            <div class="socialconnect"> <a href="#" class="facebook">Log in with Facebook</a>
+			        <p align="center"><em>Log in with your Facebook</em>
+			        </p>
+			    </div>
+			    <div class="socialconnect"> <a href="#" class="facebook">Log in with Facebook</a>
 
-		            </div>
-		            <p align="center"><em>Or signup with your email & name</em>
-		            </p>
-		            <div class="box-form">
-		                <form action="" method="post">
-		                    <p>
-		                        <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Email" />
-		                    </p>
-		                    <p>
-		                        <input type="email" id="" name="" required="required" class="text-input focus" placeHolder="Name" />
-		                    </p>
-		                    <p>
-		                        <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Password" />
-		                    </p>
-		                    <p>
-		                        <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Re-Enter Password" />
-		                    </p>
-		                    <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
-		                    </p>
-		                    <p>
-		                        <input type="submit" name="submit" value="SIGNUP!" class="button large bold">
-		                    </p>
-		                </form>
-		            </div>
-		            <div class="footer">
-		                 <h2 class="heading-title" align="center">Already have an account? <a href="login.html">Login</a></h2>
+			    </div>
+			    <p align="center"><em>Or signup with your email & name</em>
+			    </p>
+			    <div class="box-form">
+			        <form action="" method="post">
+			            <p>
+			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Email" />
+			            </p>
+			            <p>
+			                <input type="email" id="" name="" required="required" class="text-input focus" placeHolder="Name" />
+			            </p>
+			            <p>
+			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Password" />
+			            </p>
+			            <p>
+			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Re-Enter Password" />
+			            </p>
+			            <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+			            </p>
+			            <p>
+			                <input type="submit" name="submit" value="SIGNUP!" class="button large bold">
+			            </p>
+			        </form>
+			    </div>
+			    <div class="footer">
+			         <h2 class="heading-title" align="center">Already have an account? <a href="login.html">Login</a></h2>
+			    </div>
+			</div>
+		</div> <!-- End container -->
 
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		
-	</div>
 
 		<!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
 
-        
+        <!-- Critical Libraries -->
+      
         
         <!--  Less Libraries -->
         <script src="../js/lib/other/classie.js"></script>
         <script src="../js/lib/other/application-searchbar.js"></script>
+      
        	<script src="../js/lib/other/jquery.dlmenu.js"></script>
+
 
         <!-- Scripts to call in Libraries -->
 		<script>
@@ -192,6 +195,8 @@
 				$( '#dl-menu' ).dlmenu();
 			});
 		</script>
+		
+		
 
   			<!--
         This script enables structural HTML5 elements in old IE.
@@ -201,3 +206,6 @@
 	    <![endif]-->
 	</body>
 </html>
+
+		
+	
