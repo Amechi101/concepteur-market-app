@@ -16,14 +16,10 @@
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/> 
 		<link rel="stylesheet" type="text/css" href="../css/main.css"/> 
 		<link rel="stylesheet" type="text/css" href="../css/forms.css"/> 
-		<link rel="stylesheet" type="text/css" href="../bootstrap-3.1.1-dist/css/bootstrap.css"/>
 
 		<!--****Script tags needed to be in-between the head tags****-->
 		<script src="../js/lib/main-important/jquery-1.11.0.js"></script>
 		<script src="../js/lib/other/modernizr.custom.32600.js"></script>
-		<!--<script src="js/lib/main-important/angular.js"></script> -->
-		<!--<script src="js/lib/angular/angular-route.js"></script> -->
-        <!--<script src="js/controller.js"></script>-->		
 	</head>
 	<body>
 		<div class="wrap">
@@ -110,10 +106,10 @@
 						</div><!-- /dl-menuwrapper -->
 					</div> <!-- slogan end -->
 					<div class="logoWrap">
-						<a href="main.html"><img src="../img/logo.png" class="logo"/></a>
+						<a href="../main.html"><img src="../img/logo.png" class="logo"/></a>
 					</div> 
     				<ul class="right">
-                    	<li class="login"><a href="signup.html"  >Login / Signup</a></li>
+                    	<li class="login"><a href="signup.html" >Login / Signup</a></li>
                 		<li class="social">
 				            <a href="../information/information-page.html" class="info">Information</a>
 				            <a href="#" class="facebook">Facebook</a>
@@ -132,42 +128,44 @@
       		</header>
       		<div  class="space"></div>
 
-			<div class="box-login">
-			    <div class="head">
-			         <h2 class="heading-title">Start Discovering</h2>
+      		<div id="main-form">
+				<div class="box-login">
+				    <div class="head">
+				         <h2 class="heading-title">Start Discovering</h2>
 
-			        <p align="center"><em>Log in with your Facebook</em>
-			        </p>
-			    </div>
-			    <div class="socialconnect"> <a href="#" class="facebook">Log in with Facebook</a>
+				        <p align="center"><em>Log in with your Facebook</em>
+				        </p>
+				    </div>
+				    <div class="socialconnect"> <a href="#" class="facebook">Log in with Facebook</a>
 
-			    </div>
-			    <p align="center"><em>Or signup with your email & name</em>
-			    </p>
-			    <div class="box-form">
-			        <form action="" method="post">
-			            <p>
-			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Email" />
-			            </p>
-			            <p>
-			                <input type="email" id="" name="" required="required" class="text-input focus" placeHolder="Name" />
-			            </p>
-			            <p>
-			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Password" />
-			            </p>
-			            <p>
-			                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Re-Enter Password" />
-			            </p>
-			            <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
-			            </p>
-			            <p>
-			                <input type="submit" name="submit" value="SIGNUP!" class="button large bold">
-			            </p>
-			        </form>
-			    </div>
-			    <div class="footer">
-			         <h2 class="heading-title" align="center">Already have an account? <a href="login.html">Login</a></h2>
-			    </div>
+				    </div>
+				    <p align="center"><em>Or signup with your email & name</em>
+				    </p>
+				    <div class="box-form">
+				        <form action="" method="post">
+				            <p>
+				                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Email" />
+				            </p>
+				            <p>
+				                <input type="email" id="" name="" required="required" class="text-input focus" placeHolder="Name" />
+				            </p>
+				            <p>
+				                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Password" />
+				            </p>
+				            <p>
+				                <input type="text" id="" name="" required="required" pattern="" class="text-input" placeHolder="Re-Enter Password" />
+				            </p>
+				            <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+				            </p>
+				            <p>
+				                <input type="submit" name="submit" value="SIGNUP!" class="button large bold">
+				            </p>
+				        </form>
+				    </div>
+				    <div class="footer">
+				         <h2 class="heading-title" align="center">Already have an account? <a id="ajaxMagic" href="login.html">Login</a></h2>
+				    </div>
+				</div>
 			</div>
 		</div> <!-- End container -->
 
@@ -195,9 +193,24 @@
 				$( '#dl-menu' ).dlmenu();
 			});
 		</script>
-		
-		
+		<script type="text/javascript">
+  		$(function () {
+  			var register = $('#ajaxMagic');
+  			var password = $('ajaxMagic-2')
+  			var url = $(this).attr('href');
 
+  			register.on('click', function() {
+				$('#main-form').load(url);
+				return true;
+  			});
+
+  			password.on('click', function() {
+				$('#main-form').load(url);
+				return true;
+  			});
+  		});
+  		</script>
+		
   			<!--
         This script enables structural HTML5 elements in old IE.
         http://code.google.com/p/html5shim/ -->

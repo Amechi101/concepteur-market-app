@@ -1033,7 +1033,8 @@ All this is done for any sub-level being entered.
   right: 0px;
   height: 100%;
   z-index: 1001;
-  background: rgb(33,33,33);
+  background: rgb(255,255,255);
+  overflow:scroll;
 }
 
 
@@ -1206,6 +1207,7 @@ conatainer class: product-info
 
 sub-classes:
 - product-main
+- product-likes
 - product-size
 - product-colors
 - product-desc
@@ -1224,14 +1226,14 @@ text-align:center;
  margin:0;  
 }
 
-	.ps-container .ps-header .ps-inner-third .product-info .product-colors p,
-    .ps-container .ps-header .ps-inner-third .product-info .product-size p,
-    .ps-container .ps-header .ps-inner-third .product-info .product-main p,
-    .ps-container .ps-header .ps-inner-third .product-info .product-main h2 {
-    	margin-bottom:8px;
-    }
+.ps-container .ps-header .ps-inner-third .product-info .product-colors p,
+.ps-container .ps-header .ps-inner-third .product-info .product-size p,
+.ps-container .ps-header .ps-inner-third .product-info .product-main p,
+.ps-container .ps-header .ps-inner-third .product-info .product-main h2 {
+	margin-bottom:8px;
+}
 
-
+    /* size */
 	.ps-container .ps-header .ps-inner-third .product-info .product-size .size { 
 	  width: 30px;
 	  height: 30px;
@@ -1247,7 +1249,8 @@ text-align:center;
 	  line-height: 31px;
 	  text-decoration: none;
 	}
-
+    
+    /* colors */
 	.ps-container .ps-header .ps-inner-third .product-colors .color {
 	  text-indent: -999999px;
 	  width: 30px;
@@ -1260,14 +1263,14 @@ text-align:center;
 	  background-origin: border-box;
 	  background-image: url('https://d2csjd0bj2nauk.cloudfront.net/products/ed6412bd-65f4-442d-8b79-d3aec96bb967_t.jpg')
 	}	
-
+    
+    /* main */
 	.ps-container .ps-header .ps-inner-third .product-info .product-main h1 {
 
 	 font-size:1.3em; 
 	 font-weight:700;
 
 	}
-
 	.ps-container .ps-header .ps-inner-third .product-info .product-main h2 {
 	 font-size:1.0em; 
 	}
@@ -1275,8 +1278,51 @@ text-align:center;
 	.ps-container .ps-header .ps-inner-third .product-info .product-main h2 span {
 	color:red;
 	}
+    
+    /* likes */
+    .ps-container .ps-header .ps-inner-third .product-likes {
+    float:right;
+    font-size: 1.5em;
+    }
+    .ps-container .ps-header .ps-inner-third .product-likes > span.total {
+    padding-right:10px;
+    vertical-align:top;
+    line-height:23px;
+    }
+    .ps-container .ps-header .ps-inner-third .product-likes:after {      
+    content: "\e600";
+    float:right;
+    font-family: 'icomoon';
+    color: black;
+    text-decoration: none;
+    cursor:pointer; 
+    }
 
-
+    /* desc */
+    .ps-container .ps-header .ps-inner-third .product-desc .comment {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 20px 0px 0px;
+    padding: 10px 20px;
+    border: 1px solid red;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    font-family: "satellite",sans-serif;
+    border-radius: 3px;
+    transition: all 0.7s ease-in;
+    }
+    .ps-container .ps-header .ps-inner-third .product-desc .comment:hover {
+    background:rgb(18,194,134);
+    }
+    .ps-container .ps-header .ps-inner-third .product-desc  .total-comment {
+    color:red;
+    padding-left:10px;
+    }
 
 
 /*------Collapse Two-------*/
