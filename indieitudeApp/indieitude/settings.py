@@ -126,10 +126,10 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
 #Apps for Concepteur Market
-    'designers',
-    'boutiques',
-    'profiles',
-    'products',  
+    # 'designers',
+    # 'boutiques',
+    # 'profiles',
+    # 'products',  
 
 #Third Party Apps
 
