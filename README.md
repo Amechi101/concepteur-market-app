@@ -14,12 +14,8 @@ The application is comparable to Pinterest, Wikipedia and Linkedin. Not in total
 
 Folders:
 ===============
-- Front-end-assets: contains all the client-side components
+- src: contains front-end-assets, Project-Specifications & Database-info
 
-- Project-Specifications: contains the application overview and use case 
-
-- Database-info: contains anything related to the database
-
-- Indieitude-project: contains the **Actual** django project folder where we have the apps, models and settings.py. Which we will be using to launch the product and actually creating the templates, business logic and etc.
+- Root Level: contains the **Actual** django project where we have the apps, manage.py. Procfile,requirements.txt and Indieitude folder housing the settings.py, url.py & wgsi.py. Which we will be using to launch the product and actually creating the templates, business logic and etc.
 
 
