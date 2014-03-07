@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath="$PWD/indieitudeapp " indieitudeapp .wsgi
+web: gunicorn --pythonpath="$PWD/indieitudeapp " indieitudeapp.wsgi
