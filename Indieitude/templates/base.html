@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Indieitude</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<link rel="shortcut icon" href=""> 
+		
+		<!--*****CSS LINKS******-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/> 
+		<link rel="stylesheet" type="text/css" href="css/main.css"/> 
+		<link rel="stylesheet" type="text/css" href="css/forms.css"/> 
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.css"/>
+
+		<!--****Script tags needed to be in-between the head tags****-->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="js/lib/other/modernizr.custom.32600.js"></script>
+			
+	</head>
+	<body>
+		<div class="wrap">
+			{% include "header.html" %}
+			
+			<!-- Main content of images -->
+			<div  class="space"></div>
+
+
+			<div id="main" role="main">
+				<ul id="tiles">
+		      	
+		      	{% block content %} Empty Page {% endblock %}
+		      		
+				</ul>
+		      	
+		      	
+			</div>
+		</div> <!-- End container -->
+
+
+		<!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        <!-- Critical Libraries -->
+        <script src="js/lib/main-important/jquery.wookmark.js"></script>
+        
+        <!--  Less Libraries -->
+        <script src="js/lib/other/classie.js"></script>
+        <script src="js/lib/other/application-searchbar.js"></script>
+        <script src="js/lib/other/overlay-product.js"></script>
+       	<script src="js/lib/other/jquery.dlmenu.js"></script>
+        <script src="js/lib/other/jquery.imagesloaded.js"></script>
+        <script src="js/lib/other/slider.js"></script>
+        <script src="js/micro.js"></script>
+        <script src="bootstrap-3.1.1-dist/js/bootstrap.js"/></script>
+
+        <!-- Scripts to call in Libraries -->
+		<script>
+        	new UISearch( document.getElementById( 'tl-search' ) );
+        </script>
+		<script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu();
+			});
+		</script>
+		<script>
+			$(function() {
+
+			Slider.init();
+
+			});
+    	</script>
+		
+		<script>
+			(function ($){
+			      var handler = $('#tiles li');
+
+			      handler.wookmark({
+			          // Prepare layout options.
+			          autoResize: true, // This will auto-update the layout when the browser window is resized.
+			          offset: 20, // Optional, the distance between grid items
+			          itemWidth: 210 // Optional, the width of a grid item
+			      });
+
+			     
+			        handler.wookmark();
+			 
+    		})(jQuery);
+  		</script>
+  		<script>
+  		$(function () {
+  			$('').on('')
+  		});
+  		</script>
+
+  			<!--
+        This script enables structural HTML5 elements in old IE.
+        http://code.google.com/p/html5shim/ -->
+	    <!--[if lt IE 9]>
+	    <script src = "//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	</body>
+</html>
