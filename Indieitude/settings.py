@@ -82,7 +82,7 @@ USE_TZ = True
 
 
 ####### For Template Absolute path ###########
-TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
+# TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
