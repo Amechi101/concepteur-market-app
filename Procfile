@@ -1,1 +1,1 @@
-web: 'gunicorn indieitudeapp.wsgi'
+web: gunicorn indieitudeapp.wsgi
