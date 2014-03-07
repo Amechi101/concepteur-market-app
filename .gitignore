@@ -1,0 +1,8 @@
+venv
+*.pyc
+staticfiles
+
+settings.py
+*.json
+
+media/temp
