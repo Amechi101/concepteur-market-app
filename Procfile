@@ -1,1 +1,1 @@
-web: gunicorn indieitudeapp.wsgi
+web: gunicorn -b 0.0.0.0:8000 --pythonpath=./indieitudeapp indieitudeapp.wsgi.wsgi:application
