@@ -47,9 +47,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'indieitudeapp.urls'
+ROOT_URLCONF = 'Indieitude.urls'
 
-WSGI_APPLICATION = 'indieitudeapp.wsgi.application'
+WSGI_APPLICATION = 'Indieitude.wsgi.application'
 
 
 # Database
