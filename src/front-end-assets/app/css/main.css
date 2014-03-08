@@ -954,6 +954,42 @@ All this is done for any sub-level being entered.
   display: block;
 }
 
+#tiles li p {
+  color: #666;
+  font-size: 13px;
+line-height: 20px;
+text-align: center;
+font-weight: 200;
+  margin: 7px 0 2px 7px;
+}
+
+#tiles li .user-icon {
+    float:left;
+    font-size: 1.5em;
+    }
+    .ps-container .ps-header .ps-inner-third .product-likes > span.total {
+    padding-right:10px;
+    vertical-align:top;
+    line-height:23px;
+    }
+    #tiles li .d-heart-icon:after {      
+    content: "\e600";
+    float:right;
+    font-family: 'icomoon';
+    color: black;
+    text-decoration: none;
+    cursor:pointer; 
+    }
+
+   #tiles li .d-plus-icon {
+    /*content: "\e600";
+    float:right;
+    font-family: 'icomoon';
+    color: black;
+    text-decoration: none;
+    cursor:pointer; */
+   }
+
 
 
 /* Overlay style */
