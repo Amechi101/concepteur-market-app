@@ -1,6 +1,10 @@
 venv
+
 *.pyc
+
 staticfiles
+
+src-files
 
 *.json
 
