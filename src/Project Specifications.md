@@ -67,7 +67,7 @@ Available for users after they Sign-up or Log-In
 
 Aggregates the content in the designated content area, that the user liked on different products 
 
-- **Notifications**:
+- **Notifications (v2)**: 
 
 Shows if the user has any new comments or announcements 
 
@@ -119,7 +119,7 @@ Influencer Level Titles:
 
 --> They have no editing power, (basic level everyone begins at)
 
-**Fashion Editor is allowed to Add**:
+**Fashion Editor is allowed to Add(v2)**:
 
 --> Adding Product Tags
 
