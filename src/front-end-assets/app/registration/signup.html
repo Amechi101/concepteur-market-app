@@ -128,7 +128,7 @@
       		</header>
       		<div  class="space"></div>
 
-      		<div id="main-form">
+      		<div class="mainForm" id="mainForm2">
 				<div class="box-login">
 				    <div class="head">
 				         <h2 class="heading-title">Start Discovering</h2>
@@ -163,7 +163,7 @@
 				        </form>
 				    </div>
 				    <div class="footer">
-				         <h2 class="heading-title" align="center">Already have an account? <a id="ajaxMagic" href="login.html">Login</a></h2>
+				         <h2 class="heading-title" align="center">Already have an account? <a id="ajaxMagic" href="#">Login</a></h2>
 				    </div>
 				</div>
 			</div>
@@ -196,21 +196,25 @@
 		<script type="text/javascript">
   		$(function () {
   			var register = $('#ajaxMagic');
-  			var password = $('ajaxMagic-2')
-  			var url = $(this).attr('href');
-
+  			
   			register.on('click', function() {
-				$('#main-form').load(url);
+				$('.mainForm').load('login.html');
 				return true;
   			});
 
+  			
+  		});
+  		</script>
+		<script type="text/javascript">
+  		$(function () {
+  			var password = $('#ajaxMagic-2');
+  			
   			password.on('click', function() {
-				$('#main-form').load(url);
+				$('#mainForm2').load('forgot-password.html');
 				return true;
   			});
   		});
   		</script>
-		
   			<!--
         This script enables structural HTML5 elements in old IE.
         http://code.google.com/p/html5shim/ -->

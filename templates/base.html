@@ -25,18 +25,18 @@
 	</head>
 	<body>
 		<div class="wrap">
-			{% include "header.html" %}
+			<header id="header">
+				{% block header %}{% endblock %}
+			</header>
 			
 			<!-- Main content of images -->
 			<div  class="space"></div>
 
 
 			<div id="main" role="main">
-				<ul id="tiles">
+				
 		      	
-		      	{% block content %} Empty Page {% endblock %}
-		      		
-				</ul>
+		      	{% block content %}{% endblock %}
 		      	
 		      	
 			</div>
