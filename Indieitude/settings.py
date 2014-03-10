@@ -40,6 +40,9 @@ INSTALLED_APPS = (
     ##### Indieitude Apps #####
     'home', #homepage
     'profiles',
+
+    #### Third Party Apps #####
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
