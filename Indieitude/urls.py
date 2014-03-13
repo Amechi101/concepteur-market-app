@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^profiles/', include('profiles.urls')),
     url(r'^$', 'home.views.index'),
+    url(r'^likes/', include('likes.urls')),
 )
 

@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.seretballot',
+    'django.conrtib.likes',
 
     ##### Indieitude Apps #####
     'home', #homepage
@@ -52,6 +54,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.secretballot.middleware.SecretBallotIpUseragentMiddleware',
+    'django.contrib.likes.middleware.SecretBallotUserIpUseragentMiddleware',
 )
 
 ROOT_URLCONF = 'Indieitude.urls'
@@ -122,7 +126,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 
-
+TEMPLATE_CONTEXT_PROCESSORS = (
+    ...other context processors...
+    "django.core.context_processors.request",
+)
 
 
 

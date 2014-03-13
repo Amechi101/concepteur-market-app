@@ -1,4 +1,5 @@
 from django.db import models
+import secretballot
 # from django.contrib.auth.models import User
 
 # Create your models here.
@@ -20,3 +21,9 @@ from django.db import models
 #     #Override the _unicode_() methid to return out something meaningful
 #     def _unicode_(self):
 #     	return self.user.username
+
+class Comment(models.Models):
+	time_posted=models.DateField([auto_now=True, auto_now_add=True])
+	body=models.TextField();
+
+secretballot.enable_voting_on(Comment)
