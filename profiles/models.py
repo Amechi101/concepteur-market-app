@@ -1,14 +1,5 @@
 from django.db import models
-<<<<<<< HEAD
 from django.contrib.auth.models import User
-=======
-
-from django.contrib.auth.models import User
-=======
-import secretballot
-# from django.contrib.auth.models import User
-
->>>>>>> FETCH_HEAD
 
 
 class ProfileUser(models.Model):
@@ -21,10 +12,7 @@ class ProfileUser(models.Model):
 	# user_points = models.IntegerField(null=False, verbose_name="Influence Credit", blank=True)
 	# picture = models.ImageField(upload_to='images', blank=True)
 
-<<<<<<< HEAD
-=======
 
->>>>>>> FETCH_HEAD
 	#admin level and additional infomation
 	is_active = models.BooleanField(default=True)
 	is_staff = models.BooleanField(default=False)
@@ -32,10 +20,5 @@ class ProfileUser(models.Model):
 	#Override the _unicode_() method to return out something meaningful
 	def _unicode_(self):
 		return self.user.username
-
-#     #Override the _unicode_() methid to return out something meaningful
-#     def _unicode_(self):
-#     	return self.user.username
-
 
 
