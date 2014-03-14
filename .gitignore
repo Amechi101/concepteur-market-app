@@ -4,7 +4,7 @@ venv
 
 staticfiles
 
-src-files
+docs
 
 *.json
 
