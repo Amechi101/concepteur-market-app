@@ -17,6 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}"/> 
 		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/> 
 		<link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}"/> 
+		<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}"/> 
 		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap-3.1.1-dist/css/bootstrap.css' %}"/> 
 
 
@@ -110,20 +111,18 @@
 							</ul>
 						</div><!-- /dl-menuwrapper -->
 					</div> <!-- slogan end -->
-					<div class="logoWrap">
-						<a href="main.html"><img src="{% static 'img/logo.png' %}" class="logo"/></a>
-					</div> 
+					<a href="{% url "home.views.base" %}"><div class="logoWrap"></div></a>
     				<ul class="right">
-                    	<li class="login"><a href="registration/register">Login / Signup</a></li>
+                    	<li class="login"><a href="{% url "profiles.views.login" %}">Login / Signup</a></li>
                     	<!-- For when a user logs-in
-                    	<li class="logued">
+                    	<li class="logged-in">
 			                <a href="/user/amechi.egbe" class="name">Amechi Egbe</a>
 			                <a href="/user/amechi.egbe"><img src="img/profile-image.png" width="40" height="40" alt="Amechi Egbe"></a>
 			                <a href="/logout" class="logout" title="Sign out">Logout</a>
             			</li> -->
                 		<li class="social">
-				            <a href="../information/information-page.html" class="info">Information</a>
-				            <a href="#" class="facebook">Facebook</a>
+				            <a href="information/information-page.html" class="info">Information</a>
+				            <a href="#" class="facebook"  title="Facebook"></a>
 				            <a href="#" class="twitter">Twitter</a>
 				            <a href="#" class="pinterest">Pinterest</a>
         				</li>
@@ -136,28 +135,21 @@
 					    </form>
     				</div>
 				</nav>
+         
       		</header>
+			
+			<!-- Space div for header to content -->
+			{% block space %}<div  class="space"></div>{% endblock %}
+
 			<!-- Main content of images -->
-			<div  class="space"></div>
+			{% block content %}{% endblock %}
+			
 
-
-			<div id="main" role="main">
-				<ul id="tiles">
-		      	 	<li><a href="overlay.html"><img src="http://www.spiritualameri.ca/media/catalog/product/cache/1/image/348x518/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_0529_2.jpg"/></a></li>
-			      	<li><img  src="{% static 'img/test2.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test3.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test4.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test5.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test6.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test7.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test8.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test9.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test10.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test11.jpg' %}"/></li>
-	      			<li><img  src="{% static 'img/test12.jpg' %}"/></li>
-				</ul>
-			</div>
+			{% block login %}{% endblock %}
 		</div> <!-- End container -->
+
+		
+
 
 
 		<!-- Le javascript
@@ -166,12 +158,13 @@
 
         
         <script src="{% static 'js/lib/main-important/jquery.wookmark.js' %}"></script>
+        <script src="{% static 'js/lib/main-important/jquery.remodal.js' %}"></script>
         
-        <!--  Less Libraries -->
         <script src="{% static 'js/lib/other/classie.js' %}"></script>
         <script src="{% static 'js/lib/other/application-searchbar.js' %}"></script>
        	<script src="{% static 'js/lib/other/jquery.dlmenu.js' %}"></script>
         <script src="{% static 'js/lib/other/jquery.imagesloaded.js' %}"></script>
+         <script src="{% static 'js/lib/other/selectize.js' %}"></script>
         <script src="{% static 'js/lib/other/slider.js' %}"></script>
         <script src="{% static 'bootstrap-3.1.1-dist/js/bootstrap.js' %}"/></script>
 
@@ -199,7 +192,7 @@
 			      handler.wookmark({
 			          // Prepare layout options.
 			          autoResize: true, // This will auto-update the layout when the browser window is resized.
-			          offset: 20, // Optional, the distance between grid items
+			          offset: 2, // Optional, the distance between grid items
 			          itemWidth: 210 // Optional, the width of a grid item
 			      });
 
@@ -208,6 +201,18 @@
 			 
     		})(jQuery);
   		</script>
+  		<script>
+				$('#input-tags').selectize({
+					delimiter: ',',
+					persist:false,
+					create :function(input) {
+						return {
+							value: input,
+							text: input
+						}
+					}
+				});
+		</script>
 
   			<!--
         This script enables structural HTML5 elements in old IE.

@@ -1,3 +1,204 @@
+/***                 after user logs-in                        ***/
+#header nav.top li.logged-in img {
+    float: left;
+    margin: 4px 0 0 0;
+}
+#header nav.top li.logged-in  a.name {
+    float: left;
+    margin-right: 10px;
+    color: #aaa;
+}
+#header nav.top li.logged-in  a.name:hover {
+    text-decoration: underline;
+}
+#header nav.top li.logged-in  a.logout {
+    position: relative;
+    display: block;
+    float: left;
+    width: 44px;
+    height: 47px;
+    margin-left: 4px;
+    text-align: center;
+    border-left: 1px solid#d6d6d6;
+    background-color: rgba(0, 0, 0, 0);
+    text-indent: -23em;
+    overflow: hidden;
+}
+#header nav.top li.logged-in a.logout:before {
+    content: '\e603';
+    display: block;
+    position: absolute;
+    top: 50% ;
+    left: 50% ;
+    width: 26px;
+    height: 26px;
+    margin: -13px 0 0 -13px;
+    overflow: hidden;
+    font-family: 'icomoon';
+    font-size: 26px;
+    line-height: 26px;
+    display: block;
+    text-indent: 0;
+    color: #BBB;
+    text-decoration: inherit;
+    font-variant: normal;
+-webkit-transition: all 0.3s ease-out; 
+-moz-transition: all 0.3s ease-out; 
+-ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+#header nav.top li.logged-in  a.logout:hover:before {
+    color: #313131;
+}
+
+
+/***             Structural styles for registration                     ***/
+table {
+    border-collapse: separate;
+    border-spacing: 0
+}
+
+
+input[type="submit"], input[type="text"] {
+    -webkit-appearance: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin - bottom: 23px;
+    font-weight: normal;
+    line-height: 170%;
+}
+h1 {
+    font-size: 34px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 15px;
+}
+h5 {
+    font-size: 15px;
+}
+h6 {
+    font-size: 12px;
+}
+h4.hr {
+    padding-bottom: 20px;
+    border-bottom: 1px solid#d6d6d6;
+    line-height: normal
+}
+p, blockquote {
+    margin-bottom: 23px;
+    line-height: 190 %
+}
+
+input[type=submit] {
+    -webkit-appearance: none
+}
+input, textarea, select {
+    font-size: 15px;
+color: #313131}
+.italic{font-style:italic}
+.bold{font-weight:normal}
+.x-bold{font-weight:normal}
+.underline{text-decoration:underline}
+.left{float:left}
+.right{float:right}
+.color-green{
+    color:# 409f89
+}.heading-title {
+    font-size: 30px
+}
+
+}.heading-h4 em {
+    font-style: normal
+}
+
+.inner {
+    max-width: 1423px;
+    margin: 0 auto; 
+    -webkit-transition: width 0.3s ease-out; 
+    - moz-transition: width 0.3s ease-out; 
+    -ms-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out
+}
+.inner.width-2 {
+    width: 940px
+}
+
+.block {
+    position: relative;
+    padding: 0 0 50px 0
+}
+.block:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.block:first-child,
+.block.first {
+    padding-top: 50px
+}
+.block:last-child {
+    margin-bottom: 0;
+    border-bottom: 0
+}.block.min-height {
+    min-height: 300px
+}
+
+.space-registration {
+ padding-bottom:10px;  
+ position:relative;
+ width:100%;
+ right:0;
+ top:0;
+ left:0;
+  bottom:0;
+  text-align:center;
+
+}
+
+
+textarea.text-input {
+    padding: 15px
+}
+.text-input.disable {
+    background-color: #ccc
+}
+
+.button {
+    display: inline-block;
+    height: 40px;
+    line-height: 41px;
+    padding: 0 15px;
+    background-color: #409f89;color:# fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px; 
+    -webkit-transition: opacity 0.2s linear; 
+    -moz-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear
+}
+
+.button.large {
+    height: 50px;
+    line-height: 51px
+}.button.x-large {
+    height: 66px;
+    line-height: 67px
+}.button.dark {
+    background-color: #444}.button.voted{background:# 444;
+    cursor: default
+}
+#footer > .inner {
+padding: 60px 0
+ }
+
 .text-input{
 	display:block;
 	height:46px;
