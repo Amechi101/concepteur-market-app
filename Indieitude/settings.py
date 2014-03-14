@@ -36,8 +36,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.seretballot',
-    'django.conrtib.likes',
 
     ##### Indieitude Apps #####
     'home', #homepage
