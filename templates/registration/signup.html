@@ -1,0 +1,56 @@
+{% extends 'home/base.html' %}
+{% block title %}Signup with Indieitude{% endblock title %}
+
+{% block search %}
+{% endblock search %}
+
+
+{% block space %}
+<div  class="space-registration"></div>
+{% endblock space %}
+
+{% block signup %}  
+<div id="content"> 
+	<div class="block">
+		<div class="box-login">
+		    <div class="head">
+		         <h2 class="heading-title">Start Discovering</h2>
+
+		        <p align="center"><em>Log in with your Facebook</em>
+		        </p>
+		    </div>
+		    <div class="socialconnect"> <a href="#" class="facebook">Log in with Facebook</a>
+
+		    </div>
+		    <p align="center"><em>Or signup with your email & name</em>
+		    </p>
+		    <div class="box-form">
+		        <form action="" method="post">{% csrf_token %}
+		           
+
+		            <p>
+		                {{form.email}}
+		            </p>
+		            <p>
+		                {{form.username}}
+		            </p>
+		            <p>
+		                {{form.password}}
+		            </p>
+		            <p>
+		                {{form.password2}}
+		            </p>
+		            <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+		            </p>
+		            <p>
+		                <input type="submit" name="submit" value="register" class="button large bold">
+		            </p>
+		        </form>
+		    </div>
+		    <div class="footer">
+		         <h2 class="heading-title" align="center">Already have an account? <a href="{% url "profiles.views.login" %}">Login</a></h2>
+		    </div>
+		</div>
+	</div>
+</div>
+{% endblock signup %}  

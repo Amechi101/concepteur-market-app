@@ -26,6 +26,7 @@ time, mark, audio, video {
     font-style:normal;
     vertical-align:baseline;
     background:transparent;
+    list-style-type: none;
 }
 
 body {

@@ -1,0 +1,56 @@
+{% extends 'home/base.html' %}
+{% block title %}Settings -Indieitude{% endblock title %}
+			
+			<!-- Main content of images -->
+			{% block space %}
+			<div  class="space-registration"></div>
+			{% endblock space %}
+
+			{% block settings %}
+<section id="content">
+
+        <div class="block">
+            <div class="inner width-2">
+                <h1 class="heading-title" align="center">Settings</h1>
+                <div class="msg-alert"></div>
+                <div class="form-submit center">
+                    <form method="post" action="/amechi.egbe/settings">
+                        <ul>
+                            <li><label for="user_profile_username" class="required"><strong>Username</strong></label><div class="boxadd size3"><input type="text" id="user_profile_username" name="user_profile[username]" required="required" maxlength="255" pattern="[A-Za-z0-9\._-]{1,50}"    class="text-input size2" value="amechi.egbe" /></div><span class="tip">Your username</span></li>
+                            <li><label for=""><strong>First Name</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                            <li><label for=""><strong>Last Name</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                           <li><label for=""><strong>Email</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                           <li><label for=""><strong>D.O.B</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                            
+                            
+                            
+                            <li><label for="user_profile_city"><strong>City</strong></label><input type="text" id="user_profile_city" name="user_profile[city]" maxlength="50"    class="text-input size2" /></li>
+                            <li><label for=""><strong>State</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                         
+                            <li><label for=""><strong>New Password</strong></label><input type="password" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                            <li><label for=""><strong>Re-Enter Password</strong></label><input type="password" id="" name="" maxlength="50"    class="text-input size2" /></li>
+                            
+                            <li>
+                                <label><strong>Image</strong><br/></label>
+                                <div class="box-screenshot view2">
+                                    <p style="display:none"><input type="text" id="user_profile_photographyTemp" name="user_profile[photographyTemp]" /></p>
+                                    <div class="pic"><img src="img/profile-image.png" width="75" height="75" alt="Image" style="width:75px;height:75px"></div>
+                                    <span id="bfoto" class="button">Upload an image</span>
+                                    <div class="info">
+                                        <span>400 KB max. Recommended size: 250x250px</span>
+                                        <span class="errorphoto"></span>
+                                    </div>
+                                </div>
+                                <span class="tip">Please select a JPEG file</span>
+                            </li>
+                            
+                        </ul>
+                        <p class="mleft"><input type="submit" value="SAVE" class="button large size2 bold"></p>
+                        <p class="mleft desactivate"><a href="/amechi.egbe/delete-account">Delete account</a></p>
+                    <input type="hidden" id="user_profile__token" name="user_profile[_token]" value="71c13aab7aaa8fd5216dab4b2c1877258202ad25" /></form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+	{% endblock settings %}

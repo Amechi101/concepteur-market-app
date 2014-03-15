@@ -127,6 +127,7 @@
 				            <a href="#" class="pinterest">Pinterest</a>
         				</li>
 					</ul>
+					{% block search %}
 					<div id="tl-search" class="tl-search">
 	    				<form>
 					        <input class="tl-search-input" placeholder="Enter product search term..." type="search" value="" name="search" id="search">
@@ -134,18 +135,25 @@
 					        <span class="tl-icon-search"></span>
 					    </form>
     				</div>
+    				{% endblock search %}
 				</nav>
          
       		</header>
 			
 			<!-- Space div for header to content -->
-			{% block space %}<div  class="space"></div>{% endblock %}
+			{% block space %}<div  class="space"></div>{% endblock space %}
 
-			<!-- Main content of images -->
-			{% block content %}{% endblock %}
+			<!-- Main content-->
+			{% block content %}{% endblock content %}
 			
 
-			{% block login %}{% endblock %}
+			{% block login %}{% endblock login %}
+			
+			{% block signup %}{% endblock signup %} 
+
+			{% block settings %}{% endblock settings %} 
+
+			{% block dashboard %}{% endblock dashboard %} 
 		</div> <!-- End container -->
 
 		
