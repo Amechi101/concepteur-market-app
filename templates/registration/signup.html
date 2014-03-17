@@ -40,6 +40,12 @@
 		            <p>
 		                {{form.password2}}
 		            </p>
+		            <div class="alerts errorlist">
+                    	<span>{{form.username.errors}}</span>
+                    	<span>{{form.email.errors}}</span>	
+                    	<span>{{form.password2.errors}}</span>	
+
+                    </div>
 		            <p class="agree">By signing up, I agree to Indieitude's <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
 		            </p>
 		            <p>

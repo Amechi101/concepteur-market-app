@@ -11,8 +11,14 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    
+    #Base File for templates to extend
     url(r'^$', 'home.views.base', name="base"),
-    url(r'^login/', 'profiles.views.login', name="login"),
-     url(r'^register/', 'profiles.views.register', name="register"),
+    
+    #For User Registration
+    url(r'^login/$', 'profiles.views.login', name="login"),
+    url(r'^signup/$', 'profiles.views.signup', name="signup"),
+    url(r'^signup/register/$', 'profiles.views.register', name="register"),
+    url(r'^dashboard/$', 'profiles.views.dashboard', name="dashboard"),
 )
 

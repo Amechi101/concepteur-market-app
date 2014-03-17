@@ -171,7 +171,7 @@ textarea.text-input {
     background-color: #ccc
 }
 
-.button {
+.button, #id_image {
     display: inline-block;
     height: 40px;
     line-height: 41px;
@@ -413,14 +413,15 @@ padding: 60px 0
 	color:#64686a
 }
 
-.button{
+.button, #id_button{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box
 }
 
-.text-input, #id_email,#id_username, #id_password, #id_password2 {
+.text-input, #id_email,#id_username, #id_password, #id_password2, 
+#id_first_name, #id_last_name, #id_birthday, #id_state, #id_city, #id_image,  #id_realname {
 	display:block;
 	height:46px;
 	padding:0 15px;
@@ -443,7 +444,8 @@ padding: 60px 0
 	width:211px
 }
 
-.text-input.size2{
+.text-input.size2,
+#id_first_name, #id_last_name, #id_birthday, #id_state, #id_city, #id_image, #id_realname{
 	width:700px
 }
 
@@ -1175,8 +1177,9 @@ padding: 60px 0
 	margin-bottom:20px
 }
 
-.box-login .alerts span,.box-login .alerts li{
-	color:#c00
+.box-login .alerts span, .box-login .errorlist span{
+	color:#c00;
+	display:block;
 }
 
 .box-login .alerts li{
