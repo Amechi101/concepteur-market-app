@@ -2,6 +2,9 @@
 {% block title %}Settings -Indieitude{% endblock title %}
 			
 <!-- Main content of images -->
+{% block search %}
+{% endblock search %}
+
 {% block space %}
 <div  class="space-registration"></div>
 {% endblock space %}
@@ -16,7 +19,8 @@
                 <div class="form-submit center">
                     <form method="post" action="" enctype="multipart/form-data">{% csrf_token %}
                         <ul>
-                            <li>{{form.realname}}</li>
+                            <li>{{form.first_name}}</li>
+                            <li>{{form.last_name}}</li>
                             <li>{{form.birthday}}</li>
                             <li>{{form.city}}</li>
                             <li>{{form.state}}</li>

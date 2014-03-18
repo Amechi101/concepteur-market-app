@@ -1,7 +1,20 @@
 {% extends 'home/base.html' %}
 {% block title %}Dashboard -Indieitude{% endblock title %}
-			
 
+{% block search %}
+{% endblock search %}			
+
+{% block authenticate %}
+{%if is_authenticated %}
+                        <li class="logged-in">
+                            <a href="/user/amechi.egbe" class="name">{{username}}</a>
+                            <a href="/user/amechi.egbe"><img src="{{image}}" width="40" height="40" alt="Amechi Egbe"></a>
+                            <a href="/logout" class="logout" title="Sign out">Logout</a>
+                        </li>
+                         {%else%}
+                        <li class="login"><a href="{% url "profiles.views.login" %}">Login / Signup</a></li>
+                         {%endif%}
+{% endblock authenticate %}
 			<!-- Main content of images -->
 {% block space %}
 <div  class="space"></div>
@@ -15,8 +28,8 @@
 			<li><a href="#"> Start Discovering</a></li>
 		</ul>
 		<div class="dash-middle">
-			<label>Point Total:<span class="dash-total">0</span></label>
-			<label>Influence Level:<span class="dash-name">Fashionista</span></label>
+			<label>Point Total:<span class="dash-total">{{points}}</span></label>
+			<label>Influence Level:<span class="dash-name">{{title}}</span></label>
 		</div>
 	</div>
 </div>
@@ -24,52 +37,43 @@
 <div class="hr-line"></div>
 
 <section id="content">
-
-        <div class="block">
-            <div class="inner width-2">
-                <h1 class="heading-title" align="center">Register Below</h1>
-                <div class="msg-alert"></div>
-                <div class="form-submit center">
-                    <form method="post" action="">
-                        <ul>
-                            <li><label for="user_profile_username" class="required"><strong>Username</strong></label><div class="boxadd size3"><input type="text" id="user_profile_username" name="user_profile[username]" required="required" maxlength="255" pattern="[A-Za-z0-9\._-]{1,50}"    class="text-input size2" value="amechi.egbe" /></div><span class="tip">Your username</span></li>
-                            <li><label for=""><strong>First Name</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                            <li><label for=""><strong>Last Name</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                           <li><label for=""><strong>Email</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                           <li><label for=""><strong>D.O.B</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                            <li><label for=""><strong>Email</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                           <li><label for=""><strong>D.O.B</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                            
-                            
-                            <li><label for="user_profile_city"><strong>City</strong></label><input type="text" id="user_profile_city" name="user_profile[city]" maxlength="50"    class="text-input size2" /></li>
-                            <li><label for=""><strong>State</strong></label><input type="text" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                         
-                            <li><label for=""><strong>New Password</strong></label><input type="password" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                            <li><label for=""><strong>Re-Enter Password</strong></label><input type="password" id="" name="" maxlength="50"    class="text-input size2" /></li>
-                            
-                            <li>
-                                <label><strong>Image</strong><br/></label>
-                                <div class="box-screenshot view2">
-                                    <p style="display:none"><input type="text" id="user_profile_photographyTemp" name="user_profile[photographyTemp]" /></p>
-                                    <div class="pic"><img src="img/profile-image.png" width="75" height="75" alt="Image" style="width:75px;height:75px"></div>
-                                    <span id="bfoto" class="button">Upload an image</span>
-                                    <div class="info">
-                                        <span>400 KB max. Recommended size: 250x250px</span>
-                                        <span class="errorphoto"></span>
-                                    </div>
+    <div class="block">
+        <div class="inner width-2">
+            <h1 class="heading-title" align="center">Account Settings</h1>
+            <div class="msg-alert"></div>
+            <div class="form-submit center">
+                <form method="post" action="">{% csrf_token %}
+                    <ul>
+                        <li><label ><strong>First Name</strong></label><input type="text" name="first_name"  value="{{first_name}}"  class="text-input size2" /></li>
+                        <li><label ><strong>Last Name</strong></label><input type="text" name="last_name"  value="{{last_name}}"  class="text-input size2" /></li>
+                        <li><label class="required"><strong>Username</strong></label><input type="text" name="username" required="required" maxlength="255" pattern="" class="text-input size2" value="{{username}}" /></li>
+                        <li><label><strong>Email</strong></label><input type="text" value="{{email}}" name="email" class="text-input size2"/></li>
+                        <li><label><strong>D.O.B</strong></label><input type="text" id="" name="birthday" value="{{birthday}}"   class="text-input size2" /></li>            
+                        <li><label><strong>City</strong></label><input type="text" name="city" value="{{city}}" class="text-input size2" /></li>
+                        <li><label><strong>State</strong></label><input type="text" id="" name="state" value="{{state}}"  class="text-input size2" /></li>
+                        <li><label><strong>New Password</strong></label><input type="password"  name="password" maxlength="50"    class="text-input size2" /></li>
+                        <li><label><strong>Re-Enter Password</strong></label><input type="password"  name="re-enter password" maxlength="50"    class="text-input size2" /></li> 
+                        <li>
+                            <label><strong>Image</strong><br/></label>
+                            <div class="box-screenshot view2">
+                                <p style="display:none"><input type="text" id="user_profile_photographyTemp" name="user_profile[photographyTemp]" /></p>
+                                <div class="pic"><img src="{{image}}" width="75" height="75" alt="Image" style="width:75px;height:75px"></div>
+                                <span id="bfoto" class="button">Upload an image</span>
+                                <div class="info">
+                                    <span>400 KB max. Recommended size: 250x250px</span>
+                                    <span class="errorphoto"></span>
                                 </div>
-                                <span class="tip">Please select a JPEG file</span>
-                            </li>
-                            
+                            </div>
+                            <span class="tip">Please select a JPEG file</span>
+                        </li>  
                         </ul>
-                        <p class="mleft"><input type="submit" value="SAVE" class="button large size2 bold"></p>
-                        <p class="mleft desactivate"><a href="/amechi.egbe/delete-account">Delete account</a></p>
-                    <input type="hidden" id="user_profile__token" name="user_profile[_token]" value="71c13aab7aaa8fd5216dab4b2c1877258202ad25" /></form>
-                </div>
+                    <p class="mleft"><input type="submit" value="UPDATE" class="button large size2 bold"></p>
+                    <p class="mleft desactivate"><a href="/amechi.egbe/delete-account">Delete account</a></p>
+                </form>
             </div>
         </div>
-
-    </section>
+    </div>
+</section>
 
 {% endblock dashboard %}				
 

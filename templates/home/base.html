@@ -113,13 +113,18 @@
 					</div> <!-- slogan end -->
 					<a href="{% url "home.views.base" %}"><div class="logoWrap"></div></a>
     				<ul class="right">
-                    	<li class="login"><a href="{% url "profiles.views.login" %}">Login / Signup</a></li>
-                    	<!-- For when a user logs-in
+    				{% block authenticate %}
+    					{%if is_authenticated %}
                     	<li class="logged-in">
-			                <a href="/user/amechi.egbe" class="name">Amechi Egbe</a>
-			                <a href="/user/amechi.egbe"><img src="img/profile-image.png" width="40" height="40" alt="Amechi Egbe"></a>
+			                <a href="/user/amechi.egbe" class="name">{{username}}</a>
+			                <a href="/user/amechi.egbe"><img src="user_images/{{user.image}}" width="40" height="40" alt="Amechi Egbe"></a>
 			                <a href="/logout" class="logout" title="Sign out">Logout</a>
-            			</li> -->
+            			</li>
+            			 {%else%}
+                    	<li class="login"><a href="{% url "profiles.views.login" %}">Login / Signup</a></li>
+                    	 {%endif%}
+           
+            			{% endblock authenticate %}
                 		<li class="social">
 				            <a href="information/information-page.html" class="info">Information</a>
 				            <a href="#" class="facebook"  title="Facebook"></a>

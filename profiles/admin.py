@@ -1,5 +1,5 @@
-# from django.contrib import admin
-# from profiles.models import ProfileStatsUser, ProfileUser
+from django.contrib import admin
+from profiles.models import ProfileUser, User
 
-# admin.site.register(ProfileUser)
-# admin.site.register(ProfileStatsUser)
+admin.site.register(ProfileUser)
+

@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.forms import extras
-from models import ProfileUser, ProfileStatsUser
+from models import ProfileUser
 import time
 
 now=time.localtime()
@@ -58,7 +58,8 @@ class SignupForm(forms.ModelForm):
 
 ###### Registration for users ###########
 class RegisterForm(forms.ModelForm):
-    realname=forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Real Name','required':True}))
+    first_name=forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'First Name','required':True}))
+    last_name=forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Last Name','required':True}))
     birthday=forms.DateField(label=_(u"birthdate(mm/dd/yy)"),widget=extras.SelectDateWidget(years=range(1900, now[0]+1)),required=False)
     city=forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder': 'City','required':True}))
     state=forms.CharField(max_length=2, widget=forms.TextInput(attrs={'placeholder': 'State','required':True}))
@@ -67,23 +68,9 @@ class RegisterForm(forms.ModelForm):
     class Meta:
         """ To Specify the fields from User model and the extension of the user model from django, and to prevent abstraction"""
         model = ProfileUser
-        fields = ['realname', 'birthday','city','state','image']
+        fields = ['first_name','last_name', 'birthday','city','state','image']
 
 
-
-###### Profile for users ###########
-class ProfileForm(forms.Form):
-    realname=forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Real Name','required':True}))
-    email=forms.EmailField(max_length=30, widget=forms.TextInput(attrs={'required':False}))
-    username=forms.CharField(max_length=30, widget=forms.TextInput(attrs={'required':False}))
-    birthday=forms.DateField(widget=forms.DateInput(attrs={'required':False}))
-    city=forms.CharField(max_length=30, widget=forms.TextInput(attrs={'required':False}))
-    state=forms.CharField(max_length=2, widget=forms.TextInput(attrs={'required':False}))
-
-    class Meta:
-        """ To Specify the fields from User model and the extension of the user model from django, and to prevent abstraction"""
-        model = ProfileUser
-        fields = ['first_name', 'last_name', 'birthday','city', 'state', 'email', 'username', 'user_title']
     
     
 

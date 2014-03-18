@@ -61,7 +61,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 )
 
-
+AUTH_PROFILE_MODULE = "profiles.ProfileUser"
 
 
 ROOT_URLCONF = 'Indieitude.urls'
