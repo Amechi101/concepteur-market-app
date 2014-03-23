@@ -1,24 +1,19 @@
 from django.conf.urls import patterns, include, url
-from home import views
-from profiles import views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 from django.contrib import admin
-admin.autodiscover()
+
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'indieitude.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+  
+    url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
     url(r'^admin/', include(admin.site.urls)),
-    
-    #Base File for templates to extend
-    url(r'^$', 'home.views.base', name="base"),
-    
-    #For User Registration
-    url(r'^login/$', 'profiles.views.login', name="login"),
-    url(r'^signup/$', 'profiles.views.signup', name="signup"),
-    url(r'^signup/register/$', 'profiles.views.register', name="register"),
-    url(r'^dashboard/$', 'profiles.views.dashboard', name="dashboard"),
+    url(r"^account/", include("account.urls")),
 )
+    
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+
 
