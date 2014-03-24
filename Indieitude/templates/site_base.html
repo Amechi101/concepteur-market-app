@@ -6,11 +6,20 @@
 
 
 {% block style_base %}
-    <link href="{% static "pinax/css/theme.css" %}" rel="stylesheet">
-    <link href="{% static "css/site.css" %}" rel="stylesheet">
-     <link href="{% static "bootstrap/css/forms-copy.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/site.css" %}" >
+    <link rel="stylesheet" href="{% static "css/font.css" %}"/> 
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}"/> 
+    <link rel="stylesheet" href="{% static "css/main.css" %}"/> 
+    <link rel="stylesheet" href="{% static "css/form.css" %}"/> 
+    <link rel="stylesheet" href="{% static "bootstrap-3.1.1-dist/css/bootstrap.css" %}"/> 
     {% block extra_style %}{% endblock %}
 {% endblock %}
+
+{% block top_script_base %}
+    <script src="{% block jquery_src %}{% static 'js/lib/main-important/jquery-1.11.0.js' %}{% endblock %}"></script>
+    <script src=" {% static 'js/lib/other/modernizr.custom.32600.js' %}"></script>
+{% endblock %}
+
 
 
 {% block extra_head_base %}
@@ -18,10 +27,11 @@
 {% endblock %}
 
 
-{% block footer %}
+
+<!-- {% block footer %}
     {% include "_footer.html" %}
 {% endblock %}
-
+ -->
 
 {% block extra_body_base %}
     {% analytics %}
@@ -30,8 +40,63 @@
 
 
 {% block script_base %}
-    <script src="{% block jquery_src %}{% static "pinax/js/jquery.js" %}{% endblock %}"></script>
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <script src="{% static "pinax/js/theme.js" %}"></script>
-    {% block extra_script %}{% endblock %}
-{% endblock %}
+            <script src="{% static 'js/lib/main-important/jquery.wookmark.js' %}"></script>
+            <script src="{% static 'js/lib/main-important/jquery.remodal.js' %}"></script>
+        
+            <script src="{% static 'js/lib/other/classie.js' %}"></script>
+            <script src="{% static 'js/lib/other/application-searchbar.js' %}"></script>
+            <script src="{% static 'js/lib/other/jquery.dlmenu.js' %}"></script>
+            <script src="{% static 'js/lib/other/jquery.imagesloaded.js' %}"></script>
+            <script src="{% static 'js/lib/other/selectize.js' %}"></script>
+            <script src="{% static 'js/lib/other/slider.js' %}"></script>
+            <script src="{% static 'bootstrap-3.1.1-dist/js/bootstrap.js' %}"/></script>
+            <script src="{% static "pinax/js/theme.js" %}"></script>
+
+            {% block extra_script %}
+                <!-- Scripts to call in Libraries -->
+        <script>
+            new UISearch( document.getElementById( 'tl-search' ) );
+        </script>
+        <script>
+            $(function() {
+                $( '#dl-menu' ).dlmenu();
+            });
+        </script>
+        <script>
+            $(function() {
+
+            Slider.init();
+
+            });
+        </script>
+        
+        <script>
+            (function ($){
+                  var handler = $('#tiles li');
+
+                  handler.wookmark({
+                      // Prepare layout options.
+                      autoResize: true, // This will auto-update the layout when the browser window is resized.
+                      offset: 2, // Optional, the distance between grid items
+                      itemWidth: 210 // Optional, the width of a grid item
+                  });
+
+                 
+                    handler.wookmark();
+             
+            })(jQuery);
+        </script>
+        <script>
+                $('#input-tags').selectize({
+                    delimiter: ',',
+                    persist:false,
+                    create :function(input) {
+                        return {
+                            value: input,
+                            text: input
+                        }
+                    }
+                });
+        </script>
+            {% endblock %}
+        {% endblock %}
