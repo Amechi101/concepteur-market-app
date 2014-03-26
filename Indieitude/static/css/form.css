@@ -173,11 +173,12 @@ textarea.text-input {
     background-color: #ccc
 }
 
-.button, #id_image {
+.button {
     display: inline-block;
     height: 40px;
     line-height: 41px;
     padding: 0 15px;
+    width: 100%;
     background-color: #409f89;color:# fff;
     cursor: pointer;
     border: 0;

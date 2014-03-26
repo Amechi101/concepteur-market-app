@@ -9,8 +9,7 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="{% url "account_settings" %}"><i class="fa fa-user"></i> {% trans "Settings" %}</a></li>
-                <li><a href="#"><i class="fa fa-dashboard"></i> {% trans "Dashboard" %}</a></li>
+                <li><a href="{% url "account_settings" %}"><i class="fa fa-user"></i> {% trans "Account" %}</a></li>
                 {% if request.user.is_staff %}
                     <li><a href="{% url THEME_ADMIN_URL|default:"admin:index" %}"><i class="fa fa-cog"></i> {% trans "Admin" %}</a></li>
                 {% endif %}
@@ -20,11 +19,11 @@
                 </li>
             </ul>
         </li>
-
+    <li class="social-img"><span><img src="/site_media/static/img/profile-image.png" width="40" height="40" alt="Amechi Egbe"></span></li>
     <li class="logged-in">
-    <!-- <a href="#"><img src="../img/profile-image.png" width="40" height="40" alt="Amechi Egbe"></a> -->
     <a href="{% url "account_logout" %}" class="logout" title="Sign out">Logout</a>
     </li>
+
 
         
     {% else %}
