@@ -45,11 +45,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
 
     ##### Indieitude Apps #####
+    "account",
+    "products",
 
 
     #### Third Party Apps #####
     'south',
-    "account",
     "eventlog",
     "metron",
     'imagekit',

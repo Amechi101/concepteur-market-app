@@ -9,7 +9,7 @@
      */
     var pluginName = "remodal",
         defaults = {
-            hashTracking: true
+            hashTracking: false
         };
 
     /**
