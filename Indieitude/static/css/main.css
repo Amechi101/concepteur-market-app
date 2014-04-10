@@ -201,7 +201,6 @@ color: rgb(18,194,134);
 #header nav.top div.tl-search,
 #header nav.scroll div.tl-search {
     position:relative;
-    margin-right:-10px;
 
     width:0%;
   
@@ -1199,7 +1198,7 @@ background:black;
 }
 
 
-/*@media screen and (max-width: 860px) {
+@media screen and (max-width: 860px) {
 
   .js .ps-container > div {
     width: 100%;
@@ -1218,7 +1217,7 @@ background:black;
   .js .ps-slidewrapper > nav {
     height: 100px;
   }
-}*/
+}
 
 /***********************************************************************************************************************************************************/
 /********************************                                    Level 6                                               ****************************************/

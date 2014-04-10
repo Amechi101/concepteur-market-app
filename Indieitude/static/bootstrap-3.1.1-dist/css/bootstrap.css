@@ -649,6 +649,8 @@
     margin-left: 0%;
   }
 }
+
+
 table {
   max-width: 100%;
   background-color: transparent;
@@ -2343,6 +2345,8 @@ a.thumbnail.active {
   color: #333333;
 }
 .alert {
+    position: relative;
+     top:67px;
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;

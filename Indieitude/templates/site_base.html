@@ -8,7 +8,6 @@
 {% block style_base %}
     <link rel="stylesheet" href="{% static "css/site.css" %}" >
     <link rel="stylesheet" href="{% static "css/font.css" %}"/> 
-    <link rel="stylesheet" href="{% static "css/normalize.css" %}"/> 
     <link rel="stylesheet" href="{% static "css/main.css" %}"/> 
     <link rel="stylesheet" href="{% static "css/form.css" %}"/> 
     <link rel="stylesheet" href="{% static "bootstrap-3.1.1-dist/css/bootstrap.css" %}"/> 
@@ -98,10 +97,8 @@
                 });
         </script>
         <script>
-        
             $(window).stellar();
         </script>
-        
         <script>
         $(document).scroll(function() {
             var y = $(this).scrollTop();
@@ -115,6 +112,9 @@
                 $("nav.scroll").css({position:"absolute",top:"0px",left:"0px"});
             }
         });
+          $(function() {
+            $('body').css({"height":0});
+          });
         </script>
             {% endblock %}
         {% endblock %}

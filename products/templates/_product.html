@@ -1,6 +1,4 @@
 {% load i18n %}
-
-{% if request.user.is_authenticated %}
 <section id="ps-container" class="ps-container">
                 <div class="ps-slidewrapper">
                     <div class="ps-slides">
@@ -248,59 +246,3 @@
                 </div>  <!-- container for accordian  -->                       
             </div> <!-- accordian end -->
         </section><!-- ps-header end -->
-{% else %}
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div id="content">
-            <div class="block">
-                <div class="inner width-2">
-                    <div class="box-login">
-                        <div class="box-form">
-                            <div class="head">
-                                 <h2 class="heading-title">Must register to start discovering!</h2>
-
-                            </div>
-                            <div class="socialconnect"> <a href="" class="facebook">Login with your Facebook</a>
-
-                            </div>
-                            <p align="center"><em>Or Login with your Username & Password</em>
-                            </p>
-                            <form method="POST" action="/account/login/" autocapitalize="off">
-                                <input type='hidden' name='csrfmiddlewaretoken' value='HKaq1Cs6xOrcp4SWyaG7Bij9hxGr7iGc' />
-                                <div class="form-group">
-                                    <label class="control-label  " for="id_username">Username</label>
-                                    <div class=" ">
-                                        <input class=" form-control" id="id_username" maxlength="30" name="username" type="text" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label  " for="id_password">Password</label>
-                                    <div class=" ">
-                                        <input class=" form-control" id="id_password" name="password" type="password" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input id="id_remember" name="remember" type="checkbox" /> <span>Remember Me</span>
-
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p><a href="/account/password/reset/" class="underline"><strong>Forgot your password?</strong></a>
-                                </p>
-                                <p>
-                                    <button type="submit" class="button large bold">Log in</button>
-                                </p>
-                            </form>
-                            <h2 align="center" class="heading-title">Not a member yet? <a class="underline" href="{% url "account_signup" %}"> Signup now!</a></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endif %}
