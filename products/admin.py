@@ -19,8 +19,9 @@ class BoutiqueAdmin(admin.ModelAdmin):
     list_display = ["name", "address", "city", " state", "zipcode", "boutique_website", "is_active"]
     search_fields = ["name"]
 
-
-admin.site.register(Designer, Boutique)
-admin.site.register(Product, ProductCategory)
+admin.site.register(Boutique)
+admin.site.register(Designer)
+admin.site.register(Product)
+admin.site.register(ProductCategory)
 
 
