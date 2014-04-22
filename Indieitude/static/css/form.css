@@ -39,8 +39,7 @@
 }
 
 .block {
-    position: relative;
-    padding: 0 0 50px 0
+    position: relative
 }
 .block:after {
     content: '';

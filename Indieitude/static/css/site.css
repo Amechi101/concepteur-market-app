@@ -272,9 +272,7 @@ html{
 body{
     font-family:"GandhiSans",sans-serif;
     font-size:14px;
-    line-height:1.428571429;
-    color:#333;
-    background-color:#000
+    line-height:1.428571429
 }
 
 input,button,select,textarea{

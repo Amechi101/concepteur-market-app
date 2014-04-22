@@ -54,6 +54,8 @@ INSTALLED_APPS = (
     "eventlog",
     "metron",
     'imagekit',
+    'secretballot',
+    'likes',
 
     # theme
     "bootstrapform",
@@ -68,6 +70,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'secretballot.middleware.SecretBallotIpUseragentMiddleware',
+    'likes.middleware.SecretBallotUserIpUseragentMiddleware',
 )
 
 
