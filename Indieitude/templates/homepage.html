@@ -7,19 +7,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block banner %}
-{% block parallax_wrapper_id %}the_container{% endblock %} {% block wrapper_class %}wrap remodal-bg container-fluid{% endblock %}
 
-{% block modal %}
-    {% if request.user.is_authenticated %}
-        <div class="remodal" data-id="" data-remodal-id="modal" data-remodal-options='{ "hashTracking": false }' >
-              {% include "_product.html" %} 
-        </div>
-    {% else %}
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            {% include "_homepage_signup.html" %} 
-        </div>
-    {% endif %}
-{% endblock %}
 
 {% block search %}
     <div id="tl-search" class="tl-search">

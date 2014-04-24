@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -6,7 +8,7 @@ import datetime
 class Designer(models.Model):
     name = models.CharField(max_length=254, blank=True, null=True)
     label_name = models.CharField(max_length=254, blank=True, null=True)
-    description = models.CharField(max_length=254, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
     specialites = models.CharField(max_length=254,  null=True, blank=True)
     image = models.ImageField(upload_to='images/designers/main',max_length=100, null=True) #For the argument upload_to, will add to the static folder and generated image will be stored in suing that path specified
 
@@ -17,10 +19,11 @@ class Designer(models.Model):
     #Metadata
     class Meta:
        verbose_name = _("Designer Information")
+       verbose_name_plural = _("Designers")
 
     #Helps return something meaningful, to show within the admin interface for easy interaction
     def __unicode__(self):
-        return self.name
+        return "{0} {1}".format(self.name, self.label_name)
 
 class Boutique(models.Model):
     name = models.CharField(max_length=254, blank=True, null=True)
@@ -39,29 +42,35 @@ class Boutique(models.Model):
     #Metadata
     class Meta:
       verbose_name = _("Boutique Information")
+      verbose_name_plural = _("Boutiques")
 
     #Helps return something meaningful, to show within the admin interface for easy interaction
     def __unicode__(self):
-        return self.name
+        return "{0}, {1}, {2}".format(self.name, self.city, self.state)
 
 class ProductCategory(models.Model):
-   name = models.CharField(max_length=255L, blank=True, null=True)
-   slug = models.SlugField(max_length=50, unique=True, help_text='Unique value for product page URL, created from name.')
-   
-   #For Admin Purposes, to track and see which if still active by for administrative users only
-   is_active = models.BooleanField(default=True)
+    name = models.CharField(max_length=255L, blank=True, null=True)
+    slug = models.SlugField(max_length=50, unique=True, help_text='Unique value for product page URL, created from name.')
 
-   #For Admin Purposes, to track when we add each product and each product was updated by administrative users
-   created_at = models.DateTimeField(auto_now_add=True)
-   updated_at = models.DateTimeField(auto_now=True)
+    #For Admin Purposes, to track and see which if still active by for administrative users only
+    is_active = models.BooleanField(default=True)
 
-   #Helps return something meaningful, to show within the admin interface for easy interaction
-   def __unicode__(self):
-        return self.name
+    #For Admin Purposes, to track when we add each product and each product was updated by administrative users
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    #Metadata
+    class Meta:
+        verbose_name = _("Product Category")
+        verbose_name_plural = _("Product Categories")
+
+    #Helps return something meaningful, to show within the admin interface for easy interaction
+    def __unicode__(self):
+        return "{0}".format(self.name)
 
 class Product(models.Model):
     name = models.CharField(max_length=254, blank=True, null=True)
-    description = models.CharField(max_length=254, blank=True, null=True)    
+    description = models.TextField(blank=True, null=True)    
     color_name = models.CharField(max_length=254, null=True, blank=True)
     size_types = models.CharField(max_length=7, null=True, blank=True)
     product_price = models.DecimalField(max_digits=9,decimal_places=2)
@@ -91,7 +100,7 @@ class Product(models.Model):
 
     #Helps return something meaningful, to show within the admin interface for easy interaction
     def __unicode__(self):
-        return self.name
+        return "{0}".format(self.name)
 
 
 
