@@ -8,6 +8,12 @@
 
 {% block banner %}
 
+ {% block modal %}
+<div class="remodal" data-remodal-id="modal" >
+	{% include "product_information/_product.html" %}
+</div>
+ {% endblock %}
+
 
 {% block search %}
     <div id="tl-search" class="tl-search">
