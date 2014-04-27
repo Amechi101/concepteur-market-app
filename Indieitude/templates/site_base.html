@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{% static "css/font.css" %}"/> 
     <link rel="stylesheet" href="{% static "css/main.css" %}"/> 
     <link rel="stylesheet" href="{% static "css/form.css" %}"/> 
-    <link rel="stylesheet" href="{% static "bootstrap-3.1.1-dist/css/bootstrap.css" %}"/> 
     {% block extra_style %}{% endblock %}
 {% endblock %}
 
@@ -46,7 +45,6 @@
             <script src="{% static "js/lib/other/application-searchbar.js" %}"></script>
             <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
             <script src="{% static "js/lib/other/jquery.imagesloaded.js" %}"></script>
-            <script src="{% static "js/lib/other/selectize.js" %}"></script>
             <script src="{% static "js/lib/other/slider.js" %}"></script>
             <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
             <script src="{% static "pinax/js/theme.js" %}"></script>
@@ -84,36 +82,5 @@
              
             })(jQuery);
         </script>
-        <script>
-                $('#input-tags').selectize({
-                    delimiter: ',',
-                    persist:false,
-                    create :function(input) {
-                        return {
-                            value: input,
-                            text: input
-                        }
-                    }
-                });
-        </script>
-      
-        </script>
-        <!-- <script>
-            $(window).stellar();
-        </script>
-        <script>
-        $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            var slide1Pos = $("#slide1").height();
-            var slide2Pos = $("#slide2").height();
-            var totalHeight = slide1Pos + slide2Pos;
-            if(y >= totalHeight) {
-                $("nav.scroll").css({position:"fixed", top:"0px", left:"0px"});
-            } else {
-            
-                $("nav.scroll").css({position:"absolute",top:"0px",left:"0px"});
-            }
-        });
-        </script>-->
             {% endblock %}
         {% endblock %}
