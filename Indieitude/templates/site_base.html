@@ -26,9 +26,6 @@
 
 
 
-{% block footer %}
-    {% include "_footer.html" %}
-{% endblock %}
 
 
 {% block extra_body_base %}
@@ -38,14 +35,9 @@
 
 
 {% block script_base %}
-            <script src="{% static "js/lib/main-important/jquery.wookmark.js" %}"></script>
-            <script src="{% static "js/lib/main-important/jquery.stellar.js" %}"></script>
-            <script src="{% static "js/lib/main-important/jquery.remodal.js" %}"></script>
             <script src="{% static "js/lib/other/classie.js" %}"></script>
             <script src="{% static "js/lib/other/application-searchbar.js" %}"></script>
             <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
-            <script src="{% static "js/lib/other/jquery.imagesloaded.js" %}"></script>
-            <script src="{% static "js/lib/other/slider.js" %}"></script>
             <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
             <script src="{% static "pinax/js/theme.js" %}"></script>
 
@@ -58,29 +50,6 @@
             $(function() {
                 $( '#dl-menu' ).dlmenu();
             });
-        </script>
-        <script>
-            $(function() {
-
-            Slider.init();
-
-            });
-        </script>
-        <script>
-            (function ($){
-                  var handler = $('#tiles li');
-
-                  handler.wookmark({
-                      // Prepare layout options.
-                      autoResize: true, // This will auto-update the layout when the browser window is resized.
-                      offset: 20, // Optional, the distance between grid items
-                      itemWidth: 210 // Optional, the width of a grid item
-                  });
-
-                 
-                    handler.wookmark();
-             
-            })(jQuery);
         </script>
             {% endblock %}
         {% endblock %}

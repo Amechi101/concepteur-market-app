@@ -1,29 +1,116 @@
-{% extends "banner_base.html" %}
+{% extends "site_base.html" %}
 
 {% load i18n %}
+{% load staticfiles %}
 
 {% block head_title %}{% trans "Welcome" %}{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
 {% block banner %}
+	<div class="slide" id="slide1">
+	    <div class="white_overlay" id="slide1_white_overlay"></div>
+	    <div id="slide1_content">
+	        <img id="homepage_logo" src="{% static "img/logo.png" %}" />
+	        	<h1 id="slide1_text_headline">Where Clothing has more than just designs and pattens but a story</h1>
+	    </div>
+	</div>
+	<div class="main-homepage">
+	    <article  class="work grid1 clearfix">
+	        <div class="thumb" style="background-image:url('{% static "img/test10.jpg" %}');">
+	            <div class="centered">	
+	            	<a href="">Watch</a>
+	            </div>
+	        </div>
+	        <aside>
+	            <div class="description">
+	                <div class="title">Learn</div>
+	                <div class="texto">
+	                    <div class="min_border_black"></div>
+	                    <p>Getting to know your local designer/artisan is important. Our mission is to share with you why, and how connecting more with your local independent designer will help pave the way for a better shopping experience</p>
+	                    <div class="min_border_black"></div>
+	                </div>
+	            </div>
+	            <div class="arrow">
+	                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+	                    <rect x="4.861" y="4.063" transform="matrix(0.7071 0.7071 -0.7071 0.7071 14.9681 -6.3024)" width="20.461" height="21.706" />
+	                </svg>
+	            </div>
+	        </aside>
+	    </article>
+	    <article  class="work grid2 clearfix">
+	        <div class="thumb" style="background-image:url('{% static "img/test9.jpg" %}')">
+	            <div class="centered">	<a href="{% url "product_view" %}">Browse All Items</a>
 
- {% block modal %}
-<div class="remodal" data-remodal-id="modal" >
-	{% include "product_information/_product.html" %}
-</div>
- {% endblock %}
-
-
-{% block search %}
-    <div id="tl-search" class="tl-search">
-        <form>
-            <input class="tl-search-input" placeholder="Enter product search term..." type="search" value="" name="search" id="search">
-            <input class="tl-search-submit" type="submit" value="">
-            <span class="tl-icon-search"></span>
-        </form>
-    </div>
+	            </div>
+	        </div>
+	        <aside>
+	            <div class="description">
+	                <div class="title">Discover</div>
+	                <div class="texto">
+	                    <div class="min_border_black"></div>
+	                    <p>Find hidden gems with our discovery search engine, as we upload new items daily, digging far and wide to get you the best designers to your fingertips</p>
+	                    <div class="min_border_black"></div>
+	                </div>
+	            </div>
+	            <div class="arrow">
+	                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+	                    <rect x="4.861" y="4.063" transform="matrix(0.7071 0.7071 -0.7071 0.7071 14.9681 -6.3024)" width="20.461" height="21.706" />
+	                </svg>
+	            </div>
+	        </aside>
+	    </article>
+	    <article class="work grid1 clearfix">
+	        <div class="thumb" style="background-image:url('{% static "img/test17.jpg" %}');">
+	            <div class="centered">	
+	            	<a href="">Listen</a>
+	            </div>
+	        </div>
+	        <aside>
+	            <div class="description">
+	                <div class="title">Pick A Favorite</div>
+	                <div class="texto">
+	                    <div class="min_border_black"></div>
+	                    <p>If you have a independent designer in mind, get straight to business and shop their products only</p>
+	                    <div class="min_border_black"></div>
+	                </div>
+	            </div>
+	            <div class="arrow">
+	                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+	                    <rect x="4.861" y="4.063" transform="matrix(0.7071 0.7071 -0.7071 0.7071 14.9681 -6.3024)" width="20.461" height="21.706" />
+	                </svg>
+	            </div>
+	        </aside>
+	    </article>
+	</div>	
 {% endblock %}
+
+
+{% block footer %}
+    {% include "_footer.html" %}
 {% endblock %}
+
+
+{% block script_base %}
+            <script src="{% static "js/lib/other/classie.js" %}"></script>
+            <script src="{% static "js/lib/other/application-searchbar.js" %}"></script>
+            <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
+            <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
+            <script src="{% static "pinax/js/theme.js" %}"></script>
+
+            {% block extra_script %}
+                <!-- Scripts to call in Libraries -->
+        <script>
+            new UISearch( document.getElementById( 'tl-search' ) );
+        </script>
+        <script>
+            $(function() {
+                $( '#dl-menu' ).dlmenu();
+            });
+        </script>
+     
+            {% endblock %}
+        {% endblock %}
+
 
 
