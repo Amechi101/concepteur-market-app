@@ -6,5 +6,5 @@ from products.views import ProductListView
 
 
 urlpatterns = patterns("",
-     url(r"^browse/", ProductListView.as_view(), name="product_view"),
+    url(r"^browse/", ProductListView.as_view(), name="browse_view"),
 )

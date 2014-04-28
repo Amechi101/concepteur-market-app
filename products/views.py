@@ -16,11 +16,10 @@ from products.forms import DesignerForm
 
 from products.models import Boutique, Product, ProductCategory, Designer
 
-
 class ProductListView(ListView):
 	template_name="banner_base.html"
 	model = Product
-	context_object_name = "products"
+	context_object_name = "product_list"
 
 
 
