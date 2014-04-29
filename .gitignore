@@ -1,13 +1,9 @@
 venv
-
 *.pyc
-
 staticfiles
 
-docs
 
-*.json
 
-media/temp
+
 
 
