@@ -1,5 +1,11 @@
 *.pyc
 
+cat >.gitignore <<EOF
+bin/
+include/
+lib/
+EOF
+
 
 
 
