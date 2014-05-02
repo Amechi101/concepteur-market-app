@@ -41,15 +41,14 @@
             <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
             <script src="{% static "pinax/js/theme.js" %}"></script>
 
+            <script>
+                new UISearch( document.getElementById( 'tl-search' ) );
+            </script>
+            <script>
+                $(function() {
+                    $( '#dl-menu' ).dlmenu();
+                });
+            </script>
             {% block extra_script %}
-                <!-- Scripts to call in Libraries -->
-        <script>
-            new UISearch( document.getElementById( 'tl-search' ) );
-        </script>
-        <script>
-            $(function() {
-                $( '#dl-menu' ).dlmenu();
-            });
-        </script>
             {% endblock %}
         {% endblock %}

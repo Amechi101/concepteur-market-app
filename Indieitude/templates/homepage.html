@@ -7,19 +7,22 @@
 
 {% block body_class %}home{% endblock %}
 
-{% block banner %}
+{% block home_banner %}
+<!-- first slide, big image -->
 	<div class="slide" id="slide1">
 	    <div class="white_overlay" id="slide1_white_overlay"></div>
 	    <div id="slide1_content">
-	        <img id="homepage_logo" src="{% static "img/logo.png" %}" />
 	        	<h1 id="slide1_text_headline">Where Clothing has more than just designs and pattens but a story</h1>
 	    </div>
 	</div>
+
+<!-- Middle content area -->
 	<div class="main-homepage">
+		<!-- Top area information -->
 	    <article  class="work grid1 clearfix">
 	        <div class="thumb" style="background-image:url('{% static "img/test10.jpg" %}');">
 	            <div class="centered">	
-	            	<a href="">Watch</a>
+	            	<a href="{% url "designer_browse" %}">Designer Stories</a>
 	            </div>
 	        </div>
 	        <aside>
@@ -38,6 +41,8 @@
 	            </div>
 	        </aside>
 	    </article>
+
+	    <!-- Middle area information -->
 	    <article  class="work grid2 clearfix">
 	        <div class="thumb" style="background-image:url('{% static "img/test9.jpg" %}')">
 	            <div class="centered">	<a href="{% url "browse_view" %}">Browse All Items</a>
@@ -46,7 +51,7 @@
 	        </div>
 	        <aside>
 	            <div class="description">
-	                <div class="title">Discover</div>
+	                <div class="title right-align">Discover</div>
 	                <div class="texto">
 	                    <div class="min_border_black"></div>
 	                    <p>Find hidden gems with our discovery search engine, as we upload new items daily, digging far and wide to get you the best designers to your fingertips</p>
@@ -60,7 +65,9 @@
 	            </div>
 	        </aside>
 	    </article>
-	    <article class="work grid1 clearfix">
+
+	    <!-- Bottom area information -->
+	    <!-- <article class="work grid1 clearfix">
 	        <div class="thumb" style="background-image:url('{% static "img/test17.jpg" %}');">
 	            <div class="centered">	
 	            	<a href="">Listen</a>
@@ -81,7 +88,7 @@
 	                </svg>
 	            </div>
 	        </aside>
-	    </article>
+	    </article> -->
 	</div>	
 {% endblock %}
 
@@ -92,25 +99,23 @@
 
 
 {% block script_base %}
-            <script src="{% static "js/lib/other/classie.js" %}"></script>
-            <script src="{% static "js/lib/other/application-searchbar.js" %}"></script>
-            <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
-            <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
-            <script src="{% static "pinax/js/theme.js" %}"></script>
+    <script src="{% static "js/lib/other/classie.js" %}"></script>
+    <script src="{% static "js/lib/other/application-searchbar.js" %}"></script>
+    <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
+    <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
+    <script src="{% static "pinax/js/theme.js" %}"></script>
+    <script>
+       	new UISearch( document.getElementById( 'tl-search' ) );
+    </script>
+    <script>
+        $(function() {
+            $( '#dl-menu' ).dlmenu();
+        });
+    </script>
 
-            {% block extra_script %}
-                <!-- Scripts to call in Libraries -->
-        <script>
-            new UISearch( document.getElementById( 'tl-search' ) );
-        </script>
-        <script>
-            $(function() {
-                $( '#dl-menu' ).dlmenu();
-            });
-        </script>
-     
-            {% endblock %}
-        {% endblock %}
+    {% block extra_script %}
+    {% endblock %}
+{% endblock %}
 
 
 

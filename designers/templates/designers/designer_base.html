@@ -1,0 +1,111 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block head_title %}{% trans "Browse Thousands of Independent Designers" %}{% endblock %}
+
+ {% block search %}
+{% endblock %}
+
+{% block body %}
+    <div class="designer-head">
+      <h1>Search For Designer or Artisan Below. . .</h1>
+      <p>Click the letter below to filter the grid.</p>
+    </div>
+    <br/>
+    <ol id="filters">
+      <li data-filter="all">All</li>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+      <li>E</li>
+      <li>F</li>
+      <li>G</li>
+      <li>H</li>
+      <li>I</li>
+      <li>J</li>
+      <li>K</li>
+      <li>L</li>
+      <li>M</li>
+      <li>N</li>
+      <li>O</li>
+      <li>Q</li>
+      <li>R</li>
+      <li>S</li>
+      <li>T</li>
+      <li>U</li>
+      <li>V</li>
+      <li>W</li>
+      <li>X</li>
+      <li>Y</li>
+      <li>Z</li>
+    </ol>
+    <br/>
+    <br/>
+	<div id="main" role="main">
+	    <ul id="tiles">
+		{% for designer in designer_list %}
+			<li>
+				<a href="#">
+				    <img src="{{designer.image.url}}" />
+				</a>
+			</li>     
+		{% endfor %}    
+	     </ul>
+    </div>
+{% endblock %}
+
+
+{% block script_base %}
+    <script src="{% static "js/lib/main-important/jquery.wookmark.js" %}"></script>
+    <script src="{% static "js/lib/other/classie.js" %}"></script>
+    <script src="{% static "js/lib/other/jquery.dlmenu.js" %}"></script>
+    <script src="{% static "js/lib/other/jquery.imagesloaded.js" %}"></script>
+    <script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.js" %}"/></script>
+    <script src="{% static "pinax/js/theme.js" %}"></script>
+    <script>
+        $(function() {
+            $( '#dl-menu' ).dlmenu();
+        });
+    </script>
+
+    {% block extra_script %}
+        <script>
+                     
+    (function ($){
+      $('#tiles').imagesLoaded(function() {
+        // Prepare layout options.
+        var options = {
+          itemWidth: 300, // Optional min width of a grid item
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('#tiles'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 0, // Optional the distance from grid to parent
+          flexibleWidth: '50%' // Optional, the maximum width of a grid item
+        };
+
+        // Get a reference to your grid items.
+        var handler = $('#tiles li');
+
+        var $window = $(window);
+        $window.resize(function() {
+          var windowWidth = $window.width(),
+              newOptions = { flexibleWidth: '50%' };
+
+          // Breakpoint
+          if (windowWidth < 1024) {
+            newOptions.flexibleWidth = '100%';
+          }
+
+          handler.wookmark(newOptions);
+        });
+
+        // Call the layout function.
+        handler.wookmark(options);
+      });
+    })(jQuery);
+        </script>
+    {% endblock %}
+{% endblock %}

@@ -47,6 +47,8 @@ INSTALLED_APPS = (
     ##### Indieitude Apps #####
     "account",
     "products",
+    "boutiques",
+    "designers",
 
 
     #### Third Party Apps #####

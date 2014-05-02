@@ -10,24 +10,13 @@ from django.contrib import auth, messages
 from django.contrib.sites.models import get_current_site
 from django.shortcuts import render
 
-from products.forms import ProductForm, ProductCategoryForm
+from designers.forms import Designer
 
-from products.models import Product, ProductCategory
-
-class ProductListView(ListView):
-	template_name="banner_base.html"
-	model = Product
-	context_object_name = "product_list"
+from designers.models import Designer
 
 
 
-
-# class ProductCategoryView(FormView):
-
-# 	form_class = ProductCategoryForm
-# 	template_var={}
-	
-
-# 	def __init__(self, *arg):
-# 		super(ProductCategory, self).__init__()
-# 		self.arg = arg
+class DesignerListView(ListView):
+	template_name="designers/designer_base.html"
+	model = Designer
+	context_object_name = "designer_list"

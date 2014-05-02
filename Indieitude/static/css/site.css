@@ -272,7 +272,8 @@ html{
 body{
     font-family:"GandhiSans",sans-serif;
     font-size:14px;
-    line-height:1.428571429
+    line-height:1.428571429;
+    background:#37333c
 }
 
 input,button,select,textarea{
@@ -429,10 +430,14 @@ cite{
 }
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:"GandhiSans",sans-serif;;
     font-weight:500;
     line-height:1.1;
     color:inherit
+}
+
+.panel-image-designer {
+    float:left;
 }
 
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small{
@@ -3480,12 +3485,13 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .nav>li>a{
     position:relative;
     display:block;
-    padding:10px 15px
+    padding:10px 15px;
+    color:rgb(0,0,0);
 }
 
 .nav>li>a:hover,.nav>li>a:focus{
     text-decoration:none;
-    background-color:#eee
+  color:#790e30
 }
 
 .nav>li.disabled>a{

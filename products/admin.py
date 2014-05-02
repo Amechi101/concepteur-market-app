@@ -1,14 +1,8 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from products.models import Designer, Product, ProductCategory, Boutique
+from products.models import Product, ProductCategory
 
-
-class DesignerAdmin(admin.ModelAdmin):
-    
-    list_display = ["name", "label_name", "description", "specialites", "image", "is_active"]
-    search_fields = ["name", "label_name"]
-    list_per_page = 50
 
 class ProductAdmin(admin.ModelAdmin):
 
@@ -22,16 +16,6 @@ class ProductCategoryAdmin(admin.ModelAdmin):
     search_fields = ["name"]
     list_per_page = 25
 
-class BoutiqueAdmin(admin.ModelAdmin):
-
-    list_display = ["name", "address", "city", "state", "zipcode", "boutique_website", "is_active"]
-    search_fields = ["name"]
-    list_per_page = 10
-
-
-#Register Models below
-admin.site.register(Boutique, BoutiqueAdmin)
-admin.site.register(Designer, DesignerAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductCategory, ProductCategoryAdmin)
 
