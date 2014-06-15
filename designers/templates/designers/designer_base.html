@@ -10,8 +10,7 @@
 
 {% block body %}
     <div class="designer-head">
-      <h1>Search For Designer or Artisan Below. . .</h1>
-      <p>Click the letter below to filter the grid.</p>
+      <h1>Search For Designer or Artisan Below</h1>
     </div>
     <br/>
     <ol id="filters">
@@ -43,7 +42,6 @@
       <li>Z</li>
     </ol>
     <br/>
-    <br/>
 	<div id="main" role="main">
 	    <ul id="tiles">
 		{% for designer in designer_list %}
@@ -52,7 +50,7 @@
 				    <img src="{{designer.image.url}}" />
 				</a>
 			</li>     
-		{% endfor %}    
+		{% endfor %}  
 	     </ul>
     </div>
 {% endblock %}

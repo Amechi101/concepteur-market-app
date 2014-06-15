@@ -9,20 +9,14 @@
  1. Icons and @Font-Face styling
  2. Main header, and Search styling
  3. Menu styling
- 4. Space(div) and Wookmark(main grid) styling
+ 4. Wookmark(main grid) styling
  5. Product Overlay Settings(Structure)
  6. Accordion design for housing the Product Information
- 7. Remodal Window for product information display
- 8. Parallax scrolling
+ 7. 
+ 8. 
+ 9.
  */
 
-  #the_container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    margin-left: 0px;
-}
 
 /***********************************************************************************************************************************************************/
 /********************************                                    Level 1                                               ****************************************/
@@ -1018,10 +1012,10 @@ div.designer-head p {
 #filters li {
   font-size: 12px;
   float: left;
-  padding: 6px 0 4px 0;
+  padding: 6px 10px 5px 10px;
   cursor: pointer;
   margin: 0 1% 0 1%;
-  width: 8%;
+  width: 1.7%;
  color:rgb(255,255,255);
   -webkit-transition: all 0.15s ease-out;
      -moz-transition: all 0.15s ease-out;
@@ -1651,7 +1645,7 @@ MEDIA QUERIES
 
 
 /***********************************************************************************************************************************************************/
-/********************************                                    Level 10                                          ****************************************/
+/********************************                                    Level 9                                         ****************************************/
 /*****************************************************************************************************************************************************/
 
 
