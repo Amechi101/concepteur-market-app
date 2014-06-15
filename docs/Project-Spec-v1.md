@@ -132,11 +132,11 @@ Showing the number of likes an items has gotten
 
 Shows general guidelines for fitting
 
-- **(8) Buy Now**
+- **(9) Buy Now**
 
 Redirects users to buy items
 
-- **(9) Novelty of Product [if applicable]**:
+- **(10) Novelty of Product [if applicable]**:
 
 Helps shows if the product is ultra rare or one of a kind, E.g.:
 
