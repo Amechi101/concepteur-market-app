@@ -10,6 +10,19 @@ Main source of output to display the products, gathered from the Algorithm.
 - **Designer Area**: 
 
 Area, you will see a listing of designers populate. From this `Area` users can select and view important data stats and brief summary about the designer.
+the two main stats that will be used for launch that will be gathered by the algorithm are:
+
+- Displaying gathered data to see the percentage of the types of clothing a designer sells, for example 
+
+(Designer 1: 45% jeans, 10% accessories, etc), 
+
+(Designer 2: 30% Jeans, 50% Shoes, 20% Tops)
+
+- Displaying gathered data to see the percentage of the types of clothing a designer sells at different boutiques, for example:
+
+(Designer 1 at Boutique 1: 45% Jeans, 10% Accessories, 25% Dresses, 20% Tops), (Designer 1 at Boutique 2: 30% Jeans, 50% Shoes, 20% Tops),
+
+(Designer 2 at Boutique 1: 45% Tops, 10% accessories, 25% Dresses, 20% Tops), (Designer 2 at Boutique: 30% Dresses, 50% Tops, 20% Jeans)
 
 - **User Area**: 
 
