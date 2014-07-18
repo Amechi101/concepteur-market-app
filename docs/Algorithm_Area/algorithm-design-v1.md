@@ -1,6 +1,8 @@
-Algorithm Design
+Algorithm Design (Ignore this file for Now)
 ==========================
 ==========================
+
+
 
 The way this algorithm will function on this site, will be to finding products items based on a few factors:
 
@@ -29,5 +31,6 @@ From this we can begin to compile information from the products that are affilia
 (Designer 1 at Boutique 1: 45% Jeans, 10% Accessories, 25% Dresses, 20% Tops), (Designer 1 at Boutique 2: 30% Jeans, 50% Shoes, 20% Tops),
 
 (Designer 2 at Boutique 1: 45% Tops, 10% accessories, 25% Dresses, 20% Tops), (Designer 2 at Boutique: 30% Dresses, 50% Tops, 20% Jeans) 
+
 
 
